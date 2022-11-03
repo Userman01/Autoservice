@@ -1,0 +1,14 @@
+#Xcode
+xcuserdata/
+xcshareddata/
+*.xcworkspace
+
+#CocoaPods
+Pods/
+*.lock
+
+#OS
+.DS_Store
+
+# R.swift
+*.generated.swift
