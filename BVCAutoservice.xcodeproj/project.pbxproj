@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C932E9A629169FDC008D7057 /* AuthChoiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9A529169FDC008D7057 /* AuthChoiceBuilder.swift */; };
+		C932E9A829169FE7008D7057 /* AuthChoicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9A729169FE7008D7057 /* AuthChoicePresenter.swift */; };
+		C932E9AA29169FF7008D7057 /* AuthChoiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9A929169FF7008D7057 /* AuthChoiceInteractor.swift */; };
+		C932E9AC2916A007008D7057 /* AuthChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9AB2916A007008D7057 /* AuthChoiceViewController.swift */; };
+		C932E9AE2916A04C008D7057 /* AuthChoiceDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9AD2916A04C008D7057 /* AuthChoiceDataFlow.swift */; };
+		C932E9B42916A0E9008D7057 /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9B32916A0E9008D7057 /* AuthorizationCoordinator.swift */; };
+		C932E9B62916A0F3008D7057 /* AuthorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9B52916A0F3008D7057 /* AuthorizationRouter.swift */; };
 		C93F5F5629137B0500B74065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F5F5529137B0500B74065 /* AppDelegate.swift */; };
 		C93F5F5829137B0500B74065 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F5F5729137B0500B74065 /* SceneDelegate.swift */; };
 		C93F5F5A29137B0500B74065 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F5F5929137B0500B74065 /* ViewController.swift */; };
@@ -53,6 +60,13 @@
 		835259CB78329A1AA5621EA4 /* Pods-BVCAutoservice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice.debug.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice/Pods-BVCAutoservice.debug.xcconfig"; sourceTree = "<group>"; };
 		91846AA4BB38A9F18077A7BF /* Pods-BVCAutoserviceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoserviceTests.release.xcconfig"; path = "Target Support Files/Pods-BVCAutoserviceTests/Pods-BVCAutoserviceTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE5D753B99806416BF11D6D1 /* Pods_BVCAutoservice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVCAutoservice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C932E9A529169FDC008D7057 /* AuthChoiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoiceBuilder.swift; sourceTree = "<group>"; };
+		C932E9A729169FE7008D7057 /* AuthChoicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoicePresenter.swift; sourceTree = "<group>"; };
+		C932E9A929169FF7008D7057 /* AuthChoiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoiceInteractor.swift; sourceTree = "<group>"; };
+		C932E9AB2916A007008D7057 /* AuthChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoiceViewController.swift; sourceTree = "<group>"; };
+		C932E9AD2916A04C008D7057 /* AuthChoiceDataFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoiceDataFlow.swift; sourceTree = "<group>"; };
+		C932E9B32916A0E9008D7057 /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		C932E9B52916A0F3008D7057 /* AuthorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRouter.swift; sourceTree = "<group>"; };
 		C93F5F5229137B0500B74065 /* BVCAutoservice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVCAutoservice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93F5F5529137B0500B74065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C93F5F5729137B0500B74065 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +142,84 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C932E9A0291696A7008D7057 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C932E9A1291696C7008D7057 /* Authorization */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C932E9A1291696C7008D7057 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				C932E9A2291696EF008D7057 /* Coordinators */,
+				C932E9A329169701008D7057 /* Modules */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		C932E9A2291696EF008D7057 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C932E9B32916A0E9008D7057 /* AuthorizationCoordinator.swift */,
+				C932E9B52916A0F3008D7057 /* AuthorizationRouter.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C932E9A329169701008D7057 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C932E9A429169F1F008D7057 /* AuthChoice */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C932E9A429169F1F008D7057 /* AuthChoice */ = {
+			isa = PBXGroup;
+			children = (
+				C932E9B22916A06A008D7057 /* Provider */,
+				C932E9B12916A061008D7057 /* Model */,
+				C932E9B02916A058008D7057 /* ViewModel */,
+				C932E9AF2916A051008D7057 /* View */,
+				C932E9A529169FDC008D7057 /* AuthChoiceBuilder.swift */,
+				C932E9A729169FE7008D7057 /* AuthChoicePresenter.swift */,
+				C932E9A929169FF7008D7057 /* AuthChoiceInteractor.swift */,
+				C932E9AB2916A007008D7057 /* AuthChoiceViewController.swift */,
+				C932E9AD2916A04C008D7057 /* AuthChoiceDataFlow.swift */,
+			);
+			path = AuthChoice;
+			sourceTree = "<group>";
+		};
+		C932E9AF2916A051008D7057 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C932E9B02916A058008D7057 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C932E9B12916A061008D7057 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C932E9B22916A06A008D7057 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		C93F5F4929137B0500B74065 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +248,7 @@
 				C9D8B3612913C1AA00B68EFE /* Common */,
 				C9D8B35E2913C16600B68EFE /* Coordinators */,
 				C9D8B3692914205500B68EFE /* Factories */,
+				C932E9A0291696A7008D7057 /* Modules */,
 				C93F5F5529137B0500B74065 /* AppDelegate.swift */,
 				C93F5F5729137B0500B74065 /* SceneDelegate.swift */,
 				C93F5F5929137B0500B74065 /* ViewController.swift */,
@@ -509,13 +602,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D8B3602913C19900B68EFE /* ApplicationCoordinator.swift in Sources */,
+				C932E9B42916A0E9008D7057 /* AuthorizationCoordinator.swift in Sources */,
 				C9D8B3672913C1EA00B68EFE /* Presentable.swift in Sources */,
+				C932E9AC2916A007008D7057 /* AuthChoiceViewController.swift in Sources */,
+				C932E9A629169FDC008D7057 /* AuthChoiceBuilder.swift in Sources */,
 				C9D8B3632913C1D100B68EFE /* BaseCoordinator.swift in Sources */,
+				C932E9B62916A0F3008D7057 /* AuthorizationRouter.swift in Sources */,
 				C93F5F5A29137B0500B74065 /* ViewController.swift in Sources */,
+				C932E9AA29169FF7008D7057 /* AuthChoiceInteractor.swift in Sources */,
 				C9D8B3652913C1DC00B68EFE /* Router.swift in Sources */,
 				C93F5F5629137B0500B74065 /* AppDelegate.swift in Sources */,
 				C9D8B36B291420EC00B68EFE /* CoordinatorFactory.swift in Sources */,
 				C93F5F5829137B0500B74065 /* SceneDelegate.swift in Sources */,
+				C932E9A829169FE7008D7057 /* AuthChoicePresenter.swift in Sources */,
+				C932E9AE2916A04C008D7057 /* AuthChoiceDataFlow.swift in Sources */,
 				C9D8B35329138DD400B68EFE /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
