@@ -15,8 +15,20 @@ enum AuthorizationCoordinatorOutCmd {
 final class AuthorizationCoordinator: BaseCoordinator {
     
     private let authorizationRouter: AuthorizationRouterProtocol
+    private let out: AuthorizationCoordinatorOut
     
-    init(router: RouterProtocol) {
+    init(router: RouterProtocol, out: @escaping AuthorizationCoordinatorOut) {
         self.authorizationRouter = AuthorizationRouter(router: router)
+        self.out = out
+    }
+    
+    override func start() {
+        openAuthChoice()
+    }
+    
+    private func openAuthChoice() {
+        authorizationRouter.openAuthChoice {
+            //
+        }
     }
 }

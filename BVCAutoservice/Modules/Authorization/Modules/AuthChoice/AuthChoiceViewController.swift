@@ -11,9 +11,16 @@ protocol AuthChoiceDisplayLogic: AnyObject {
     
 }
 
+typealias AuthChoiceOut = () -> Void
+enum AuthChoiceOutCmd {
+    
+}
+
 final class AuthChoiceViewController: UIViewController, AuthChoiceDisplayLogic {
     
     private let interactor: AuthChoiceBuisnessLogic
+    
+    private lazy var customView = self.view as? AuthChoiceView
     
     init(interactor: AuthChoiceBuisnessLogic) {
         self.interactor = interactor
@@ -24,8 +31,12 @@ final class AuthChoiceViewController: UIViewController, AuthChoiceDisplayLogic {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        let view = AuthChoiceView(frame: UIScreen.main.bounds)
+        self.view = view
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
     }
 }

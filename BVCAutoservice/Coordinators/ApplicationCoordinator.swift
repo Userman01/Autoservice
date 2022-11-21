@@ -31,6 +31,9 @@ final class ApplicationCoordinator: BaseCoordinator {
     }
     
     private func runAuthFlow() {
-        
+        let authorizationCoordinator = coordinatorFactory.makeAuthorizationCoordinator(router: router) { cmd in
+            //
+        }
+        authorizationCoordinator.start()
     }
 }

@@ -7,6 +7,7 @@
 
 protocol AuthorizationRouterProtocol {
     
+    func openAuthChoice(out: @escaping AuthChoiceOut)
 }
 
 final class AuthorizationRouter: AuthorizationRouterProtocol {
@@ -15,5 +16,11 @@ final class AuthorizationRouter: AuthorizationRouterProtocol {
     
     init(router: RouterProtocol) {
         self.router = router
+    }
+    
+    func openAuthChoice(out: @escaping AuthChoiceOut) {
+        let authChoiceController = AuthChoiceBuilder()
+            .build()
+        router.push(authChoiceController)
     }
 }
