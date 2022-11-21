@@ -79,6 +79,7 @@
 		C9938B1E292BEED600B43B05 /* AuthChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthChoiceView.swift; sourceTree = "<group>"; };
 		C9938B20292BEF1000B43B05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C9A8AA7E292BF0710065A736 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9A8AA80292BF25D0065A736 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9D8B35229138DD400B68EFE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C9D8B35B2913BEE700B68EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9D8B35F2913C19900B68EFE /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -411,6 +412,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = C93F5F4929137B0500B74065;
 			productRefGroup = C93F5F5329137B0500B74065 /* Products */;
@@ -654,6 +656,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C9D8B35B2913BEE700B68EFE /* en */,
+				C9A8AA80292BF25D0065A736 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
