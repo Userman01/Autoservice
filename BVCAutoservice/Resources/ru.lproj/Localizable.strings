@@ -5,3 +5,13 @@
   Created by Петр Постников on 03.11.2022.
   
 */
+
+// MARK: Общие
+"common.logo-title" = "АвтоСервис";
+"common.enter" = "Войти";
+
+// MARK: Авторизация выборка
+"auth-choice.button-user.title" = "Ищу Автосервис";
+"auth-choice.button-service.title" = "Пердлагаю Автосервис";
+"auth-choice.labelAuth" = "Уже есть аккаунт?";
+

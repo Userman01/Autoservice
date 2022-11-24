@@ -5,4 +5,16 @@
 //  Created by Петр Постников on 05.11.2022.
 //
 
-import Foundation
+enum AuthChoice {
+    enum GetScreens {
+        struct Request {
+        }
+        
+        struct Responce {
+        }
+        
+        struct ViewModel {
+            let result: [AuthChoiceViewModel]
+        }
+    }
+}

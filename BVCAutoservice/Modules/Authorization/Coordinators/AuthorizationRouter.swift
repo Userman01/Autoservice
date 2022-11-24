@@ -20,7 +20,7 @@ final class AuthorizationRouter: AuthorizationRouterProtocol {
     
     func openAuthChoice(out: @escaping AuthChoiceOut) {
         let authChoiceController = AuthChoiceBuilder()
-            .build()
+            .build(out: out)
         router.push(authChoiceController)
     }
 }

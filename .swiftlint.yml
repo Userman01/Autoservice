@@ -8,3 +8,5 @@ excluded:
   - AebOnlineAppIOSTests
   - AebOnlineAppIOSUITests
   - R.generated.swift
+  - BVCAutoservice/Common/Extensions/UITableView/UITableView.swift
+  - BVCAutoservice/Common/Extensions/UICollectionView/UICollectionView.swift

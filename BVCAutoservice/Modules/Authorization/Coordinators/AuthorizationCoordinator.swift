@@ -27,7 +27,7 @@ final class AuthorizationCoordinator: BaseCoordinator {
     }
     
     private func openAuthChoice() {
-        authorizationRouter.openAuthChoice {
+        authorizationRouter.openAuthChoice {_ in 
             //
         }
     }

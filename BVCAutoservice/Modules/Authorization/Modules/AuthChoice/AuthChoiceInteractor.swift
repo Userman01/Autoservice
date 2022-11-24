@@ -8,7 +8,8 @@
 import Foundation
 
 protocol AuthChoiceBuisnessLogic {
-    
+    /// Запрос на получение экрана
+    func getScreen(request: AuthChoice.GetScreens.Request)
 }
 
 final class AuthChoiceInteractor: AuthChoiceBuisnessLogic {
@@ -17,5 +18,10 @@ final class AuthChoiceInteractor: AuthChoiceBuisnessLogic {
     
     init(presenter: AuthChoicePresentationLogic) {
         self.presenter = presenter
+    }
+    
+    /// Запрос на получение экрана
+    func getScreen(request: AuthChoice.GetScreens.Request) {
+        presenter.presentScreen(responce: AuthChoice.GetScreens.Responce())
     }
 }
