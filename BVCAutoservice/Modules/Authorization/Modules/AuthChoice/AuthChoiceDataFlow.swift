@@ -14,7 +14,7 @@ enum AuthChoice {
         }
         
         struct ViewModel {
-            let result: [AuthChoiceViewModel]
+            let result: AuthChoiceViewModel
         }
     }
 }

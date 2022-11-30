@@ -18,8 +18,6 @@ final class AuthChoicePresenter: AuthChoicePresentationLogic {
     
     // MARK: Показ экранов онбординга
     func presentScreen(responce: AuthChoice.GetScreens.Responce) {
-        let viewModel = AuthChoiceViewModel()
-        let viewModel2 = AuthChoiceViewModel()
-        viewController?.displayScreen(viewModel: AuthChoice.GetScreens.ViewModel(result: [viewModel, viewModel2]))
+        viewController?.displayScreen(viewModel: AuthChoice.GetScreens.ViewModel(result: AuthChoiceViewModel()))
     }
 }

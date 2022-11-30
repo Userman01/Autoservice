@@ -8,6 +8,8 @@
 protocol AuthorizationRouterProtocol {
     
     func openAuthChoice(out: @escaping AuthChoiceOut)
+    
+    func openRegistration(out: @escaping RegistrationOut, userRoleType: UserRoleType)
 }
 
 final class AuthorizationRouter: AuthorizationRouterProtocol {
@@ -22,5 +24,12 @@ final class AuthorizationRouter: AuthorizationRouterProtocol {
         let authChoiceController = AuthChoiceBuilder()
             .build(out: out)
         router.push(authChoiceController)
+    }
+    
+    func openRegistration(out: @escaping RegistrationOut, userRoleType: UserRoleType) {
+        let registration = RegistrationBuilder()
+            .set(userRoleType: userRoleType)
+            .build(out: out)
+        router.push(registration)
     }
 }

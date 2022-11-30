@@ -7,6 +7,5 @@
 
 import Foundation
 
-struct AuthChoiceModel {
-    let role: String
+struct RegistrationModel: Decodable {
 }

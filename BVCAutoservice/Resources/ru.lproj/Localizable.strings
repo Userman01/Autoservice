@@ -9,9 +9,18 @@
 // MARK: Общие
 "common.logo-title" = "АвтоСервис";
 "common.enter" = "Войти";
+"common.next" = "Далее";
+"common.registration" = "Регистрация";
+"common.error-message" = "Произошла ошибка";
 
 // MARK: Авторизация выборка
 "auth-choice.button-user.title" = "Ищу Автосервис";
 "auth-choice.button-service.title" = "Пердлагаю Автосервис";
 "auth-choice.labelAuth" = "Уже есть аккаунт?";
 
+// MARK: Регистрация
+"registration.enter-phone-number.title" = "Введите номер телефона";
+"registration.enter-sms-code.title" = "Введите код из смс";
+
+// MARK: SMS регситрация
+"Auth-sms.go" = "Поехали!";

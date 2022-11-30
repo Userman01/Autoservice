@@ -27,8 +27,15 @@ final class AuthorizationCoordinator: BaseCoordinator {
     }
     
     private func openAuthChoice() {
-        authorizationRouter.openAuthChoice {_ in 
-            //
+        authorizationRouter.openAuthChoice { cmd in
+            switch cmd {
+            case let .open(roleType):
+                self.authorizationRouter.openRegistration(out: { cmd in
+                    print(cmd)
+                }, userRoleType: roleType)
+            case .openAuth:
+                print("auth")
+            }
         }
     }
 }

@@ -83,6 +83,15 @@ final class AuthChoiceView: UIView {
         return label
     }()
     
+    private lazy var emptyBottonView: UIView = {
+        let view = UIView()
+        view.backgroundColor = ViewMetrics.backgroundColorAuthButton
+        view.setContentHuggingPriority(.defaultLow, for: .vertical)
+        view.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupLayout()
@@ -101,6 +110,7 @@ final class AuthChoiceView: UIView {
         addSubview(labelAuth)
         addSubview(authButton)
         addSubview(emptyView)
+        addSubview(emptyBottonView)
         
         logoImageView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
@@ -144,20 +154,26 @@ final class AuthChoiceView: UIView {
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
             make.height.equalTo(CGFloat.spacing80Pt)
         }
+        emptyBottonView.snp.makeConstraints { make in
+            make.top.equalTo(authButton.snp.bottom)
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
     
-    private func configure(viewModel: AuthChoiceViewModel) {
+    func configure(viewModel: AuthChoiceViewModel) {
     }
     
     @objc private func userButtonTupped() {
-        delegate?.didTupp(with: AuthChoiceModel(role: "ROLE_USER"))
+        delegate?.didTupp(with: .user)
     }
     
     @objc private func serviceButtonTupped() {
-        delegate?.didTupp(with: AuthChoiceModel(role: "ROLE_SERVICE"))
+        delegate?.didTupp(with: .service)
     }
     
     @objc private func authButtonTupped() {
-        delegate?.didTupp(with: nil)
+        delegate?.openAuth()
     }
 }

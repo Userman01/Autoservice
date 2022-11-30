@@ -9,8 +9,18 @@
 // MARK: Общие
 "common.logo-title" = "AutoService";
 "common.enter" = "Enter";
+"common.next" = "Next";
+"common.registration" = "Registration";
+"common.error-message" = "Error";
 
 // MARK: Авторизация выборка
 "auth-choice.button-user.title" = "Looking for a AutoService";
 "auth-choice.button-service.title" = "Offer AutoService";
 "auth-choice.labelAuth" = "Already have an account?";
+
+// MARK: Регистрация
+"registration.enter-phone-number.title" = "Enter phone number";
+"registration.enter-sms-code.title" = "Enter code from sms";
+
+// MARK: SMS регситрация
+"Auth-sms.go" = "Go";

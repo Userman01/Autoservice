@@ -13,12 +13,16 @@ protocol AuthChoiceDisplayLogic: AnyObject {
 }
 
 protocol AuthChoiceDelegateViewController: NSObject {
-    func didTupp(with: AuthChoiceModel?)
+    
+    func didTupp(with: UserRoleType)
+    
+    func openAuth()
 }
 
 typealias AuthChoiceOut = (AuthChoiceOutCmd) -> Void
 enum AuthChoiceOutCmd {
-    case open(AuthChoiceModel?)
+    case open(UserRoleType)
+    case openAuth
 }
 
 final class AuthChoiceViewController: UIViewController {
@@ -50,6 +54,11 @@ final class AuthChoiceViewController: UIViewController {
         getScreen()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationBarStyle(.clear, isLargeTitle: false)
+    }
+    
     private func getScreen() {
         interactor.getScreen(request: AuthChoice.GetScreens.Request())
     }
@@ -59,12 +68,17 @@ extension AuthChoiceViewController: AuthChoiceDisplayLogic {
     
     // MARK: Отображения экрана
     func displayScreen(viewModel: AuthChoice.GetScreens.ViewModel) {
+        customView?.configure(viewModel: viewModel.result)
     }
 }
 
 extension AuthChoiceViewController: AuthChoiceDelegateViewController {
     
-    func didTupp(with: AuthChoiceModel?) {
+    func didTupp(with: UserRoleType) {
         out(.open(with))
+    }
+    
+    func openAuth() {
+        out(.openAuth)
     }
 }

@@ -10,3 +10,6 @@ excluded:
   - R.generated.swift
   - BVCAutoservice/Common/Extensions/UITableView/UITableView.swift
   - BVCAutoservice/Common/Extensions/UICollectionView/UICollectionView.swift
+function_body_length:
+  warning: 100
+  error: 150
