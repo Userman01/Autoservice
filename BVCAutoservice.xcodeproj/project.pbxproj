@@ -64,6 +64,27 @@
 		C9B72BF22937823500FA9AC5 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72BF12937823500FA9AC5 /* BaseURL.swift */; };
 		C9B72BF52937831100FA9AC5 /* AuthorizationEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72BF42937831100FA9AC5 /* AuthorizationEndpoints.swift */; };
 		C9B72BF829378E7D00FA9AC5 /* AuthBySMSCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72BF729378E7D00FA9AC5 /* AuthBySMSCodeViewModel.swift */; };
+		C9B72C0829379A4E00FA9AC5 /* PassportCreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72BFB29379A4E00FA9AC5 /* PassportCreateViewModel.swift */; };
+		C9B72C0929379A4E00FA9AC5 /* PassportCreateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72BFC29379A4E00FA9AC5 /* PassportCreateInteractor.swift */; };
+		C9B72C0A29379A4E00FA9AC5 /* PassportCreateDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72BFD29379A4E00FA9AC5 /* PassportCreateDataFlow.swift */; };
+		C9B72C0B29379A4E00FA9AC5 /* PassportCreateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72BFF29379A4E00FA9AC5 /* PassportCreateProvider.swift */; };
+		C9B72C0C29379A4E00FA9AC5 /* PassportCreateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C0029379A4E00FA9AC5 /* PassportCreateService.swift */; };
+		C9B72C0D29379A4E00FA9AC5 /* PassportCreatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C0129379A4E00FA9AC5 /* PassportCreatePresenter.swift */; };
+		C9B72C0E29379A4E00FA9AC5 /* PassportCreateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C0329379A4E00FA9AC5 /* PassportCreateModel.swift */; };
+		C9B72C0F29379A4E00FA9AC5 /* PassportCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C0529379A4E00FA9AC5 /* PassportCreateView.swift */; };
+		C9B72C1029379A4E00FA9AC5 /* PassportCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C0629379A4E00FA9AC5 /* PassportCreateViewController.swift */; };
+		C9B72C1129379A4E00FA9AC5 /* PassportCreateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C0729379A4E00FA9AC5 /* PassportCreateBuilder.swift */; };
+		C9B72C132937ADFF00FA9AC5 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C122937ADFF00FA9AC5 /* AlertController.swift */; };
+		C9B72C162937B6FD00FA9AC5 /* AnimationPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C152937B6FD00FA9AC5 /* AnimationPaths.swift */; };
+		C9B72C182937B72800FA9AC5 /* preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = C9B72C172937B72700FA9AC5 /* preloader.json */; };
+		C9B72C1A2937B93700FA9AC5 /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C192937B93700FA9AC5 /* LoadingAnimation.swift */; };
+		C9B72C1E2937BA4900FA9AC5 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C1D2937BA4900FA9AC5 /* LoadingIndicatorView.swift */; };
+		C9B72C202937BD4700FA9AC5 /* AnimationIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C1F2937BD4700FA9AC5 /* AnimationIndicator.swift */; };
+		C9B72C232937BE3600FA9AC5 /* LoadingBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C222937BE3600FA9AC5 /* LoadingBackgroundView.swift */; };
+		C9B72C252937C0FE00FA9AC5 /* StartStopAnimatingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C242937C0FE00FA9AC5 /* StartStopAnimatingIndicator.swift */; };
+		C9B72C272938DDC400FA9AC5 /* BVCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C262938DDC400FA9AC5 /* BVCError.swift */; };
+		C9B72C292939FBD200FA9AC5 /* PassportCreateIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C282939FBD200FA9AC5 /* PassportCreateIndicatorView.swift */; };
+		C9B72C2D293A4A8A00FA9AC5 /* PassportTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C2C293A4A8A00FA9AC5 /* PassportTextFieldView.swift */; };
 		C9D8B35329138DD400B68EFE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B35229138DD400B68EFE /* R.generated.swift */; };
 		C9D8B3582913BED700B68EFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9D8B35A2913BED700B68EFE /* Localizable.strings */; };
 		C9D8B3602913C19900B68EFE /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B35F2913C19900B68EFE /* ApplicationCoordinator.swift */; };
@@ -166,6 +187,27 @@
 		C9B72BF12937823500FA9AC5 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		C9B72BF42937831100FA9AC5 /* AuthorizationEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationEndpoints.swift; sourceTree = "<group>"; };
 		C9B72BF729378E7D00FA9AC5 /* AuthBySMSCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeViewModel.swift; sourceTree = "<group>"; };
+		C9B72BFB29379A4E00FA9AC5 /* PassportCreateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreateViewModel.swift; sourceTree = "<group>"; };
+		C9B72BFC29379A4E00FA9AC5 /* PassportCreateInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreateInteractor.swift; sourceTree = "<group>"; };
+		C9B72BFD29379A4E00FA9AC5 /* PassportCreateDataFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreateDataFlow.swift; sourceTree = "<group>"; };
+		C9B72BFF29379A4E00FA9AC5 /* PassportCreateProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreateProvider.swift; sourceTree = "<group>"; };
+		C9B72C0029379A4E00FA9AC5 /* PassportCreateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreateService.swift; sourceTree = "<group>"; };
+		C9B72C0129379A4E00FA9AC5 /* PassportCreatePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreatePresenter.swift; sourceTree = "<group>"; };
+		C9B72C0329379A4E00FA9AC5 /* PassportCreateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreateModel.swift; sourceTree = "<group>"; };
+		C9B72C0529379A4E00FA9AC5 /* PassportCreateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreateView.swift; sourceTree = "<group>"; };
+		C9B72C0629379A4E00FA9AC5 /* PassportCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreateViewController.swift; sourceTree = "<group>"; };
+		C9B72C0729379A4E00FA9AC5 /* PassportCreateBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreateBuilder.swift; sourceTree = "<group>"; };
+		C9B72C122937ADFF00FA9AC5 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		C9B72C152937B6FD00FA9AC5 /* AnimationPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPaths.swift; sourceTree = "<group>"; };
+		C9B72C172937B72700FA9AC5 /* preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = preloader.json; sourceTree = "<group>"; };
+		C9B72C192937B93700FA9AC5 /* LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
+		C9B72C1D2937BA4900FA9AC5 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		C9B72C1F2937BD4700FA9AC5 /* AnimationIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationIndicator.swift; sourceTree = "<group>"; };
+		C9B72C222937BE3600FA9AC5 /* LoadingBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingBackgroundView.swift; sourceTree = "<group>"; };
+		C9B72C242937C0FE00FA9AC5 /* StartStopAnimatingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartStopAnimatingIndicator.swift; sourceTree = "<group>"; };
+		C9B72C262938DDC400FA9AC5 /* BVCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVCError.swift; sourceTree = "<group>"; };
+		C9B72C282939FBD200FA9AC5 /* PassportCreateIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportCreateIndicatorView.swift; sourceTree = "<group>"; };
+		C9B72C2C293A4A8A00FA9AC5 /* PassportTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportTextFieldView.swift; sourceTree = "<group>"; };
 		C9D8B35229138DD400B68EFE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C9D8B35B2913BEE700B68EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9D8B35F2913C19900B68EFE /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -276,6 +318,7 @@
 		C932E9A329169701008D7057 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C9B72BF929379A4E00FA9AC5 /* PassportCreate */,
 				C9AD2204292FC7E50039C187 /* Registration */,
 				C932E9A429169F1F008D7057 /* AuthChoice */,
 				EE025E9846A010A7F30F0305 /* AuthBySMSCode */,
@@ -338,6 +381,7 @@
 		C93F5F5429137B0500B74065 /* BVCAutoservice */ = {
 			isa = PBXGroup;
 			children = (
+				C9B72C142937B6E500FA9AC5 /* Animations */,
 				C9D8B3612913C1AA00B68EFE /* Common */,
 				C9D8B35E2913C16600B68EFE /* Coordinators */,
 				C9D8B3692914205500B68EFE /* Factories */,
@@ -403,6 +447,8 @@
 			isa = PBXGroup;
 			children = (
 				C9A8AA86292D16370065A736 /* NavigationBarStyle.swift */,
+				C9B72C122937ADFF00FA9AC5 /* AlertController.swift */,
+				C9B72C192937B93700FA9AC5 /* LoadingAnimation.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -517,6 +563,7 @@
 			isa = PBXGroup;
 			children = (
 				C9AD222C292FD3030039C187 /* TextFieldView.swift */,
+				C9B72C2C293A4A8A00FA9AC5 /* PassportTextFieldView.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -534,6 +581,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B72BD52934E64200FA9AC5 /* GestureRecognizer.swift */,
+				C9B72C242937C0FE00FA9AC5 /* StartStopAnimatingIndicator.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -577,6 +625,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B72BEC2937680600FA9AC5 /* NetworkError.swift */,
+				C9B72C262938DDC400FA9AC5 /* BVCError.swift */,
 			);
 			path = NetworkError;
 			sourceTree = "<group>";
@@ -606,6 +655,91 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C9B72BF929379A4E00FA9AC5 /* PassportCreate */ = {
+			isa = PBXGroup;
+			children = (
+				C9B72C0729379A4E00FA9AC5 /* PassportCreateBuilder.swift */,
+				C9B72BFC29379A4E00FA9AC5 /* PassportCreateInteractor.swift */,
+				C9B72BFD29379A4E00FA9AC5 /* PassportCreateDataFlow.swift */,
+				C9B72C0129379A4E00FA9AC5 /* PassportCreatePresenter.swift */,
+				C9B72C0629379A4E00FA9AC5 /* PassportCreateViewController.swift */,
+				C9B72C0429379A4E00FA9AC5 /* View */,
+				C9B72BFA29379A4E00FA9AC5 /* ViewModel */,
+				C9B72BFE29379A4E00FA9AC5 /* Provider */,
+				C9B72C0229379A4E00FA9AC5 /* Model */,
+			);
+			path = PassportCreate;
+			sourceTree = "<group>";
+		};
+		C9B72BFA29379A4E00FA9AC5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C9B72BFB29379A4E00FA9AC5 /* PassportCreateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C9B72BFE29379A4E00FA9AC5 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				C9B72BFF29379A4E00FA9AC5 /* PassportCreateProvider.swift */,
+				C9B72C0029379A4E00FA9AC5 /* PassportCreateService.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		C9B72C0229379A4E00FA9AC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9B72C0329379A4E00FA9AC5 /* PassportCreateModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9B72C0429379A4E00FA9AC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9B72C0529379A4E00FA9AC5 /* PassportCreateView.swift */,
+				C9B72C282939FBD200FA9AC5 /* PassportCreateIndicatorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C9B72C142937B6E500FA9AC5 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C9B72C152937B6FD00FA9AC5 /* AnimationPaths.swift */,
+				C9B72C172937B72700FA9AC5 /* preloader.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		C9B72C1B2937BA1800FA9AC5 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C9B72C212937BE0700FA9AC5 /* BackgroundView */,
+				C9B72C1C2937BA2400FA9AC5 /* LoadingIndicator */,
+				C9B72C1F2937BD4700FA9AC5 /* AnimationIndicator.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		C9B72C1C2937BA2400FA9AC5 /* LoadingIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				C9B72C1D2937BA4900FA9AC5 /* LoadingIndicatorView.swift */,
+			);
+			path = LoadingIndicator;
+			sourceTree = "<group>";
+		};
+		C9B72C212937BE0700FA9AC5 /* BackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				C9B72C222937BE3600FA9AC5 /* LoadingBackgroundView.swift */,
+			);
+			path = BackgroundView;
+			sourceTree = "<group>";
+		};
 		C9D8B35129138D9500B68EFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +763,7 @@
 		C9D8B3612913C1AA00B68EFE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C9B72C1B2937BA1800FA9AC5 /* Animation */,
 				C9B72BE8293766DE00FA9AC5 /* Endpoints */,
 				C9B72BE4293766A800FA9AC5 /* Services */,
 				C9A9B9B129326ED300A91766 /* Views */,
@@ -797,6 +932,7 @@
 			files = (
 				C9A8AA7F292BF0710065A736 /* LaunchScreen.storyboard in Resources */,
 				C9A8AA8A292D16A00065A736 /* Colors.xcassets in Resources */,
+				C9B72C182937B72800FA9AC5 /* preloader.json in Resources */,
 				C9938B21292BEF1000B43B05 /* Images.xcassets in Resources */,
 				C9D8B3582913BED700B68EFE /* Localizable.strings in Resources */,
 			);
@@ -965,10 +1101,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B72C0C29379A4E00FA9AC5 /* PassportCreateService.swift in Sources */,
 				C9AD2200292FB3A50039C187 /* TextStyle.swift in Sources */,
+				C9B72C0E29379A4E00FA9AC5 /* PassportCreateModel.swift in Sources */,
 				C9AD2227292FC9190039C187 /* RegistrationPresenter.swift in Sources */,
 				C9AD22302930D58D0039C187 /* UserRoleType.swift in Sources */,
 				C9AD222A292FC9190039C187 /* RegistrationModel.swift in Sources */,
+				C9B72C202937BD4700FA9AC5 /* AnimationIndicator.swift in Sources */,
 				C9B72BE7293766C700FA9AC5 /* APIClient.swift in Sources */,
 				C9A8AA97292D1FFB0065A736 /* UITableView.swift in Sources */,
 				C9AD222D292FD3030039C187 /* TextFieldView.swift in Sources */,
@@ -976,20 +1115,31 @@
 				C9AD2226292FC9190039C187 /* RegistrationViewModel.swift in Sources */,
 				C9AD2225292FC9190039C187 /* RegistrationView.swift in Sources */,
 				C9A8AA94292D1CC50065A736 /* UICollectionView.swift in Sources */,
+				C9B72C2D293A4A8A00FA9AC5 /* PassportTextFieldView.swift in Sources */,
 				C9B72BDC29365BE100FA9AC5 /* ValidatorError.swift in Sources */,
+				C9B72C0929379A4E00FA9AC5 /* PassportCreateInteractor.swift in Sources */,
 				C9B72BF52937831100FA9AC5 /* AuthorizationEndpoints.swift in Sources */,
+				C9B72C1E2937BA4900FA9AC5 /* LoadingIndicatorView.swift in Sources */,
 				C9A9B9B329326F0900A91766 /* InsetLabel.swift in Sources */,
+				C9B72C232937BE3600FA9AC5 /* LoadingBackgroundView.swift in Sources */,
 				C9B72BF22937823500FA9AC5 /* BaseURL.swift in Sources */,
 				C9A9B9B029321CFF00A91766 /* ValidatorProtocol.swift in Sources */,
 				C9AD2224292FC9190039C187 /* RegistrationDataFlow.swift in Sources */,
 				C9B72BD62934E64200FA9AC5 /* GestureRecognizer.swift in Sources */,
 				C9AD2228292FC9190039C187 /* RegistrationViewController.swift in Sources */,
 				C9A8AA88292D16380065A736 /* NavigationBarStyle.swift in Sources */,
+				C9B72C162937B6FD00FA9AC5 /* AnimationPaths.swift in Sources */,
+				C9B72C252937C0FE00FA9AC5 /* StartStopAnimatingIndicator.swift in Sources */,
+				C9B72C292939FBD200FA9AC5 /* PassportCreateIndicatorView.swift in Sources */,
 				C9B72BEA293767AA00FA9AC5 /* RequestResult.swift in Sources */,
 				C932E9B42916A0E9008D7057 /* AuthorizationCoordinator.swift in Sources */,
 				C9D8B3672913C1EA00B68EFE /* Presentable.swift in Sources */,
+				C9B72C0F29379A4E00FA9AC5 /* PassportCreateView.swift in Sources */,
+				C9B72C272938DDC400FA9AC5 /* BVCError.swift in Sources */,
 				C932E9AC2916A007008D7057 /* AuthChoiceViewController.swift in Sources */,
 				C932E9A629169FDC008D7057 /* AuthChoiceBuilder.swift in Sources */,
+				C9B72C0829379A4E00FA9AC5 /* PassportCreateViewModel.swift in Sources */,
+				C9B72C0B29379A4E00FA9AC5 /* PassportCreateProvider.swift in Sources */,
 				C9D8B3632913C1D100B68EFE /* BaseCoordinator.swift in Sources */,
 				C9B72BED2937680600FA9AC5 /* NetworkError.swift in Sources */,
 				C9B72BF829378E7D00FA9AC5 /* AuthBySMSCodeViewModel.swift in Sources */,
@@ -997,16 +1147,20 @@
 				C932E9B62916A0F3008D7057 /* AuthorizationRouter.swift in Sources */,
 				C9B72BDE29365C9400FA9AC5 /* PhoneValidator.swift in Sources */,
 				C9938B1F292BEED600B43B05 /* AuthChoiceView.swift in Sources */,
+				C9B72C1A2937B93700FA9AC5 /* LoadingAnimation.swift in Sources */,
 				C9A8AA87292D16380065A736 /* ThemeColor.swift in Sources */,
 				C932E9AA29169FF7008D7057 /* AuthChoiceInteractor.swift in Sources */,
 				C9D8B3652913C1DC00B68EFE /* Router.swift in Sources */,
 				C9A8AAA7292F942F0065A736 /* Spacing.swift in Sources */,
+				C9B72C1029379A4E00FA9AC5 /* PassportCreateViewController.swift in Sources */,
 				C9B72BE1293764DB00FA9AC5 /* RegistrationProvider.swift in Sources */,
 				C9AD2229292FC9190039C187 /* RegistrationBuilder.swift in Sources */,
 				C9AD2223292FC9190039C187 /* RegistrationInteractor.swift in Sources */,
+				C9B72C132937ADFF00FA9AC5 /* AlertController.swift in Sources */,
 				C93F5F5629137B0500B74065 /* AppDelegate.swift in Sources */,
 				C9D8B36B291420EC00B68EFE /* CoordinatorFactory.swift in Sources */,
 				C9B72BE3293764E700FA9AC5 /* RegistrationService.swift in Sources */,
+				C9B72C0D29379A4E00FA9AC5 /* PassportCreatePresenter.swift in Sources */,
 				C93F5F5829137B0500B74065 /* SceneDelegate.swift in Sources */,
 				C932E9A829169FE7008D7057 /* AuthChoicePresenter.swift in Sources */,
 				C932E9AE2916A04C008D7057 /* AuthChoiceDataFlow.swift in Sources */,
@@ -1023,6 +1177,8 @@
 				8990A16515CAF17662370B37 /* AuthBySMSCodeProvider.swift in Sources */,
 				3522ECC6B6293D9AA0186E15 /* AuthBySMSCodeDataStore.swift in Sources */,
 				E963050B04E6EB2BCB4061F6 /* AuthBySMSCodeService.swift in Sources */,
+				C9B72C1129379A4E00FA9AC5 /* PassportCreateBuilder.swift in Sources */,
+				C9B72C0A29379A4E00FA9AC5 /* PassportCreateDataFlow.swift in Sources */,
 				068D82DBBE745D23C1902F5C /* AuthBySMSCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

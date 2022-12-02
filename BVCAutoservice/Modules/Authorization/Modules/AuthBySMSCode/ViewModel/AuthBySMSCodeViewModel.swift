@@ -7,10 +7,14 @@
 
 import Foundation
 
+protocol AuthBySMSCodeTypeViewModel {
+    var phoneNumber: String? { get set }
+}
+
 struct AuthBySMSCodeViewModel {
     let isEnabled: Bool
 }
 
-struct AuthBySMSCodeNavigationType {
-    
+enum AuthBySMSCodeNavigationType {
+    case openPassportCreate
 }

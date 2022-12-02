@@ -28,4 +28,5 @@ extension CGFloat {
     static let spacing72Pt: CGFloat = 72.0
     static let spacing80Pt: CGFloat = 80.0
     static let spacing96Pt: CGFloat = 96.0
+    static let spacing120Pt: CGFloat = 120.0
 }

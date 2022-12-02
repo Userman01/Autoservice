@@ -13,6 +13,12 @@ protocol RegistrationPresentationLogic {
     
     /// Показ установки состояния кнопки
     func presentSetButtonState(response: Registration.SetButtonState.Response)
+    
+    /// Показ продолжения
+    func presentSubmit(responce: Registration.Submit.Response)
+    
+    /// Показ ошибки
+    func presentError(responce: Registration.Error.Response)
 }
 
 final class RegistrationPresenter: RegistrationPresentationLogic {
@@ -28,5 +34,16 @@ final class RegistrationPresenter: RegistrationPresentationLogic {
     // MARK: Показ установки состояния кнопки
     func presentSetButtonState(response: Registration.SetButtonState.Response) {
         viewController?.displaySetButtonState(viewModel: Registration.SetButtonState.ViewModel(isEnabledButton: response.isEnabledButton))
+    }
+    
+    // MARK: Показ продолжения
+    func presentSubmit(responce: Registration.Submit.Response) {
+        let viewModel = Registration.Submit.ViewModel(viewModel: RegistrationBySMSCodeViewModel(phoneNumber: responce.phoneNumber))
+        viewController?.displaySubmit(viewModel: viewModel)
+    }
+    
+    // MARK: Показ ошибки
+    func presentError(responce: Registration.Error.Response) {
+        viewController?.displayError(viewModel: Registration.Error.ViewModel(errorMessage: responce.errorMessage))
     }
 }

@@ -34,6 +34,7 @@ final class ApplicationCoordinator: BaseCoordinator {
         let authorizationCoordinator = coordinatorFactory.makeAuthorizationCoordinator(router: router) { cmd in
             //
         }
+        addDependency(authorizationCoordinator)
         authorizationCoordinator.start()
     }
 }

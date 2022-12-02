@@ -12,6 +12,7 @@
 "common.next" = "Далее";
 "common.registration" = "Регистрация";
 "common.error-message" = "Произошла ошибка";
+"common.OK" = "OK";
 
 // MARK: Авторизация выборка
 "auth-choice.button-user.title" = "Ищу Автосервис";
@@ -23,4 +24,10 @@
 "registration.enter-sms-code.title" = "Введите код из смс";
 
 // MARK: SMS регситрация
-"Auth-sms.go" = "Поехали!";
+"auth-sms.go" = "Поехали!";
+
+// MARK: Создание паспорта
+"passport-create.title" = "Подтвердить";
+"passport-create.textfield-label-name" = "Введите Имя";
+"passport-create.textfield-label-passport" = "Придумайте пароль";
+"passport-create.textfield-label-repeate-passport" = "Повторите пароль";

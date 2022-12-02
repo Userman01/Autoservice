@@ -3,7 +3,7 @@
 //
 
 protocol AuthBySMSCodeProviderProtocol {
-
+    func fetchResultSendPhoneNumber(SMSCode: String?, phoneNumber: String?, completion: @escaping (RequestResult<AuthBySMSCodeModel>) -> Void)
 }
 
 struct AuthBySMSCodeProvider: AuthBySMSCodeProviderProtocol {
@@ -15,4 +15,8 @@ struct AuthBySMSCodeProvider: AuthBySMSCodeProviderProtocol {
         self.service = service
     }
 
+    // MARK: Отправка СМС кода
+    func fetchResultSendPhoneNumber(SMSCode: String?, phoneNumber: String?, completion: @escaping (RequestResult<AuthBySMSCodeModel>) -> Void) {
+        service.fetchResultSendPhoneNumber(SMSCode: SMSCode, phoneNumber: phoneNumber, completion: completion)
+    }
 }

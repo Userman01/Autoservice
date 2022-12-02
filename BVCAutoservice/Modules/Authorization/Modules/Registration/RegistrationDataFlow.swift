@@ -49,9 +49,25 @@ enum Registration {
         }
 
         struct Response {
+            let phoneNumber: String?
         }
 
         struct ViewModel {
+            let viewModel: RegistrationBySMSCodeViewModel
+        }
+    }
+    
+    // MARK: Ошибка
+    enum Error {
+        struct Request {
+        }
+
+        struct Response {
+            let errorMessage: String
+        }
+
+        struct ViewModel {
+            let errorMessage: String
         }
     }
 }

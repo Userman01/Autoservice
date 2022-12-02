@@ -11,11 +11,17 @@ protocol AuthBySMSCodeDisplayLogic: AnyObject {
     
     /// Отображение установки состояния кнопки
     func displaySetButtonState(viewModel: AuthBySMSCode.SetButtonState.ViewModel)
+    
+    /// Показ ошибки
+    func displayError(viewModel: AuthBySMSCode.Error.ViewModel)
+    
+    /// Показ продолжения
+    func displaySubmit(viewModel: AuthBySMSCode.Submit.ViewModel)
 }
 
 protocol AuthBySMSCodeViewControllerDelegate: AnyObject {
-    /// Установка значения номера телефона
-    func setPhoneNumber(value: String)
+    /// Установка значения SMS кода
+    func setSMSCode(value: String)
     
     /// Продолжить
     func submit()
@@ -32,10 +38,12 @@ final class AuthBySMSCodeViewController: UIViewController {
     private lazy var customView = self.view as? AuthBySMSCodeView
 
     private let out: AuthBySMSCodeOut
+    private var viewModel: AuthBySMSCodeTypeViewModel?
     
-    init(interactor: AuthBySMSCodeBusinessLogic, out: @escaping AuthBySMSCodeOut) {
+    init(interactor: AuthBySMSCodeBusinessLogic, viewModel: AuthBySMSCodeTypeViewModel?, out: @escaping AuthBySMSCodeOut) {
         self.interactor = interactor
         self.out = out
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -51,7 +59,7 @@ final class AuthBySMSCodeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getScreen()
+        getScreen(phoneNumber: viewModel?.phoneNumber)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,8 +67,8 @@ final class AuthBySMSCodeViewController: UIViewController {
         setNavigationBarStyle(.primary)
     }
 
-    private func getScreen() {
-        interactor.getScreen(request: AuthBySMSCode.GetScreens.Request())
+    private func getScreen(phoneNumber: String?) {
+        interactor.getScreen(request: AuthBySMSCode.GetScreens.Request(phoneNumber: phoneNumber))
     }
 }
 
@@ -75,17 +83,30 @@ extension AuthBySMSCodeViewController: AuthBySMSCodeDisplayLogic {
     func displaySetButtonState(viewModel: AuthBySMSCode.SetButtonState.ViewModel) {
         customView?.setButtonState(isEnabled: viewModel.isEnabledButton)
     }
+    
+    // MARK: Показ ошибки
+    func displayError(viewModel: AuthBySMSCode.Error.ViewModel) {
+        stopFullScreenAnimatingIndicator()
+        alert(message: viewModel.errorMessage)
+    }
+    
+    // MARK: Показ продолжения
+    func displaySubmit(viewModel: AuthBySMSCode.Submit.ViewModel) {
+        stopFullScreenAnimatingIndicator()
+        out(.open(.openPassportCreate))
+    }
 }
 
 extension AuthBySMSCodeViewController: AuthBySMSCodeViewControllerDelegate {
     
-    // MARK: Установка значения номера телефона
-    func setPhoneNumber(value: String) {
-        interactor.setPhoneNumberValue(request: AuthBySMSCode.SetPhoneNumberValue.Request(value: value))
+    // MARK: Установка значения SMS кода
+    func setSMSCode(value: String) {
+        interactor.setSMSCodeValue(request: AuthBySMSCode.SetPhoneNumberValue.Request(value: value))
     }
     
     // MARK: Продолжить
     func submit() {
+        startFullScreenAnimatingIndicator()
         interactor.submit(request: AuthBySMSCode.Submit.Request())
     }
 }

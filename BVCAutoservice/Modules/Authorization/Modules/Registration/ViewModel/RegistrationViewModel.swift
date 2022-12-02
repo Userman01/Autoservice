@@ -12,4 +12,9 @@ struct RegistrationViewModel {
 }
 
 enum RegistrationNavigationType {
+    case authBySMSCode(viewModel: RegistrationBySMSCodeViewModel)
+}
+
+struct RegistrationBySMSCodeViewModel: AuthBySMSCodeTypeViewModel {
+    var phoneNumber: String?
 }

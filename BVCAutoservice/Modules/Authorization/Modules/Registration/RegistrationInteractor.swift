@@ -46,12 +46,13 @@ final class RegistrationInteractor: RegistrationBusinessLogic {
     
     // MARK: Продолжить
     func submit(request: Registration.Submit.Request) {
-        provider.fetchResultSendPhoneNumber(phoneNumber: phoneNumber) { result in
+        provider.fetchResultSendPhoneNumber(phoneNumber: phoneNumber) { [weak self] result in
+            guard let strongSelf = self else { return }
             switch result {
-            case let .success(model):
-                break
+            case .success:
+                strongSelf.presenter.presentSubmit(responce: Registration.Submit.Response(phoneNumber: self?.phoneNumber))
             case let .failure(error):
-                break
+               strongSelf.presenter.presentError(responce: Registration.Error.Response(errorMessage: error.errorMessage))
             }
         }
     }

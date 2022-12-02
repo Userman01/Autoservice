@@ -9,7 +9,11 @@ protocol AuthorizationRouterProtocol {
     
     func openAuthChoice(out: @escaping AuthChoiceOut)
     
-    func openRegistration(out: @escaping RegistrationOut, userRoleType: UserRoleType)
+    func openRegistration(out: @escaping RegistrationOut)
+    
+    func openAuthBySMSCode(viewModel: AuthBySMSCodeTypeViewModel, out: @escaping AuthBySMSCodeOut)
+    
+    func openPassportCreate(userRole: UserRoleType, phoneNumber: String?, out: @escaping PassportCreateOut)
 }
 
 final class AuthorizationRouter: AuthorizationRouterProtocol {
@@ -26,10 +30,24 @@ final class AuthorizationRouter: AuthorizationRouterProtocol {
         router.push(authChoiceController)
     }
     
-    func openRegistration(out: @escaping RegistrationOut, userRoleType: UserRoleType) {
-        let registration = RegistrationBuilder()
-            .set(userRoleType: userRoleType)
+    func openRegistration(out: @escaping RegistrationOut) {
+        let registrationController = RegistrationBuilder()
             .build(out: out)
-        router.push(registration)
+        router.push(registrationController)
+    }
+    
+    func openAuthBySMSCode(viewModel: AuthBySMSCodeTypeViewModel, out: @escaping AuthBySMSCodeOut) {
+        let authBySMSCodeController = AuthBySMSCodeBuilder()
+            .set(viewModel: viewModel)
+            .build(out: out)
+        router.push(authBySMSCodeController)
+    }
+    
+    func openPassportCreate(userRole: UserRoleType, phoneNumber: String?, out: @escaping PassportCreateOut) {
+        let passportCreate = PassportCreateBuilder()
+            .set(role: userRole)
+            .set(phoneNumber: phoneNumber)
+            .build(out: out)
+        router.push(passportCreate)
     }
 }

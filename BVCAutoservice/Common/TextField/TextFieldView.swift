@@ -80,7 +80,7 @@ class TextFieldView: UIView, TextFieldViewProtocol {
         return label
     }()
     
-    private lazy var textField: UITextField = {
+    lazy var textField: UITextField = {
         let textField = UITextField()
         textField.textColor = ViewMetrics.textFieldColor
         textField.font = .font16Regular
@@ -258,5 +258,9 @@ extension TextFieldView {
 extension TextFieldView {
     func set(keyboardType: UIKeyboardType) {
         self.textField.keyboardType = keyboardType
+    }
+    
+    func set(textContentType: UITextContentType) {
+        self.textField.textContentType = textContentType
     }
 }

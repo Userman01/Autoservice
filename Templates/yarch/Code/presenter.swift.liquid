@@ -1,33 +1,29 @@
 //
 //  {{ module_info.description }}
 //  Created by {{ developer.name }} on {{ date }}.
+//  Copyright (c) {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-import UIKit
-
 protocol {{ module_info.name }}PresentationLogic {
-    func presentSomething(response: {{ module_info.name }}.Something.Response)
+
+    // Показ полей
+    func presentFields(response: {{ module_info.name }}.GetFields.Response)
 }
 
-/// Отвечает за отображение данных модуля {{ module_info.name }}
-class {{ module_info.name }}Presenter: {{ module_info.name }}PresentationLogic {
+final class {{ module_info.name }}Presenter: {{ module_info.name }}PresentationLogic {
+
     weak var viewController: {{ module_info.name }}DisplayLogic?
 
-    // MARK: Do something
-    func presentSomething(response: {{ module_info.name }}.Something.Response) {
-        var viewModel: {{ module_info.name }}.Something.ViewModel
-        
-        switch response.result {
-        case let .failure(error):
-            viewModel = {{ module_info.name }}.Something.ViewModel(state: .error(message: error.localizedDescription))
-        case let .success(result):
-            if result.isEmpty {
-                viewModel = {{ module_info.name }}.Something.ViewModel(state: .emptyResult)
-            } else {
-                viewModel = {{ module_info.name }}.Something.ViewModel(state: .result(result))
-            }
-        }
-        
-        viewController?.displaySomething(viewModel: viewModel)
+    // MARK: Показ полей
+    func presentFields(response: {{ module_info.name }}.GetFields.Response) {
+        let viewModel = getViewModel()
+        viewController?.displayFields(viewModel: {{ module_info.name }}.GetFields.ViewModel(result: viewModel))
+    }
+}
+
+extension {{ module_info.name }}Presenter {
+
+    private func getViewModel() -> {{ module_info.name }}ViewModel {
+        {{ module_info.name }}ViewModel()
     }
 }

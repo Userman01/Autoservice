@@ -18,10 +18,7 @@ struct RegistrationService: RegistrationServiceProtocol {
     
     // MARK: Отправка номера телефона
     func fetchResultSendPhoneNumber(phoneNumber: String?, completion: @escaping (RequestResult<RegistrationModel>) -> Void) {
-        let url = AuthorizationEndpoints.clientRegistrationOfNumber
-        let parameters = [
-            "":""
-        ]
+        let url = AuthorizationEndpoints.clientRegistrationOfNumber + "\(phoneNumber ?? "")"
         apiClient.post(url, model: RegistrationModel.self, completion: completion)
     }
 }

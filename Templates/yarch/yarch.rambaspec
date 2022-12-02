@@ -18,6 +18,9 @@ code_files:
 # Model layer
 - {name: Model/Model.swift, path: Code/Model/model.swift.liquid}
 
+# ViewModel layer
+- {name: ViewModel/ViewModel.swift, path: Code/ViewModel/viewmodel.swift.liquid}
+
 # Provider layer
 - {name: Provider/Provider.swift, path: Code/Provider/provider.swift.liquid}
 - {name: Provider/DataStore.swift, path: Code/Provider/datastore.swift.liquid}

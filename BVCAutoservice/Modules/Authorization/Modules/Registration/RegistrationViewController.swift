@@ -13,9 +13,15 @@ protocol RegistrationDisplayLogic: AnyObject {
     
     /// Отображение установки состояния кнопки
     func displaySetButtonState(viewModel: Registration.SetButtonState.ViewModel)
+    
+    /// Показ продолжения
+    func displaySubmit(viewModel: Registration.Submit.ViewModel)
+    
+    /// Показ ошибки
+    func displayError(viewModel: Registration.Error.ViewModel)
 }
 
-protocol RegistrationViewControllerDelegate: NSObject {
+protocol RegistrationViewControllerDelegate: AnyObject {
     
     /// Установка значения номера телефона
     func setPhoneNumber(value: String)
@@ -36,12 +42,10 @@ final class RegistrationViewController: UIViewController {
     private lazy var customView = self.view as? RegistrationView
     
     private let out: RegistrationOut
-    private let userRoleType: UserRoleType
     
-    init(interactor: RegistrationBusinessLogic, out: @escaping RegistrationOut, userRoleType: UserRoleType) {
+    init(interactor: RegistrationBusinessLogic, out: @escaping RegistrationOut) {
         self.interactor = interactor
         self.out = out
-        self.userRoleType = userRoleType
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -81,6 +85,18 @@ extension RegistrationViewController: RegistrationDisplayLogic {
     func displaySetButtonState(viewModel: Registration.SetButtonState.ViewModel) {
         customView?.setButtonState(isEnabled: viewModel.isEnabledButton)
     }
+    
+    // MARK: Показ продолжения
+    func displaySubmit(viewModel: Registration.Submit.ViewModel) {
+        stopFullScreenAnimatingIndicator()
+        out(.open(.authBySMSCode(viewModel: viewModel.viewModel)))
+    }
+    
+    // MARK: Показ ошибки
+    func displayError(viewModel: Registration.Error.ViewModel) {
+        stopFullScreenAnimatingIndicator()
+        alert(message: viewModel.errorMessage)
+    }
 }
 
 extension RegistrationViewController: RegistrationViewControllerDelegate {
@@ -92,6 +108,7 @@ extension RegistrationViewController: RegistrationViewControllerDelegate {
     
     // MARK: Продолжить
     func submit() {
+        startFullScreenAnimatingIndicator()
         interactor.submit(request: Registration.Submit.Request())
     }
 }

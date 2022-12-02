@@ -6,6 +6,7 @@
 enum AuthBySMSCode {
     enum GetScreens {
         struct Request {
+            let phoneNumber: String?
         }
         
         struct Responce {
@@ -50,6 +51,20 @@ enum AuthBySMSCode {
         }
         
         struct ViewModel {
+        }
+    }
+    
+    // MARK: Ошибка
+    enum Error {
+        struct Request {
+        }
+
+        struct Response {
+            let errorMessage: String
+        }
+
+        struct ViewModel {
+            let errorMessage: String
         }
     }
 }

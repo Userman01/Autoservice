@@ -11,6 +11,12 @@ protocol AuthBySMSCodePresentationLogic {
     
     /// Показ установки состояния кнопки
     func presentSetButtonState(response: AuthBySMSCode.SetButtonState.Response)
+    
+    /// Показ ошибки
+    func presentError(responce: AuthBySMSCode.Error.Response)
+    
+    /// Показ продолжения
+    func presentSubmit(responce: AuthBySMSCode.Submit.Response)
 }
 
 final class AuthBySMSCodePresenter: AuthBySMSCodePresentationLogic {
@@ -27,5 +33,15 @@ final class AuthBySMSCodePresenter: AuthBySMSCodePresentationLogic {
     func presentSetButtonState(response: AuthBySMSCode.SetButtonState.Response) {
         viewController?.displaySetButtonState(viewModel: AuthBySMSCode.SetButtonState.ViewModel(isEnabledButton: response.isEnabledButton))
     }
+    
+    // MARK: Показ ошибки
+    func presentError(responce: AuthBySMSCode.Error.Response) {
+        viewController?.displayError(viewModel: AuthBySMSCode.Error.ViewModel(errorMessage: responce.errorMessage))
+    }
+    
+    // MARK: Показ продолжения
+    func presentSubmit(responce: AuthBySMSCode.Submit.Response) {
+        let viewModel = AuthBySMSCode.Submit.ViewModel()
+        viewController?.displaySubmit(viewModel: viewModel)
+    }
 }
-

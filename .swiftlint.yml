@@ -4,6 +4,7 @@ disabled_rules:
 line_length: 200
 excluded:
   - Pods
+  - Templates
   - AebOnlineAppIOS/Resources/Generated/R.generated.swift
   - AebOnlineAppIOSTests
   - AebOnlineAppIOSUITests

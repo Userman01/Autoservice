@@ -65,15 +65,15 @@ class AuthBySMSCodeView: UIView {
         }
         
         textField.snp.makeConstraints { make in
+            make.top.equalTo(titlelabel.snp.bottom).offset(CGFloat.spacing120Pt)
             make.left.equalToSuperview().offset(CGFloat.spacing16Pt)
             make.right.equalToSuperview().offset(-CGFloat.spacing16Pt)
-            make.bottom.equalTo(button.snp.top).offset(-CGFloat.spacing96Pt)
         }
         
         button.snp.makeConstraints { make in
+            make.top.equalTo(textField.snp.bottom).offset(CGFloat.spacing80Pt)
             make.left.equalToSuperview().offset(CGFloat.spacing16Pt)
             make.right.equalToSuperview().offset(-CGFloat.spacing16Pt)
-            make.center.equalTo(snp.center)
         }
     }
     
@@ -86,10 +86,10 @@ class AuthBySMSCodeView: UIView {
     }
     
     private func didEditText(_ text: String) {
-        delegate?.setPhoneNumber(value: text)
+        delegate?.setSMSCode(value: text)
     }
     
     @objc private func submit() {
-        
+        delegate?.submit()
     }
 }

@@ -1,21 +1,30 @@
 //
 //  {{ module_info.description }}
+//
 //  Created by {{ developer.name }} on {{ date }}.
+//  Copyright (c) {{ year }} {{ developer.company }}. All rights reserved.
 //
 
 import UIKit
 
-protocol {{ module_info.name }}DisplayLogic: class {
-    func displaySomething(viewModel: {{ module_info.name }}.Something.ViewModel)
+protocol {{ module_info.name }}DisplayLogic: AnyObject {
+
+    // Отображение полей
+    func displayFields(viewModel: {{ module_info.name }}.GetFields.ViewModel)
 }
 
-class {{ module_info.name }}ViewController: UIViewController {
-    let interactor: {{ module_info.name }}BusinessLogic
-    var state: {{ module_info.name }}.ViewControllerState
+protocol {{ module_info.name }}ViewControllerDelegate: AnyObject {
 
-    init(interactor: {{ module_info.name }}BusinessLogic, initialState: {{ module_info.name }}.ViewControllerState = .loading) {
+}
+
+final class {{ module_info.name }}ViewController: UIViewController {
+
+    private let interactor: {{ module_info.name }}BusinessLogic
+
+    private lazy var customView = view as? {{ module_info.name }}View
+
+    init(interactor: {{ module_info.name }}BusinessLogic) {
         self.interactor = interactor
-        self.state = initialState
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -25,39 +34,33 @@ class {{ module_info.name }}ViewController: UIViewController {
 
     // MARK: View lifecycle
     override func loadView() {
-        let view = {{ module_info.name }}View(frame: UIScreen.main.bounds)
-        self.view = view
-        // make additional setup of view or save references to subviews
+        view = {{ module_info.name }}View(frame: UIScreen.main.bounds, delegate: self)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        getFields()
     }
 
-    // MARK: Do something
-    func doSomething() {
-        let request = {{ module_info.name }}.Something.Request()
-        interactor.doSomething(request: request)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationBarStyle(.light)
+    }
+
+    // MARK: Получение полей
+    private func getFields() {
+        interactor.getFields(request: {{ module_info.name }}.GetFields.Request())
     }
 }
 
 extension {{ module_info.name }}ViewController: {{ module_info.name }}DisplayLogic {
-    func displaySomething(viewModel: {{ module_info.name }}.Something.ViewModel) {
-        display(newState: viewModel.state)
-    }
 
-    func display(newState: {{ module_info.name }}.ViewControllerState) {
-        state = newState
-        switch state {
-        case .loading:
-            print("loading...")
-        case let .error(message):
-            print("error \(message)")
-        case let .result(items):
-            print("result: \(items)")
-        case .emptyResult:
-            print("empty result")
-        }
+    // MARK: Отображение полей
+    func displayFields(viewModel: {{ module_info.name }}.GetFields.ViewModel) {
+        customView?.configure(with: viewModel.result)
     }
+}
+
+extension {{ module_info.name }}ViewController: {{ module_info.name }}ViewControllerDelegate {
+
 }

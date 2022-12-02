@@ -8,4 +8,5 @@
 import Foundation
 
 struct RegistrationModel: Decodable {
+    let message: Bool
 }

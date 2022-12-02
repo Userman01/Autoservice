@@ -23,18 +23,36 @@ final class AuthorizationCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        openAuthChoice()
+       openAuthChoice()
     }
     
     private func openAuthChoice() {
-        authorizationRouter.openAuthChoice { cmd in
+        authorizationRouter.openAuthChoice { [weak self] cmd in
             switch cmd {
-            case let .open(roleType):
-                self.authorizationRouter.openRegistration(out: { cmd in
-                    print(cmd)
-                }, userRoleType: roleType)
+            case let .open(userRoleType):
+                self?.openRegistration(userRole: userRoleType)
             case .openAuth:
                 print("auth")
+            }
+        }
+    }
+    
+    private func openRegistration(userRole: UserRoleType) {
+        authorizationRouter.openRegistration { [weak self] cmd in
+            switch cmd {
+            case let .open(.authBySMSCode(viewModel)):
+                self?.openAuthBySMSCode(viewModel: viewModel, userRole: userRole)
+            }
+        }
+    }
+    
+    private func openAuthBySMSCode(viewModel: AuthBySMSCodeTypeViewModel, userRole: UserRoleType) {
+        authorizationRouter.openAuthBySMSCode(viewModel: viewModel) { [weak self] cmd in
+            switch cmd {
+            case .open:
+                self?.authorizationRouter.openPassportCreate(userRole: userRole, phoneNumber: viewModel.phoneNumber, out: { cmd in
+                    print(cmd)
+                })
             }
         }
     }
