@@ -3,5 +3,6 @@
 //
 
 struct AuthBySMSCodeModel: Decodable {
-    let message: Bool
+    let status: String?
+    let expireDate: String?
 }

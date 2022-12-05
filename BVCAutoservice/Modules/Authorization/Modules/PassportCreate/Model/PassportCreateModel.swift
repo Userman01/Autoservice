@@ -8,4 +8,5 @@
 import Foundation
 
 struct PassportCreateModel: Decodable {
+    let message: Bool?
 }

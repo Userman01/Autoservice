@@ -80,4 +80,18 @@ enum PassportCreate {
         struct ViewModel {
         }
     }
+    
+    // MARK: Ошибка
+    enum Error {
+        struct Request {
+        }
+
+        struct Response {
+            let errorMessage: String
+        }
+
+        struct ViewModel {
+            let errorMessage: String
+        }
+    }
 }

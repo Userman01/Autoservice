@@ -18,4 +18,5 @@ struct PassportCreateViewModel {
 }
 
 enum PassportCreateNavigationType {
+    case openMain
 }

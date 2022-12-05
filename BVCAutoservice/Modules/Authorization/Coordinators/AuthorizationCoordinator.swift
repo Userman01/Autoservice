@@ -9,7 +9,7 @@ import KeychainSwift
 
 typealias AuthorizationCoordinatorOut = (AuthorizationCoordinatorOutCmd) -> Void
 enum AuthorizationCoordinatorOutCmd {
-    case openMain
+    case openPrimary
 }
 
 final class AuthorizationCoordinator: BaseCoordinator {
@@ -50,8 +50,11 @@ final class AuthorizationCoordinator: BaseCoordinator {
         authorizationRouter.openAuthBySMSCode(viewModel: viewModel) { [weak self] cmd in
             switch cmd {
             case .open:
-                self?.authorizationRouter.openPassportCreate(userRole: userRole, phoneNumber: viewModel.phoneNumber, out: { cmd in
-                    print(cmd)
+                self?.authorizationRouter.openPassportCreate(userRole: userRole, phoneNumber: viewModel.phoneNumber, out: { [weak self] cmd in
+                    switch cmd {
+                    case .open(.openMain):
+                        self?.out(.openPrimary)
+                    }
                 })
             }
         }

@@ -69,12 +69,12 @@ final class PassportCreateInteractor: PassportCreateBusinessLogic {
     
     // MARK: Продолжить
     func submit(request: PassportCreate.Submit.Request) {
-        provider.fetchResultSendUserInfo(userName: name, phoneNumber: phoneNumber, role: userRole.rawValue, password: newPassport) { result in
+        provider.fetchResultSendUserInfo(userName: name, phoneNumber: phoneNumber, role: userRole.rawValue, password: newPassport) { [weak self] result in
             switch result {
             case .success:
-                print("success")
+                self?.presenter.presentSubmit(responce: PassportCreate.Submit.Response())
             case let .failure(message):
-                print(message)
+                self?.presenter.presentError(responce: PassportCreate.Error.Response(errorMessage: message.errorMessage))
             }
         }
     }

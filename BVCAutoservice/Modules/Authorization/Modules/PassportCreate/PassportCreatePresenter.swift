@@ -13,6 +13,12 @@ protocol PassportCreatePresentationLogic {
     
     /// Показ установки состояния кнопки
     func presentSetButtonState(response: PassportCreate.SetButtonState.Response)
+    
+    /// Показ ошибки
+    func presentError(responce: PassportCreate.Error.Response)
+    
+    /// Показ продолжения
+    func presentSubmit(responce: PassportCreate.Submit.Response)
 }
 
 final class PassportCreatePresenter: PassportCreatePresentationLogic {
@@ -28,5 +34,16 @@ final class PassportCreatePresenter: PassportCreatePresentationLogic {
     // MARK: Показ установки состояния кнопки
     func presentSetButtonState(response: PassportCreate.SetButtonState.Response) {
         viewController?.displaySetButtonState(viewModel: PassportCreate.SetButtonState.ViewModel(isEnabledButton: response.isEnabledButton))
+    }
+    
+    // MARK: Показ ошибки
+    func presentError(responce: PassportCreate.Error.Response) {
+        viewController?.displayError(viewModel: PassportCreate.Error.ViewModel(errorMessage: responce.errorMessage))
+    }
+    
+    // MARK: Показ продолжения
+    func presentSubmit(responce: PassportCreate.Submit.Response) {
+        let viewModel = PassportCreate.Submit.ViewModel()
+        viewController?.displaySubmit(viewModel: viewModel)
     }
 }

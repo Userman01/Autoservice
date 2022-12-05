@@ -13,6 +13,12 @@ protocol PassportCreateDisplayLogic: AnyObject {
     
     /// Отображение установки состояния кнопки
     func displaySetButtonState(viewModel: PassportCreate.SetButtonState.ViewModel)
+    
+    /// Показ продолжения
+    func displaySubmit(viewModel: PassportCreate.Submit.ViewModel)
+    
+    /// Показ ошибки
+    func displayError(viewModel: PassportCreate.Error.ViewModel)
 }
 
 protocol PassportCreateViewControllerDelegate: NSObject {
@@ -89,6 +95,18 @@ extension PassportCreateViewController: PassportCreateDisplayLogic {
     func displaySetButtonState(viewModel: PassportCreate.SetButtonState.ViewModel) {
         customView?.setButtonState(isEnabled: viewModel.isEnabledButton)
     }
+    
+    // MARK: Показ ошибки
+    func displayError(viewModel: PassportCreate.Error.ViewModel) {
+        stopFullScreenAnimatingIndicator()
+        alert(message: viewModel.errorMessage)
+    }
+    
+    // MARK: Показ продолжения
+    func displaySubmit(viewModel: PassportCreate.Submit.ViewModel) {
+        stopFullScreenAnimatingIndicator()
+        out(.open(.openMain))
+    }
 }
 
 extension PassportCreateViewController: PassportCreateViewControllerDelegate {
@@ -110,6 +128,7 @@ extension PassportCreateViewController: PassportCreateViewControllerDelegate {
     
     // MARK: Продолжить
     func submit() {
+        startFullScreenAnimatingIndicator()
         interactor.submit(request: PassportCreate.Submit.Request())
     }
 }

@@ -76,7 +76,6 @@
 		C9B72C1129379A4E00FA9AC5 /* PassportCreateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C0729379A4E00FA9AC5 /* PassportCreateBuilder.swift */; };
 		C9B72C132937ADFF00FA9AC5 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C122937ADFF00FA9AC5 /* AlertController.swift */; };
 		C9B72C162937B6FD00FA9AC5 /* AnimationPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C152937B6FD00FA9AC5 /* AnimationPaths.swift */; };
-		C9B72C182937B72800FA9AC5 /* preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = C9B72C172937B72700FA9AC5 /* preloader.json */; };
 		C9B72C1A2937B93700FA9AC5 /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C192937B93700FA9AC5 /* LoadingAnimation.swift */; };
 		C9B72C1E2937BA4900FA9AC5 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C1D2937BA4900FA9AC5 /* LoadingIndicatorView.swift */; };
 		C9B72C202937BD4700FA9AC5 /* AnimationIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C1F2937BD4700FA9AC5 /* AnimationIndicator.swift */; };
@@ -85,6 +84,9 @@
 		C9B72C272938DDC400FA9AC5 /* BVCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C262938DDC400FA9AC5 /* BVCError.swift */; };
 		C9B72C292939FBD200FA9AC5 /* PassportCreateIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C282939FBD200FA9AC5 /* PassportCreateIndicatorView.swift */; };
 		C9B72C2D293A4A8A00FA9AC5 /* PassportTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C2C293A4A8A00FA9AC5 /* PassportTextFieldView.swift */; };
+		C9C6965A293DA3EB000CB92F /* preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = C9C69659293DA3EA000CB92F /* preloader.json */; };
+		C9C6965F293DA858000CB92F /* PrimaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C6965E293DA858000CB92F /* PrimaryCoordinator.swift */; };
+		C9C69661293DA867000CB92F /* PrimaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C69660293DA867000CB92F /* PrimaryRouter.swift */; };
 		C9D8B35329138DD400B68EFE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B35229138DD400B68EFE /* R.generated.swift */; };
 		C9D8B3582913BED700B68EFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9D8B35A2913BED700B68EFE /* Localizable.strings */; };
 		C9D8B3602913C19900B68EFE /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B35F2913C19900B68EFE /* ApplicationCoordinator.swift */; };
@@ -199,7 +201,6 @@
 		C9B72C0729379A4E00FA9AC5 /* PassportCreateBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportCreateBuilder.swift; sourceTree = "<group>"; };
 		C9B72C122937ADFF00FA9AC5 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		C9B72C152937B6FD00FA9AC5 /* AnimationPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPaths.swift; sourceTree = "<group>"; };
-		C9B72C172937B72700FA9AC5 /* preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = preloader.json; sourceTree = "<group>"; };
 		C9B72C192937B93700FA9AC5 /* LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
 		C9B72C1D2937BA4900FA9AC5 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		C9B72C1F2937BD4700FA9AC5 /* AnimationIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationIndicator.swift; sourceTree = "<group>"; };
@@ -208,6 +209,9 @@
 		C9B72C262938DDC400FA9AC5 /* BVCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVCError.swift; sourceTree = "<group>"; };
 		C9B72C282939FBD200FA9AC5 /* PassportCreateIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportCreateIndicatorView.swift; sourceTree = "<group>"; };
 		C9B72C2C293A4A8A00FA9AC5 /* PassportTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportTextFieldView.swift; sourceTree = "<group>"; };
+		C9C69659293DA3EA000CB92F /* preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = preloader.json; sourceTree = "<group>"; };
+		C9C6965E293DA858000CB92F /* PrimaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryCoordinator.swift; sourceTree = "<group>"; };
+		C9C69660293DA867000CB92F /* PrimaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryRouter.swift; sourceTree = "<group>"; };
 		C9D8B35229138DD400B68EFE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C9D8B35B2913BEE700B68EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9D8B35F2913C19900B68EFE /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -292,6 +296,7 @@
 		C932E9A0291696A7008D7057 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C9C6965B293DA81A000CB92F /* Primary */,
 				C932E9A1291696C7008D7057 /* Authorization */,
 			);
 			path = Modules;
@@ -709,7 +714,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B72C152937B6FD00FA9AC5 /* AnimationPaths.swift */,
-				C9B72C172937B72700FA9AC5 /* preloader.json */,
+				C9C69659293DA3EA000CB92F /* preloader.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -738,6 +743,31 @@
 				C9B72C222937BE3600FA9AC5 /* LoadingBackgroundView.swift */,
 			);
 			path = BackgroundView;
+			sourceTree = "<group>";
+		};
+		C9C6965B293DA81A000CB92F /* Primary */ = {
+			isa = PBXGroup;
+			children = (
+				C9C6965C293DA827000CB92F /* Coordinators */,
+				C9C6965D293DA833000CB92F /* Modules */,
+			);
+			path = Primary;
+			sourceTree = "<group>";
+		};
+		C9C6965C293DA827000CB92F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C9C6965E293DA858000CB92F /* PrimaryCoordinator.swift */,
+				C9C69660293DA867000CB92F /* PrimaryRouter.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C9C6965D293DA833000CB92F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		C9D8B35129138D9500B68EFE /* Resources */ = {
@@ -932,7 +962,7 @@
 			files = (
 				C9A8AA7F292BF0710065A736 /* LaunchScreen.storyboard in Resources */,
 				C9A8AA8A292D16A00065A736 /* Colors.xcassets in Resources */,
-				C9B72C182937B72800FA9AC5 /* preloader.json in Resources */,
+				C9C6965A293DA3EB000CB92F /* preloader.json in Resources */,
 				C9938B21292BEF1000B43B05 /* Images.xcassets in Resources */,
 				C9D8B3582913BED700B68EFE /* Localizable.strings in Resources */,
 			);
@@ -1109,6 +1139,7 @@
 				C9AD222A292FC9190039C187 /* RegistrationModel.swift in Sources */,
 				C9B72C202937BD4700FA9AC5 /* AnimationIndicator.swift in Sources */,
 				C9B72BE7293766C700FA9AC5 /* APIClient.swift in Sources */,
+				C9C69661293DA867000CB92F /* PrimaryRouter.swift in Sources */,
 				C9A8AA97292D1FFB0065A736 /* UITableView.swift in Sources */,
 				C9AD222D292FD3030039C187 /* TextFieldView.swift in Sources */,
 				C9D8B3602913C19900B68EFE /* ApplicationCoordinator.swift in Sources */,
@@ -1174,6 +1205,7 @@
 				A80008B40C908A0AD7E03822 /* AuthBySMSCodePresenter.swift in Sources */,
 				C1CD9DBAA8D370FA0AB99000 /* AuthBySMSCodeDataFlow.swift in Sources */,
 				CC5ED7F5326D054B633C1072 /* AuthBySMSCodeModel.swift in Sources */,
+				C9C6965F293DA858000CB92F /* PrimaryCoordinator.swift in Sources */,
 				8990A16515CAF17662370B37 /* AuthBySMSCodeProvider.swift in Sources */,
 				3522ECC6B6293D9AA0186E15 /* AuthBySMSCodeDataStore.swift in Sources */,
 				E963050B04E6EB2BCB4061F6 /* AuthBySMSCodeService.swift in Sources */,
