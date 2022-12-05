@@ -32,7 +32,8 @@ final class AuthChoiceView: UIView {
     private lazy var userButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(R.string.localizable.authChoiceButtonUserTitle(), for: .normal)
-        button.titleLabel?.font = .font20Regular
+        button.titleLabel?.font = .font16RegularNeuropol
+        button.titleLabel?.adjustsFontForContentSizeCategory = true
         button.setTitleColor(ViewMetrics.titleColorButton, for: .normal)
         button.addTarget(self, action: #selector(userButtonTupped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +44,8 @@ final class AuthChoiceView: UIView {
         let button = UIButton(type: .system)
         button.setTitle(R.string.localizable.authChoiceButtonServiceTitle(), for: .normal)
         button.setTitleColor(ViewMetrics.titleColorButton, for: .normal)
-        button.titleLabel?.font = .font20Regular
+        button.titleLabel?.font = .font16RegularNeuropol
+        button.titleLabel?.adjustsFontForContentSizeCategory = true
         button.addTarget(self, action: #selector(serviceButtonTupped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -52,7 +54,8 @@ final class AuthChoiceView: UIView {
     private lazy var authButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(R.string.localizable.commonEnter(), for: .normal)
-        button.titleLabel?.font = .font16Regular
+        button.titleLabel?.font = .font14RegularNeuropol
+        button.titleLabel?.adjustsFontForContentSizeCategory = true
         button.setTitleColor(ViewMetrics.titleColorAuthButton, for: .normal)
         button.backgroundColor = ViewMetrics.backgroundColorAuthButton
         button.addTarget(self, action: #selector(authButtonTupped), for: .touchUpInside)
@@ -79,6 +82,7 @@ final class AuthChoiceView: UIView {
         let label = UILabel()
         label.text = R.string.localizable.authChoiceLabelAuth()
         label.textColor = ViewMetrics.titleColorLabelAuth
+        label.font = .font14Regular
         label.textAlignment = .center
         return label
     }()

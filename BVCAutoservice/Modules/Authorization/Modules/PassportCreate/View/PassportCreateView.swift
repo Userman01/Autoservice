@@ -24,7 +24,8 @@ final class PassportCreateView: UIView {
         let label = UILabel()
         label.backgroundColor = ViewMetrics.backgroundColorLargeTitle
         label.text = R.string.localizable.commonRegistration()
-        label.font = .font20Regular
+        label.font = .font14RegularNeuropol
+        label.adjustsFontForContentSizeCategory = true
         label.textColor = ViewMetrics.textColor
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -34,6 +35,7 @@ final class PassportCreateView: UIView {
     private lazy var nameTextField: TextFieldView = {
         let textField = TextFieldView(label: R.string.localizable.passportCreateTextfieldLabelName())
         textField.set(keyboardType: .default)
+        textField.set(textAlignment: .center)
         textField.didEditText = { [weak self] text in
             self?.didEditNameText(text)
         }
@@ -42,6 +44,7 @@ final class PassportCreateView: UIView {
     
     private lazy var passportTextField: PassportTextFieldView = {
         let textField = PassportTextFieldView(label: R.string.localizable.passportCreateTextfieldLabelPassport())
+        textField.set(textAlignment: .center)
         textField.didEditText = { [weak self] text in
             self?.didEditNewPassportText(text)
         }
@@ -50,6 +53,7 @@ final class PassportCreateView: UIView {
     
     private lazy var passportRepeateTextField: PassportTextFieldView = {
         let textField = PassportTextFieldView(label: R.string.localizable.passportCreateTextfieldLabelRepeatePassport())
+        textField.set(textAlignment: .center)
         textField.didEditText = { [weak self] text in
             self?.didEditRepeatePassportText(text)
         }

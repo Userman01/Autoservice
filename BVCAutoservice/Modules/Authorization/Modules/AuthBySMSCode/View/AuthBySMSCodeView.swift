@@ -18,7 +18,8 @@ class AuthBySMSCodeView: UIView {
         let label = UILabel()
         label.backgroundColor = ViewMetrics.backgroundColorLargeTitle
         label.text = R.string.localizable.commonRegistration()
-        label.font = .font20Regular
+        label.font = .font14RegularNeuropol
+        label.adjustsFontForContentSizeCategory = true
         label.textColor = ViewMetrics.textColor
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -28,6 +29,8 @@ class AuthBySMSCodeView: UIView {
     lazy private var textField: TextFieldView = {
         let textField = TextFieldView(label: R.string.localizable.registrationEnterSmsCodeTitle())
         textField.set(keyboardType: .numberPad)
+        textField.set(textAlignment: .center)
+        textField.textField.textContentType = .oneTimeCode
         textField.didEditText = { [weak self] text in
             self?.didEditText(text)
         }

@@ -245,7 +245,7 @@ extension TextFieldView: UITextFieldDelegate {
             textField.text = formatterText
             textFieldEditingChanged(textField)
         }
-        return true
+        return false
     }
 }
 
@@ -262,5 +262,13 @@ extension TextFieldView {
     
     func set(textContentType: UITextContentType) {
         self.textField.textContentType = textContentType
+    }
+    
+    func set(formatter: Formatter) {
+        self.formatter = formatter
+    }
+    
+    func set(textAlignment: NSTextAlignment) {
+        self.textField.textAlignment = textAlignment
     }
 }

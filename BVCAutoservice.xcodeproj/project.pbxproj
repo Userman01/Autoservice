@@ -96,6 +96,10 @@
 		C9C6965A293DA3EB000CB92F /* preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = C9C69659293DA3EA000CB92F /* preloader.json */; };
 		C9C6965F293DA858000CB92F /* PrimaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C6965E293DA858000CB92F /* PrimaryCoordinator.swift */; };
 		C9C69661293DA867000CB92F /* PrimaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C69660293DA867000CB92F /* PrimaryRouter.swift */; };
+		C9C69664293E048F000CB92F /* PhoneFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C69663293E048F000CB92F /* PhoneFormatter.swift */; };
+		C9C69667293E1610000CB92F /* ContactWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C69666293E1610000CB92F /* ContactWorker.swift */; };
+		C9C6966A293E1833000CB92F /* MaskedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C69669293E1833000CB92F /* MaskedString.swift */; };
+		C9C69672293E2E5C000CB92F /* neuropol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9C69671293E2E5C000CB92F /* neuropol.ttf */; };
 		C9D8B35329138DD400B68EFE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B35229138DD400B68EFE /* R.generated.swift */; };
 		C9D8B3582913BED700B68EFE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9D8B35A2913BED700B68EFE /* Localizable.strings */; };
 		C9D8B3602913C19900B68EFE /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B35F2913C19900B68EFE /* ApplicationCoordinator.swift */; };
@@ -234,6 +238,10 @@
 		C9C69659293DA3EA000CB92F /* preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = preloader.json; sourceTree = "<group>"; };
 		C9C6965E293DA858000CB92F /* PrimaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryCoordinator.swift; sourceTree = "<group>"; };
 		C9C69660293DA867000CB92F /* PrimaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryRouter.swift; sourceTree = "<group>"; };
+		C9C69663293E048F000CB92F /* PhoneFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneFormatter.swift; sourceTree = "<group>"; };
+		C9C69666293E1610000CB92F /* ContactWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWorker.swift; sourceTree = "<group>"; };
+		C9C69669293E1833000CB92F /* MaskedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedString.swift; sourceTree = "<group>"; };
+		C9C69671293E2E5C000CB92F /* neuropol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = neuropol.ttf; path = ../../../../../Downloads/neuropol_x/neuropol.ttf; sourceTree = "<group>"; };
 		C9D8B35229138DD400B68EFE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C9D8B35B2913BEE700B68EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9D8B35F2913C19900B68EFE /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -483,6 +491,7 @@
 		C9A8AA82292D16370065A736 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C9C69668293E1820000CB92F /* String */,
 				C9B72BD42934E62600FA9AC5 /* UIView */,
 				C9AD21FE292FB3860039C187 /* UIFont */,
 				C9A8AAA5292F94150065A736 /* CGFloat */,
@@ -827,9 +836,42 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		C9C69662293E0461000CB92F /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				C9C69663293E048F000CB92F /* PhoneFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		C9C69665293E15D4000CB92F /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				C9C69666293E1610000CB92F /* ContactWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		C9C69668293E1820000CB92F /* String */ = {
+			isa = PBXGroup;
+			children = (
+				C9C69669293E1833000CB92F /* MaskedString.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		C9C6966B293E2480000CB92F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C9C69671293E2E5C000CB92F /* neuropol.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C9D8B35129138D9500B68EFE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C9C6966B293E2480000CB92F /* Fonts */,
 				C9938B20292BEF1000B43B05 /* Images.xcassets */,
 				C9A8AA89292D16A00065A736 /* Colors.xcassets */,
 				C9D8B35229138DD400B68EFE /* R.generated.swift */,
@@ -850,6 +892,8 @@
 		C9D8B3612913C1AA00B68EFE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C9C69665293E15D4000CB92F /* Worker */,
+				C9C69662293E0461000CB92F /* Formatters */,
 				C9B72C1B2937BA1800FA9AC5 /* Animation */,
 				C9B72BE8293766DE00FA9AC5 /* Endpoints */,
 				C9B72BE4293766A800FA9AC5 /* Services */,
@@ -1035,6 +1079,7 @@
 			files = (
 				C9A8AA7F292BF0710065A736 /* LaunchScreen.storyboard in Resources */,
 				C9A8AA8A292D16A00065A736 /* Colors.xcassets in Resources */,
+				C9C69672293E2E5C000CB92F /* neuropol.ttf in Resources */,
 				C9C6965A293DA3EB000CB92F /* preloader.json in Resources */,
 				C9938B21292BEF1000B43B05 /* Images.xcassets in Resources */,
 				C9D8B3582913BED700B68EFE /* Localizable.strings in Resources */,
@@ -1208,6 +1253,7 @@
 				C9AD2200292FB3A50039C187 /* TextStyle.swift in Sources */,
 				C9B72C0E29379A4E00FA9AC5 /* PassportCreateModel.swift in Sources */,
 				C9AD2227292FC9190039C187 /* RegistrationPresenter.swift in Sources */,
+				C9C69667293E1610000CB92F /* ContactWorker.swift in Sources */,
 				C9AD22302930D58D0039C187 /* UserRoleType.swift in Sources */,
 				C9AD222A292FC9190039C187 /* RegistrationModel.swift in Sources */,
 				C9B72C202937BD4700FA9AC5 /* AnimationIndicator.swift in Sources */,
@@ -1231,6 +1277,8 @@
 				C9AD2224292FC9190039C187 /* RegistrationDataFlow.swift in Sources */,
 				C9B72BD62934E64200FA9AC5 /* GestureRecognizer.swift in Sources */,
 				C9AD2228292FC9190039C187 /* RegistrationViewController.swift in Sources */,
+				C9C6966A293E1833000CB92F /* MaskedString.swift in Sources */,
+				C9C69664293E048F000CB92F /* PhoneFormatter.swift in Sources */,
 				C9A8AA88292D16380065A736 /* NavigationBarStyle.swift in Sources */,
 				C9B72C162937B6FD00FA9AC5 /* AnimationPaths.swift in Sources */,
 				C9B72C252937C0FE00FA9AC5 /* StartStopAnimatingIndicator.swift in Sources */,

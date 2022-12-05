@@ -20,6 +20,6 @@ final class PrimaryRouter: PrimaryRouterProtocol {
     func openMain() {
         let mainController = MainBuilder()
             .build()
-        router.push(mainController)
+        router.setRootModules([mainController])
     }
 }

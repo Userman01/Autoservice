@@ -48,7 +48,8 @@ class ActionButton: UIButton {
     private func setup(title: String? = nil) {
         switch buttonStyle {
         case .primary:
-            titleLabel?.font = .font16Bold
+            titleLabel?.font = .font16RegularNeuropol
+            titleLabel?.adjustsFontForContentSizeCategory = true
             setTitleColor(ViewMetrics.primaryTitleColor, for: .normal)
             setTitle(title, for: .normal)
             backgroundColor = ViewMetrics.primaryBackgroundColor

@@ -24,7 +24,9 @@ final class RegistrationInteractor: RegistrationBusinessLogic {
     private let provider: RegistrationProviderProtocol
     
     private var phoneNumber: String = ""
+    private var phoneNumberWithoutSymbol: String = ""
     private var isEnabledButton: Bool = false
+    private let allowedChars = "0123456789"
     
     init(presenter: RegistrationPresentationLogic,
          provider: RegistrationProviderProtocol = RegistrationProvider()) {
@@ -40,20 +42,27 @@ final class RegistrationInteractor: RegistrationBusinessLogic {
     // MARK: Установка значения номера телефона
     func setPhoneNumberValue(request: Registration.SetPhoneNumberValue.Request) {
         phoneNumber = request.value
-        isEnabledButton = phoneNumber.count == 11
+        phoneNumberWithoutSymbol = removeNotAllowedChars(in: phoneNumber) ?? ""
+        isEnabledButton = phoneNumberWithoutSymbol.count == 11
         presenter.presentSetButtonState(response: Registration.SetButtonState.Response(isEnabledButton: isEnabledButton))
     }
     
     // MARK: Продолжить
     func submit(request: Registration.Submit.Request) {
-        provider.fetchResultSendPhoneNumber(phoneNumber: phoneNumber) { [weak self] result in
+        provider.fetchResultSendPhoneNumber(phoneNumber: phoneNumberWithoutSymbol) { [weak self] result in
             guard let strongSelf = self else { return }
             switch result {
             case .success:
-                strongSelf.presenter.presentSubmit(responce: Registration.Submit.Response(phoneNumber: self?.phoneNumber))
+                strongSelf.presenter.presentSubmit(responce: Registration.Submit.Response(phoneNumber: self?.phoneNumberWithoutSymbol))
             case let .failure(error):
                strongSelf.presenter.presentError(responce: Registration.Error.Response(errorMessage: error.errorMessage))
             }
         }
     }
+}
+extension RegistrationInteractor {
+    
+    private func removeNotAllowedChars(in string: String?) -> String? {
+            string?.filter { allowedChars.contains($0) }
+        }
 }

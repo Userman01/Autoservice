@@ -20,7 +20,8 @@ final class MainView: UIView {
         let label = UILabel()
         label.backgroundColor = ViewMetrics.backgroundColorLargeTitle
         label.text = "Главный экран"
-        label.font = .font20Regular
+        label.font = .font14RegularNeuropol
+        label.adjustsFontForContentSizeCategory = true
         label.textColor = ViewMetrics.textColor
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false

@@ -42,9 +42,11 @@ final class ApplicationCoordinator: BaseCoordinator {
     }
     
     private func runPrimaryFlow() {
-        removeAllDependency()
-        coordinatorFactory.makePrimaryCoordinator(router: router) { [weak self] cmd in
+        let primaryCoordinator = coordinatorFactory.makePrimaryCoordinator(router: router) { [weak self] cmd in
             print(cmd)
         }
+        removeAllDependency()
+        addDependency(primaryCoordinator)
+        primaryCoordinator.start()
     }
 }

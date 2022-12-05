@@ -22,7 +22,8 @@ final class RegistrationView: UIView {
         let label = UILabel()
         label.backgroundColor = ViewMetrics.backgroundColorLargeTitle
         label.text = R.string.localizable.commonRegistration()
-        label.font = .font20Regular
+        label.font = .font14RegularNeuropol
+        label.adjustsFontForContentSizeCategory = true
         label.textColor = ViewMetrics.textColor
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -32,6 +33,8 @@ final class RegistrationView: UIView {
     lazy private var textField: TextFieldView = {
         let textField = TextFieldView(label: R.string.localizable.registrationEnterPhoneNumberTitle())
         textField.set(keyboardType: .numberPad)
+        textField.set(formatter: PhoneFormatter())
+        textField.set(textAlignment: .center)
         textField.didEditText = { [weak self] text in
             self?.didEditText(text)
         }
