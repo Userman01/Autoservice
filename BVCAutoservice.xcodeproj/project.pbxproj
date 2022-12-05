@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		068D82DBBE745D23C1902F5C /* AuthBySMSCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99120EC99A8F454EAC4D5B92 /* AuthBySMSCodeView.swift */; };
+		2F0FC25F3BE01D8E6B5C9669 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D71A8FA9CE1BBAB43CCCFC /* MainViewModel.swift */; };
 		3522ECC6B6293D9AA0186E15 /* AuthBySMSCodeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4B08B50E4E8CD95D93EAB /* AuthBySMSCodeDataStore.swift */; };
+		3C871998C1EE8E878C9A2642 /* MainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B3C98763DD89BABD6A2ADC /* MainProvider.swift */; };
 		45828B04B1D37B4698BF2530 /* AuthBySMSCodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E527D5B59D21B8A545A1EF /* AuthBySMSCodeInteractor.swift */; };
 		460511920BBB6D16B80164EA /* AuthBySMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A71394A4FA7289B9DFAFD7 /* AuthBySMSCodeViewController.swift */; };
+		4B30D9AC85802ACB8C57439B /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7754E95D7E36D30D827B75 /* MainModel.swift */; };
+		5F89DB938AB852302374A6FE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2DAD6784F7BC2D63ACDEE8 /* MainViewController.swift */; };
+		7CE8F56876E0D340DA60B143 /* MainDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6EAA63742292D1AB4A82D /* MainDataFlow.swift */; };
 		8990A16515CAF17662370B37 /* AuthBySMSCodeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD34F23E7018B5223E701FF /* AuthBySMSCodeProvider.swift */; };
+		924254CB6D9338B1B5FC7841 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC87438618759951CC1D76 /* MainView.swift */; };
+		9EC8D3527F2B1F13F9670001 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE873FC5C6835A97C064CF8 /* MainBuilder.swift */; };
+		A26145FA55008B375118E466 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D7E2FDEB70193A8003223 /* MainInteractor.swift */; };
 		A80008B40C908A0AD7E03822 /* AuthBySMSCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867E5329EDD48D2A085C56A /* AuthBySMSCodePresenter.swift */; };
 		AEF1E066FAD12A17EDD65658 /* AuthBySMSCodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1CC618EE0B58368D1B3D63 /* AuthBySMSCodeBuilder.swift */; };
 		C1CD9DBAA8D370FA0AB99000 /* AuthBySMSCodeDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AAD8D84CAE4FDDFA308BD /* AuthBySMSCodeDataFlow.swift */; };
+		C241BF35F7294A289AB1321C /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087867F1C63B6406E81584D6 /* MainService.swift */; };
 		C932E9A629169FDC008D7057 /* AuthChoiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9A529169FDC008D7057 /* AuthChoiceBuilder.swift */; };
 		C932E9A829169FE7008D7057 /* AuthChoicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9A729169FE7008D7057 /* AuthChoicePresenter.swift */; };
 		C932E9AA29169FF7008D7057 /* AuthChoiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9A929169FF7008D7057 /* AuthChoiceInteractor.swift */; };
@@ -95,7 +104,9 @@
 		C9D8B3672913C1EA00B68EFE /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B3662913C1EA00B68EFE /* Presentable.swift */; };
 		C9D8B36B291420EC00B68EFE /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B36A291420EB00B68EFE /* CoordinatorFactory.swift */; };
 		CC5ED7F5326D054B633C1072 /* AuthBySMSCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020CA0C37B1F95F3FBF529FE /* AuthBySMSCodeModel.swift */; };
+		CF7FA6702E4F55A92D235887 /* MainDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8208A08790A89D4AB011060 /* MainDataStore.swift */; };
 		DBCB063AE66AFF530609F948 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6CA191F6C6E7A22A90FC45 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework */; };
+		E0308BD1E9AB10F6A9F37C21 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673F9153B2BC1E425EA97958 /* MainPresenter.swift */; };
 		E963050B04E6EB2BCB4061F6 /* AuthBySMSCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5FE7887AFAE3D0E672B78 /* AuthBySMSCodeService.swift */; };
 		EE5457C6A76415A396EA6F6B /* Pods_BVCAutoserviceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF1D443C16372D5F84627F /* Pods_BVCAutoserviceTests.framework */; };
 		F0E139A4F1B8E54C2D05CBE2 /* Pods_BVCAutoservice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5D753B99806416BF11D6D1 /* Pods_BVCAutoservice.framework */; };
@@ -120,21 +131,32 @@
 
 /* Begin PBXFileReference section */
 		020CA0C37B1F95F3FBF529FE /* AuthBySMSCodeModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeModel.swift; sourceTree = "<group>"; };
+		087867F1C63B6406E81584D6 /* MainService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
 		10F6B7C9CDFABA3845EEF15F /* Pods-BVCAutoservice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice.release.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice/Pods-BVCAutoservice.release.xcconfig"; sourceTree = "<group>"; };
 		1D6CA191F6C6E7A22A90FC45 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVCAutoservice_BVCAutoserviceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E2DAD6784F7BC2D63ACDEE8 /* MainViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		26878891C03404A438707DAC /* Pods-BVCAutoservice-BVCAutoserviceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice-BVCAutoserviceUITests.debug.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice-BVCAutoserviceUITests/Pods-BVCAutoservice-BVCAutoserviceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		27DF1D443C16372D5F84627F /* Pods_BVCAutoserviceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVCAutoserviceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		296D7E2FDEB70193A8003223 /* MainInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		2B7754E95D7E36D30D827B75 /* MainModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		3867E5329EDD48D2A085C56A /* AuthBySMSCodePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodePresenter.swift; sourceTree = "<group>"; };
 		478AAD8D84CAE4FDDFA308BD /* AuthBySMSCodeDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeDataFlow.swift; sourceTree = "<group>"; };
+		47B3C98763DD89BABD6A2ADC /* MainProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainProvider.swift; sourceTree = "<group>"; };
 		51E527D5B59D21B8A545A1EF /* AuthBySMSCodeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeInteractor.swift; sourceTree = "<group>"; };
+		5DE873FC5C6835A97C064CF8 /* MainBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		673F9153B2BC1E425EA97958 /* MainPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		72A6EAA63742292D1AB4A82D /* MainDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainDataFlow.swift; sourceTree = "<group>"; };
 		72C900B29A2626BF2336906F /* Pods-BVCAutoserviceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoserviceTests.debug.xcconfig"; path = "Target Support Files/Pods-BVCAutoserviceTests/Pods-BVCAutoserviceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		835259CB78329A1AA5621EA4 /* Pods-BVCAutoservice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice.debug.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice/Pods-BVCAutoservice.debug.xcconfig"; sourceTree = "<group>"; };
+		8EFC87438618759951CC1D76 /* MainView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		91846AA4BB38A9F18077A7BF /* Pods-BVCAutoserviceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoserviceTests.release.xcconfig"; path = "Target Support Files/Pods-BVCAutoserviceTests/Pods-BVCAutoserviceTests.release.xcconfig"; sourceTree = "<group>"; };
+		96D71A8FA9CE1BBAB43CCCFC /* MainViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		99120EC99A8F454EAC4D5B92 /* AuthBySMSCodeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeView.swift; sourceTree = "<group>"; };
 		ADD34F23E7018B5223E701FF /* AuthBySMSCodeProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeProvider.swift; sourceTree = "<group>"; };
 		AE5D753B99806416BF11D6D1 /* Pods_BVCAutoservice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVCAutoservice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A71394A4FA7289B9DFAFD7 /* AuthBySMSCodeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeViewController.swift; sourceTree = "<group>"; };
 		BAC4B08B50E4E8CD95D93EAB /* AuthBySMSCodeDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeDataStore.swift; sourceTree = "<group>"; };
+		C8208A08790A89D4AB011060 /* MainDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainDataStore.swift; sourceTree = "<group>"; };
 		C932E9A529169FDC008D7057 /* AuthChoiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoiceBuilder.swift; sourceTree = "<group>"; };
 		C932E9A729169FE7008D7057 /* AuthChoicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoicePresenter.swift; sourceTree = "<group>"; };
 		C932E9A929169FF7008D7057 /* AuthChoiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoiceInteractor.swift; sourceTree = "<group>"; };
@@ -252,6 +274,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CF7DA3430BB1441D24EB287 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				96D71A8FA9CE1BBAB43CCCFC /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1FFDBEB53FA5BBC62874017E /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				47B3C98763DD89BABD6A2ADC /* MainProvider.swift */,
+				C8208A08790A89D4AB011060 /* MainDataStore.swift */,
+				087867F1C63B6406E81584D6 /* MainService.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		2CEC3A1E70E6EBB46200FE63 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +311,22 @@
 				99120EC99A8F454EAC4D5B92 /* AuthBySMSCodeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		60507D131C56E68959D53746 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5DE873FC5C6835A97C064CF8 /* MainBuilder.swift */,
+				1E2DAD6784F7BC2D63ACDEE8 /* MainViewController.swift */,
+				296D7E2FDEB70193A8003223 /* MainInteractor.swift */,
+				673F9153B2BC1E425EA97958 /* MainPresenter.swift */,
+				72A6EAA63742292D1AB4A82D /* MainDataFlow.swift */,
+				E6452BB28AD1E4367DE534C4 /* Model */,
+				0CF7DA3430BB1441D24EB287 /* ViewModel */,
+				1FFDBEB53FA5BBC62874017E /* Provider */,
+				DD75853B1FA8CD9DC290AB1A /* View */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		B36147B3C2C6F5B4BD46048E /* Provider */ = {
@@ -766,6 +822,7 @@
 		C9C6965D293DA833000CB92F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				60507D131C56E68959D53746 /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -822,6 +879,22 @@
 				C9D8B36A291420EB00B68EFE /* CoordinatorFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		DD75853B1FA8CD9DC290AB1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8EFC87438618759951CC1D76 /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E6452BB28AD1E4367DE534C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B7754E95D7E36D30D827B75 /* MainModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EE025E9846A010A7F30F0305 /* AuthBySMSCode */ = {
@@ -1212,6 +1285,17 @@
 				C9B72C1129379A4E00FA9AC5 /* PassportCreateBuilder.swift in Sources */,
 				C9B72C0A29379A4E00FA9AC5 /* PassportCreateDataFlow.swift in Sources */,
 				068D82DBBE745D23C1902F5C /* AuthBySMSCodeView.swift in Sources */,
+				9EC8D3527F2B1F13F9670001 /* MainBuilder.swift in Sources */,
+				5F89DB938AB852302374A6FE /* MainViewController.swift in Sources */,
+				A26145FA55008B375118E466 /* MainInteractor.swift in Sources */,
+				E0308BD1E9AB10F6A9F37C21 /* MainPresenter.swift in Sources */,
+				7CE8F56876E0D340DA60B143 /* MainDataFlow.swift in Sources */,
+				4B30D9AC85802ACB8C57439B /* MainModel.swift in Sources */,
+				2F0FC25F3BE01D8E6B5C9669 /* MainViewModel.swift in Sources */,
+				3C871998C1EE8E878C9A2642 /* MainProvider.swift in Sources */,
+				CF7FA6702E4F55A92D235887 /* MainDataStore.swift in Sources */,
+				C241BF35F7294A289AB1321C /* MainService.swift in Sources */,
+				924254CB6D9338B1B5FC7841 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
