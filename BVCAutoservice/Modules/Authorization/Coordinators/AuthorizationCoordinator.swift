@@ -32,7 +32,7 @@ final class AuthorizationCoordinator: BaseCoordinator {
             case let .open(userRoleType):
                 self?.openRegistration(userRole: userRoleType)
             case .openAuth:
-                print("auth")
+                self?.openAuthByAccount()
             }
         }
     }
@@ -58,5 +58,11 @@ final class AuthorizationCoordinator: BaseCoordinator {
                 })
             }
         }
+    }
+    
+    private func openAuthByAccount() {
+        authorizationRouter.openAuthByAccount(out: {_ in
+            print("next")
+        })
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		068D82DBBE745D23C1902F5C /* AuthBySMSCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99120EC99A8F454EAC4D5B92 /* AuthBySMSCodeView.swift */; };
+		2BE084AEF96CCAD44CF8F5FB /* AuthByAccountBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AC3E4BDFAF598E7988B26 /* AuthByAccountBuilder.swift */; };
 		2F0FC25F3BE01D8E6B5C9669 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D71A8FA9CE1BBAB43CCCFC /* MainViewModel.swift */; };
 		3522ECC6B6293D9AA0186E15 /* AuthBySMSCodeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4B08B50E4E8CD95D93EAB /* AuthBySMSCodeDataStore.swift */; };
 		3C871998C1EE8E878C9A2642 /* MainProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B3C98763DD89BABD6A2ADC /* MainProvider.swift */; };
@@ -15,10 +16,15 @@
 		460511920BBB6D16B80164EA /* AuthBySMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A71394A4FA7289B9DFAFD7 /* AuthBySMSCodeViewController.swift */; };
 		4B30D9AC85802ACB8C57439B /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7754E95D7E36D30D827B75 /* MainModel.swift */; };
 		5F89DB938AB852302374A6FE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2DAD6784F7BC2D63ACDEE8 /* MainViewController.swift */; };
+		6886FA40854FB51A10F9D8B0 /* AuthByAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FA85EA35D72D236692834E /* AuthByAccountView.swift */; };
+		6898C1486137A676E4697CA4 /* AuthByAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3477FC15FF6A8EA2EDB80C /* AuthByAccountViewController.swift */; };
 		7CE8F56876E0D340DA60B143 /* MainDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6EAA63742292D1AB4A82D /* MainDataFlow.swift */; };
+		7FB69CF19129736E2DD8E81E /* AuthByAccountDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4FFD9F03F8E006AFFCF01A /* AuthByAccountDataFlow.swift */; };
 		8990A16515CAF17662370B37 /* AuthBySMSCodeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD34F23E7018B5223E701FF /* AuthBySMSCodeProvider.swift */; };
+		910A2D518C0E719569D51955 /* AuthByAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296C3DB8762B621F0F3B321A /* AuthByAccountInteractor.swift */; };
 		924254CB6D9338B1B5FC7841 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC87438618759951CC1D76 /* MainView.swift */; };
 		9EC8D3527F2B1F13F9670001 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE873FC5C6835A97C064CF8 /* MainBuilder.swift */; };
+		A032237D6DE6F2ED227C69CB /* AuthByAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CC538431ED0690150B8B5 /* AuthByAccountPresenter.swift */; };
 		A26145FA55008B375118E466 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D7E2FDEB70193A8003223 /* MainInteractor.swift */; };
 		A80008B40C908A0AD7E03822 /* AuthBySMSCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867E5329EDD48D2A085C56A /* AuthBySMSCodePresenter.swift */; };
 		AEF1E066FAD12A17EDD65658 /* AuthBySMSCodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1CC618EE0B58368D1B3D63 /* AuthBySMSCodeBuilder.swift */; };
@@ -107,10 +113,15 @@
 		C9D8B3652913C1DC00B68EFE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B3642913C1DC00B68EFE /* Router.swift */; };
 		C9D8B3672913C1EA00B68EFE /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B3662913C1EA00B68EFE /* Presentable.swift */; };
 		C9D8B36B291420EC00B68EFE /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8B36A291420EB00B68EFE /* CoordinatorFactory.swift */; };
+		CBA5459183292E9B0C85CB9A /* AuthByAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE4ED31943EA71F51A7CC7 /* AuthByAccountService.swift */; };
 		CC5ED7F5326D054B633C1072 /* AuthBySMSCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020CA0C37B1F95F3FBF529FE /* AuthBySMSCodeModel.swift */; };
+		CF72C06B8FC979D110F758EC /* AuthByAccountDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3957D7B28CB67C91B6205FFF /* AuthByAccountDataStore.swift */; };
 		CF7FA6702E4F55A92D235887 /* MainDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8208A08790A89D4AB011060 /* MainDataStore.swift */; };
 		DBCB063AE66AFF530609F948 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6CA191F6C6E7A22A90FC45 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework */; };
+		DF6313F59C67F0C014FA19E9 /* AuthByAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD9DD0DE11057BBFA340699 /* AuthByAccountViewModel.swift */; };
 		E0308BD1E9AB10F6A9F37C21 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673F9153B2BC1E425EA97958 /* MainPresenter.swift */; };
+		E32D83AA270DFFA6D8E04807 /* AuthByAccountProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF018E65547BDB0D1E64059 /* AuthByAccountProvider.swift */; };
+		E471274486A5B439515F6B86 /* AuthByAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC021CB7CCCC1A374889CB /* AuthByAccountModel.swift */; };
 		E963050B04E6EB2BCB4061F6 /* AuthBySMSCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5FE7887AFAE3D0E672B78 /* AuthBySMSCodeService.swift */; };
 		EE5457C6A76415A396EA6F6B /* Pods_BVCAutoserviceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF1D443C16372D5F84627F /* Pods_BVCAutoserviceTests.framework */; };
 		F0E139A4F1B8E54C2D05CBE2 /* Pods_BVCAutoservice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5D753B99806416BF11D6D1 /* Pods_BVCAutoservice.framework */; };
@@ -139,23 +150,33 @@
 		10F6B7C9CDFABA3845EEF15F /* Pods-BVCAutoservice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice.release.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice/Pods-BVCAutoservice.release.xcconfig"; sourceTree = "<group>"; };
 		1D6CA191F6C6E7A22A90FC45 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVCAutoservice_BVCAutoserviceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E2DAD6784F7BC2D63ACDEE8 /* MainViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		20FC021CB7CCCC1A374889CB /* AuthByAccountModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountModel.swift; sourceTree = "<group>"; };
 		26878891C03404A438707DAC /* Pods-BVCAutoservice-BVCAutoserviceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice-BVCAutoserviceUITests.debug.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice-BVCAutoserviceUITests/Pods-BVCAutoservice-BVCAutoserviceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		27DF1D443C16372D5F84627F /* Pods_BVCAutoserviceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVCAutoserviceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		296C3DB8762B621F0F3B321A /* AuthByAccountInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountInteractor.swift; sourceTree = "<group>"; };
 		296D7E2FDEB70193A8003223 /* MainInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		2B7754E95D7E36D30D827B75 /* MainModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		3867E5329EDD48D2A085C56A /* AuthBySMSCodePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodePresenter.swift; sourceTree = "<group>"; };
+		3957D7B28CB67C91B6205FFF /* AuthByAccountDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountDataStore.swift; sourceTree = "<group>"; };
 		478AAD8D84CAE4FDDFA308BD /* AuthBySMSCodeDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeDataFlow.swift; sourceTree = "<group>"; };
 		47B3C98763DD89BABD6A2ADC /* MainProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainProvider.swift; sourceTree = "<group>"; };
+		498AC3E4BDFAF598E7988B26 /* AuthByAccountBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountBuilder.swift; sourceTree = "<group>"; };
 		51E527D5B59D21B8A545A1EF /* AuthBySMSCodeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeInteractor.swift; sourceTree = "<group>"; };
+		5D3477FC15FF6A8EA2EDB80C /* AuthByAccountViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountViewController.swift; sourceTree = "<group>"; };
 		5DE873FC5C6835A97C064CF8 /* MainBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		673F9153B2BC1E425EA97958 /* MainPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		690CC538431ED0690150B8B5 /* AuthByAccountPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountPresenter.swift; sourceTree = "<group>"; };
+		6B4FFD9F03F8E006AFFCF01A /* AuthByAccountDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountDataFlow.swift; sourceTree = "<group>"; };
 		72A6EAA63742292D1AB4A82D /* MainDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainDataFlow.swift; sourceTree = "<group>"; };
 		72C900B29A2626BF2336906F /* Pods-BVCAutoserviceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoserviceTests.debug.xcconfig"; path = "Target Support Files/Pods-BVCAutoserviceTests/Pods-BVCAutoserviceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7DD9DD0DE11057BBFA340699 /* AuthByAccountViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountViewModel.swift; sourceTree = "<group>"; };
+		7EFE4ED31943EA71F51A7CC7 /* AuthByAccountService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountService.swift; sourceTree = "<group>"; };
 		835259CB78329A1AA5621EA4 /* Pods-BVCAutoservice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice.debug.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice/Pods-BVCAutoservice.debug.xcconfig"; sourceTree = "<group>"; };
 		8EFC87438618759951CC1D76 /* MainView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		91846AA4BB38A9F18077A7BF /* Pods-BVCAutoserviceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoserviceTests.release.xcconfig"; path = "Target Support Files/Pods-BVCAutoserviceTests/Pods-BVCAutoserviceTests.release.xcconfig"; sourceTree = "<group>"; };
 		96D71A8FA9CE1BBAB43CCCFC /* MainViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		99120EC99A8F454EAC4D5B92 /* AuthBySMSCodeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeView.swift; sourceTree = "<group>"; };
+		99FA85EA35D72D236692834E /* AuthByAccountView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountView.swift; sourceTree = "<group>"; };
 		ADD34F23E7018B5223E701FF /* AuthBySMSCodeProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeProvider.swift; sourceTree = "<group>"; };
 		AE5D753B99806416BF11D6D1 /* Pods_BVCAutoservice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVCAutoservice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A71394A4FA7289B9DFAFD7 /* AuthBySMSCodeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +270,7 @@
 		C9D8B3642913C1DC00B68EFE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C9D8B3662913C1EA00B68EFE /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		C9D8B36A291420EB00B68EFE /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		CAF018E65547BDB0D1E64059 /* AuthByAccountProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountProvider.swift; sourceTree = "<group>"; };
 		D0BB065EC1F38B4FD620510F /* Pods-BVCAutoservice-BVCAutoserviceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice-BVCAutoserviceUITests.release.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice-BVCAutoserviceUITests/Pods-BVCAutoservice-BVCAutoserviceUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F3A5FE7887AFAE3D0E672B78 /* AuthBySMSCodeService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeService.swift; sourceTree = "<group>"; };
 		FE1CC618EE0B58368D1B3D63 /* AuthBySMSCodeBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeBuilder.swift; sourceTree = "<group>"; };
@@ -300,6 +322,17 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		2A08EB6DA13087373E1BE018 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				CAF018E65547BDB0D1E64059 /* AuthByAccountProvider.swift */,
+				3957D7B28CB67C91B6205FFF /* AuthByAccountDataStore.swift */,
+				7EFE4ED31943EA71F51A7CC7 /* AuthByAccountService.swift */,
+			);
+			name = Provider;
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		2CEC3A1E70E6EBB46200FE63 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +344,15 @@
 				91846AA4BB38A9F18077A7BF /* Pods-BVCAutoserviceTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		43F1FAA02B2F488F36ABF67B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7DD9DD0DE11057BBFA340699 /* AuthByAccountViewModel.swift */,
+			);
+			name = ViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4BC518D69ECB17E074F87820 /* View */ = {
@@ -337,6 +379,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		AE62BD8D0B95AD472E02D90C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99FA85EA35D72D236692834E /* AuthByAccountView.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
 		B36147B3C2C6F5B4BD46048E /* Provider */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +398,23 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		B7EF83455A991ADDD381F4CA /* AuthByAccount */ = {
+			isa = PBXGroup;
+			children = (
+				498AC3E4BDFAF598E7988B26 /* AuthByAccountBuilder.swift */,
+				5D3477FC15FF6A8EA2EDB80C /* AuthByAccountViewController.swift */,
+				296C3DB8762B621F0F3B321A /* AuthByAccountInteractor.swift */,
+				690CC538431ED0690150B8B5 /* AuthByAccountPresenter.swift */,
+				6B4FFD9F03F8E006AFFCF01A /* AuthByAccountDataFlow.swift */,
+				C7F14C0730A194CEF896D40C /* Model */,
+				43F1FAA02B2F488F36ABF67B /* ViewModel */,
+				2A08EB6DA13087373E1BE018 /* Provider */,
+				AE62BD8D0B95AD472E02D90C /* View */,
+			);
+			name = AuthByAccount;
+			path = AuthByAccount;
+			sourceTree = "<group>";
+		};
 		C7538065DE8C7CCBBB0A7900 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +423,15 @@
 				27DF1D443C16372D5F84627F /* Pods_BVCAutoserviceTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7F14C0730A194CEF896D40C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20FC021CB7CCCC1A374889CB /* AuthByAccountModel.swift */,
+			);
+			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C932E9A0291696A7008D7057 /* Modules */ = {
@@ -391,6 +468,7 @@
 				C9AD2204292FC7E50039C187 /* Registration */,
 				C932E9A429169F1F008D7057 /* AuthChoice */,
 				EE025E9846A010A7F30F0305 /* AuthBySMSCode */,
+				B7EF83455A991ADDD381F4CA /* AuthByAccount */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1202,7 +1280,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1344,6 +1422,17 @@
 				CF7FA6702E4F55A92D235887 /* MainDataStore.swift in Sources */,
 				C241BF35F7294A289AB1321C /* MainService.swift in Sources */,
 				924254CB6D9338B1B5FC7841 /* MainView.swift in Sources */,
+				2BE084AEF96CCAD44CF8F5FB /* AuthByAccountBuilder.swift in Sources */,
+				6898C1486137A676E4697CA4 /* AuthByAccountViewController.swift in Sources */,
+				910A2D518C0E719569D51955 /* AuthByAccountInteractor.swift in Sources */,
+				A032237D6DE6F2ED227C69CB /* AuthByAccountPresenter.swift in Sources */,
+				7FB69CF19129736E2DD8E81E /* AuthByAccountDataFlow.swift in Sources */,
+				E471274486A5B439515F6B86 /* AuthByAccountModel.swift in Sources */,
+				DF6313F59C67F0C014FA19E9 /* AuthByAccountViewModel.swift in Sources */,
+				E32D83AA270DFFA6D8E04807 /* AuthByAccountProvider.swift in Sources */,
+				CF72C06B8FC979D110F758EC /* AuthByAccountDataStore.swift in Sources */,
+				CBA5459183292E9B0C85CB9A /* AuthByAccountService.swift in Sources */,
+				6886FA40854FB51A10F9D8B0 /* AuthByAccountView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

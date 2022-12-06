@@ -22,15 +22,26 @@ final class PassportTextFieldView: TextFieldView {
         button.setImage(UIImage(systemName: "eye.slash"), for: .normal)
         button.imageView?.tintColor = ViewMetrics.tintColor
         button.addTarget(self, action: #selector(changeSecure(_:)), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     init(label: String? = nil) {
         super.init(label: label)
         textField.isSecureTextEntry = true
-        textField.rightView = iconButton
-        textField.rightViewMode = .always
         textField.textContentType = .password
+        setupLayout()
+    }
+    
+    func setupLayout() {
+        
+        addSubview(iconButton)
+        
+        iconButton.snp.makeConstraints { make in
+            make.top.equalTo(textField.snp.top)
+            make.right.equalTo(textField.snp.right)
+            make.bottom.equalTo(textField.snp.bottom)
+        }
     }
     
     required init?(coder: NSCoder) {

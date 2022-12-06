@@ -11,6 +11,7 @@
 "common.enter" = "Enter";
 "common.next" = "Next";
 "common.registration" = "Registration";
+"common.authorization" = "Authorization";
 "common.error-message" = "Error";
 "common.OK" = "OK";
 
@@ -31,3 +32,7 @@
 "passport-create.textfield-label-name" = "Enter your name";
 "passport-create.textfield-label-passport" = "Create a password";
 "passport-create.textfield-label-repeate-passport" = "Repeat password";
+// MARK: Войти
+"passport-enter.textfield-label-passport" = "Enter your password";
+"authByAccount.button-recovery.title" = "New password";
+"authByAccount.label-forget.title" = "Forget password?";

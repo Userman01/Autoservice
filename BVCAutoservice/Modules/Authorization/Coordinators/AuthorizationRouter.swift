@@ -14,6 +14,8 @@ protocol AuthorizationRouterProtocol {
     func openAuthBySMSCode(viewModel: AuthBySMSCodeTypeViewModel, out: @escaping AuthBySMSCodeOut)
     
     func openPassportCreate(userRole: UserRoleType, phoneNumber: String?, out: @escaping PassportCreateOut)
+    
+    func openAuthByAccount(out: @escaping AuthChoiceOut)
 }
 
 final class AuthorizationRouter: AuthorizationRouterProtocol {
@@ -49,5 +51,11 @@ final class AuthorizationRouter: AuthorizationRouterProtocol {
             .set(phoneNumber: phoneNumber)
             .build(out: out)
         router.push(passportCreate)
+    }
+    
+    func openAuthByAccount(out: @escaping AuthChoiceOut) {
+        let authByAccount = AuthByAccountBuilder()
+            .build()
+        router.push(authByAccount)
     }
 }
