@@ -12,13 +12,15 @@ final class PassportTextFieldView: TextFieldView {
     
     private enum ViewMetrics {
         static let buttonInsets = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0)
+        static let tintColor: UIColor! = .dynamic(light: R.color.gray(), dark: R.color.gray())
     }
     
     private lazy var iconButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 5
         button.contentEdgeInsets = ViewMetrics.buttonInsets
-        button.layer.backgroundColor = R.color.red()?.cgColor
+        button.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        button.imageView?.tintColor = ViewMetrics.tintColor
         button.addTarget(self, action: #selector(changeSecure(_:)), for: .touchUpInside)
         return button
     }()
@@ -37,6 +39,7 @@ final class PassportTextFieldView: TextFieldView {
     
     @objc private func changeSecure(_ button: UIButton) {
         textField.isSecureTextEntry.toggle()
-        button.layer.backgroundColor = textField.isSecureTextEntry ? R.color.red()?.cgColor : R.color.green()?.cgColor
+        let image = textField.isSecureTextEntry ? UIImage(systemName: "eye.slash") : UIImage(systemName: "eye")
+        button.setImage(image, for: .normal)
     }
 }
