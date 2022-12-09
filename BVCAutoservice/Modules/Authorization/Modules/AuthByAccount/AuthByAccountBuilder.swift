@@ -6,10 +6,10 @@
 
 final class AuthByAccountBuilder {
 
-    func build() -> AuthByAccountViewController {
+    func build(out: @escaping AuthByAccountOut) -> AuthByAccountViewController {
         let presenter = AuthByAccountPresenter()
         let interactor = AuthByAccountInteractor(presenter: presenter)
-        let controller = AuthByAccountViewController(interactor: interactor)
+        let controller = AuthByAccountViewController(interactor: interactor, out: out)
         presenter.viewController = controller
         return controller
     }

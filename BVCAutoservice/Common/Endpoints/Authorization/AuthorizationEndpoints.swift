@@ -19,4 +19,8 @@ struct AuthorizationEndpoints {
     static var signUp: String {
         return "\(BaseURL.BVC)/api/auth/signup"
     }
+    
+    static var signIn: String {
+        return "\(BaseURL.BVC)/api/auth/signin"
+    }
 }

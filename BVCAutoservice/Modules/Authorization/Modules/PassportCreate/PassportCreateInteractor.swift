@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LocalAuthentication
 
 protocol PassportCreateBusinessLogic {
     /// Запрос на получение экрана
@@ -85,5 +86,12 @@ extension PassportCreateInteractor {
     private func setButtonState() {
         isEnabledButton = name.count > 0 && newPassport.count > 7 && newPassport == repeatePassport
         presenter.presentSetButtonState(response: PassportCreate.SetButtonState.Response(isEnabledButton: isEnabledButton))
+    }
+    
+    private func checkBiometrics() {
+        let biometricAuthContext: LAContext = LAContext()
+        if biometricAuthContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            
+        }
     }
 }

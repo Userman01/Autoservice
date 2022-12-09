@@ -6,3 +6,8 @@
 struct AuthByAccountViewModel {
     let isEnabled: Bool
 }
+
+enum AuthByAccountNavigationType {
+    case openMain
+    case openCreateNewPassword
+}

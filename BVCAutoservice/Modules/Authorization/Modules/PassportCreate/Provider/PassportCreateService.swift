@@ -19,7 +19,7 @@ struct PassportCreateService: PassportCreateServiceProtocol {
 
     // MARK: Отправка данных пользователя
     func fetchResultSendUserInfo(userName: String?, phoneNumber: String?, role: String?, password: String?, completion: @escaping (RequestResult<PassportCreateModel>) -> Void) {
-        let url = AuthorizationEndpoints.signUp
+        let url = AuthorizationEndpoints.signIn
         let parameters: [String: Any] = [
             "username": userName ?? "",
             "phone": phoneNumber ?? "",

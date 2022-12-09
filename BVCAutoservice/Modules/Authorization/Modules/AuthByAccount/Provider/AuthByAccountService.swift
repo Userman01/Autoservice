@@ -5,9 +5,8 @@
 
 protocol AuthByAccountServiceProtocol {
 
-    // Получение полей
-    // https://wiki.albank.ru
-    func fetchFields(params: [String: Any], completion: @escaping (RequestResult<AuthByAccountModel>) -> Void)
+    // Отправка данных пользователя
+    func fetchResultSendUserInfo(userName: String?, password: String?, completion: @escaping (RequestResult<AuthByAccountModel>) -> Void)
 }
 
 final class AuthByAccountService: AuthByAccountServiceProtocol {
@@ -18,10 +17,13 @@ final class AuthByAccountService: AuthByAccountServiceProtocol {
         self.apiClient = apiClient
     }
 
-    // MARK: Получение полей
-    // https://wiki.albank.ru
-    func fetchFields(params: [String: Any], completion: @escaping (RequestResult<AuthByAccountModel>) -> Void) {
-        let url = ""
-        apiClient.post(url, parameters: params, model: AuthByAccountModel.self, completion: completion)
-    }
+    // MARK: Отправка данных пользователя
+    func fetchResultSendUserInfo(userName: String?, password: String?, completion: @escaping (RequestResult<AuthByAccountModel>) -> Void) {
+        let url = AuthorizationEndpoints.signUp
+        let parameters: [String: Any] = [
+            "username": userName ?? "",
+            "password": password ?? ""
+        ]
+        apiClient.post(url, parameters: parameters, model: AuthByAccountModel.self, completion: completion)
+  }
 }

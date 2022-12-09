@@ -4,8 +4,6 @@
 //
 
 // Модель данных с запроса
-// http://wiki.albank.ru/
+
 struct AuthByAccountModel: Decodable {
-    // Example
-    let name: String
 }

@@ -4,10 +4,9 @@
 //
 
 protocol AuthByAccountProviderProtocol {
-
-    // Получение полей
-    // https://wiki.albank.ru
-    func fetchFields(params: [String: Any], completion: @escaping (RequestResult<AuthByAccountModel>) -> Void)
+    /// Отправка данных пользователя
+    func fetchResultSendUserInfo(userName: String?, password: String?, completion: @escaping (RequestResult<AuthByAccountModel>) -> Void)
+    
 }
 
 final class AuthByAccountProvider: AuthByAccountProviderProtocol {
@@ -18,9 +17,8 @@ final class AuthByAccountProvider: AuthByAccountProviderProtocol {
         self.service = service
     }
 
-    // MARK: Получение полей
-    // https://wiki.albank.ru
-    func fetchFields(params: [String: Any], completion: @escaping (RequestResult<AuthByAccountModel>) -> Void) {
-        service.fetchFields(params: params, completion: completion)
-    }
+    // MARK: Отправка данных пользователя
+    func fetchResultSendUserInfo(userName: String?, password: String?, completion: @escaping (RequestResult<AuthByAccountModel>) -> Void) {
+        service.fetchResultSendUserInfo(userName: userName, password: password, completion: completion)
+  }
 }

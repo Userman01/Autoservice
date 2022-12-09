@@ -21,7 +21,7 @@ protocol PassportCreateDisplayLogic: AnyObject {
     func displayError(viewModel: PassportCreate.Error.ViewModel)
 }
 
-protocol PassportCreateViewControllerDelegate: NSObject {
+protocol PassportCreateViewControllerDelegate: AnyObject {
     
     /// Установка значения номера телефона
     func setName(value: String)

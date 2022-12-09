@@ -18,4 +18,67 @@ enum AuthByAccount {
             let result: AuthByAccountViewModel
         }
     }
+    
+    enum SetName {
+        struct Request {
+            let value: String
+        }
+        
+        struct Responce {
+        }
+        
+        struct ViewModel {
+        }
+    }
+    
+    enum SetNewPassport {
+        struct Request {
+            let value: String
+        }
+        
+        struct Responce {
+        }
+        
+        struct ViewModel {
+        }
+    }
+    
+    // MARK: Продолжить
+    enum Submit {
+        struct Request {
+        }
+
+        struct Response {
+        }
+
+        struct ViewModel {
+        }
+    }
+    
+    enum SetButtonState {
+        struct Request {
+        }
+
+        struct Response {
+            let isEnabledButton: Bool
+        }
+
+        struct ViewModel {
+            let isEnabledButton: Bool
+        }
+    }
+    
+    // MARK: Ошибка
+    enum Error {
+        struct Request {
+        }
+
+        struct Response {
+            let errorMessage: String
+        }
+
+        struct ViewModel {
+            let errorMessage: String
+        }
+    }
 }

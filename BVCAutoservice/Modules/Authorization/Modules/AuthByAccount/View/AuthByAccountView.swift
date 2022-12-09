@@ -178,18 +178,18 @@ final class AuthByAccountView: UIView {
     }
     
     private func didEditNameText(_ text: String) {
-        //delegate?.setName(value: text)
+        delegate?.setName(value: text)
     }
     
     private func didEditNewPassportText(_ text: String) {
-       // delegate?.setNewPassport(value: text)
+        delegate?.setNewPassport(value: text)
     }
     
     @objc private func submit() {
-        //delegate?.submit()
+        delegate?.submit()
     }
     
     @objc private func authButtonTupped() {
-        //delegate?.openAuth()
+        delegate?.openCreateNewPassword()
     }
 }

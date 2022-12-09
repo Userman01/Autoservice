@@ -238,7 +238,6 @@ class TextFieldView: UIView, TextFieldViewProtocol {
 // MARK: - UITextFieldDelegate
 extension TextFieldView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let previewText = textField.text ?? ""
         let text = NSString(string: textField.text ?? "").replacingCharacters(in: range, with: string)
         guard formatter != nil else { return true }
         if let formatterText = formatter?.editingString(for: text) {

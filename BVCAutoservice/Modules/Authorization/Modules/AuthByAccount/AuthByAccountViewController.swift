@@ -11,10 +11,34 @@ protocol AuthByAccountDisplayLogic: AnyObject {
 
     // Отображение полей
     func displayFields(viewModel: AuthByAccount.GetFields.ViewModel)
+    
+    /// Отображение установки состояния кнопки
+    func displaySetButtonState(viewModel: AuthByAccount.SetButtonState.ViewModel)
+    
+    /// Показ ошибки
+    func displayError(viewModel: AuthByAccount.Error.ViewModel)
+    
+    /// Показ продолжения
+    func displaySubmit(viewModel: AuthByAccount.Submit.ViewModel)
 }
 
 protocol AuthByAccountViewControllerDelegate: AnyObject {
+    /// Установка значения номера телефона
+    func setName(value: String)
+    
+    /// Установка значения нового паспорта
+    func setNewPassport(value: String)
+    
+    /// Открытие модуля
+    func openCreateNewPassword()
+    
+    /// Продолжить
+    func submit()
+}
 
+typealias AuthByAccountOut = ((AuthByAccountOutCmd) -> Void)
+enum AuthByAccountOutCmd {
+    case open(AuthByAccountNavigationType)
 }
 
 final class AuthByAccountViewController: UIViewController {
@@ -22,9 +46,11 @@ final class AuthByAccountViewController: UIViewController {
     private let interactor: AuthByAccountBusinessLogic
 
     private lazy var customView = view as? AuthByAccountView
+    private var out: AuthByAccountOut
 
-    init(interactor: AuthByAccountBusinessLogic) {
+    init(interactor: AuthByAccountBusinessLogic, out: @escaping AuthByAccountOut) {
         self.interactor = interactor
+        self.out = out
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -59,8 +85,45 @@ extension AuthByAccountViewController: AuthByAccountDisplayLogic {
     func displayFields(viewModel: AuthByAccount.GetFields.ViewModel) {
         customView?.configure(with: viewModel.result)
     }
+    
+    // MARK: Отображение установки состояния кнопки
+    func displaySetButtonState(viewModel: AuthByAccount.SetButtonState.ViewModel) {
+        customView?.setButtonState(isEnabled: viewModel.isEnabledButton)
+    }
+    
+    // MARK: Показ ошибки
+    func displayError(viewModel: AuthByAccount.Error.ViewModel) {
+        stopFullScreenAnimatingIndicator()
+        alert(message: viewModel.errorMessage)
+    }
+    
+    // MARK: Показ продолжения
+    func displaySubmit(viewModel: AuthByAccount.Submit.ViewModel) {
+        stopFullScreenAnimatingIndicator()
+        out(.open(.openMain))
+    }
 }
 
 extension AuthByAccountViewController: AuthByAccountViewControllerDelegate {
-
+    
+    // MARK: Установка значения номера телефона
+    func setName(value: String) {
+        interactor.setName(request: AuthByAccount.SetName.Request(value: value))
+    }
+    
+    // MARK: Установка значения нового паспорта
+    func setNewPassport(value: String) {
+        interactor.setNewPassport(request: AuthByAccount.SetNewPassport.Request(value: value))
+    }
+    
+    // MARK: Открытие модуля
+    func openCreateNewPassword() {
+        out(.open(.openCreateNewPassword))
+    }
+    
+    // MARK: Продолжить
+    func submit() {
+        startFullScreenAnimatingIndicator()
+        interactor.submit(request: AuthByAccount.Submit.Request())
+    }
 }

@@ -15,7 +15,7 @@ protocol AuthorizationRouterProtocol {
     
     func openPassportCreate(userRole: UserRoleType, phoneNumber: String?, out: @escaping PassportCreateOut)
     
-    func openAuthByAccount(out: @escaping AuthChoiceOut)
+    func openAuthByAccount(out: @escaping AuthByAccountOut)
 }
 
 final class AuthorizationRouter: AuthorizationRouterProtocol {
@@ -53,9 +53,9 @@ final class AuthorizationRouter: AuthorizationRouterProtocol {
         router.push(passportCreate)
     }
     
-    func openAuthByAccount(out: @escaping AuthChoiceOut) {
+    func openAuthByAccount(out: @escaping AuthByAccountOut) {
         let authByAccount = AuthByAccountBuilder()
-            .build()
+            .build(out: out)
         router.push(authByAccount)
     }
 }

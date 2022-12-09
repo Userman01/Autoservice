@@ -61,8 +61,17 @@ final class AuthorizationCoordinator: BaseCoordinator {
     }
     
     private func openAuthByAccount() {
-        authorizationRouter.openAuthByAccount(out: {_ in
-            print("next")
-        })
+        authorizationRouter.openAuthByAccount { [weak self] cmd in
+            switch cmd {
+            case .open(.openCreateNewPassword):
+                self?.openCreateNewPassword()
+            case .open(.openMain):
+                self?.out(.openPrimary)
+            }
+        }
+    }
+    
+    private func openCreateNewPassword() {
+        print("open create new password")
     }
 }
