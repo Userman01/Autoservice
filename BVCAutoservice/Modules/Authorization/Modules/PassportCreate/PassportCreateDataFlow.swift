@@ -8,11 +8,17 @@
 enum PassportCreate {
     enum GetScreens {
         struct Request {
-            let userRole: UserRoleType
+            let userRole: UserRoleType?
             let phoneNumber: String
+            let mode: RegistrationMode
+            let username: String?
+            let SMSCode: String?
         }
         
         struct Responce {
+            let mode: RegistrationMode
+            let model: PassportCreateModel?
+            let username: String?
         }
         
         struct ViewModel {

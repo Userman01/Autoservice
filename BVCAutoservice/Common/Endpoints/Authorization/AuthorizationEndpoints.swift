@@ -12,7 +12,15 @@ struct AuthorizationEndpoints {
         return "\(BaseURL.BVC)/api/sms/send?number="
     }
     
+    static var clientRecoveryOfNumber: String {
+        return "\(BaseURL.BVC)/api/sms/send/forget-password?number="
+    }
+    
     static var clientSMSCode: String {
+        return "\(BaseURL.BVC)/api/sms/check/"
+    }
+    
+    static var clientSMSCodeRecovery: String {
         return "\(BaseURL.BVC)/api/sms/check/"
     }
     

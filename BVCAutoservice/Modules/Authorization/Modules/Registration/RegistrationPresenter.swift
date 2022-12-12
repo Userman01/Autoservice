@@ -27,7 +27,14 @@ final class RegistrationPresenter: RegistrationPresentationLogic {
     
     // MARK: Показ экранов онбординга
     func presentScreen(responce: Registration.GetScreens.Responce) {
-        let viewModel = RegistrationViewModel(isEnabled: false)
+        let viewModel: RegistrationViewModel
+        switch responce.mode {
+        case .registration:
+            viewModel = RegistrationViewModel(isEnabled: false, title: R.string.localizable.commonRegistration())
+        case .recovery:
+            viewModel = RegistrationViewModel(isEnabled: false, title: R.string.localizable.commonRecovery())
+        }
+        
         viewController?.displayScreen(viewModel: Registration.GetScreens.ViewModel(result: viewModel))
     }
     
@@ -38,7 +45,7 @@ final class RegistrationPresenter: RegistrationPresentationLogic {
     
     // MARK: Показ продолжения
     func presentSubmit(responce: Registration.Submit.Response) {
-        let viewModel = Registration.Submit.ViewModel(viewModel: RegistrationBySMSCodeViewModel(phoneNumber: responce.phoneNumber))
+        let viewModel = Registration.Submit.ViewModel(viewModel: RegistrationBySMSCodeViewModel(phoneNumber: responce.phoneNumber, mode: responce.mode))
         viewController?.displaySubmit(viewModel: viewModel)
     }
     

@@ -17,6 +17,15 @@ protocol AuthByAccountPresentationLogic {
     
     /// Показ продолжения
     func presentSubmit(responce: AuthByAccount.Submit.Response)
+    
+    /// Установка биометрии
+    func setBiometricAuth(response: AuthByAccount.SetBiometricAuth.Response)
+    
+    /// Показ проверки биометрии
+    func presentBiometricAuth(response: AuthByAccount.BiometricAuth.Response)
+    
+    /// Показ проверки ранней установки
+    func presentCheckLaunchedBefore(response: AuthByAccount.CheckLaunchedBefore.Response)
 }
 
 final class AuthByAccountPresenter: AuthByAccountPresentationLogic {
@@ -43,6 +52,21 @@ final class AuthByAccountPresenter: AuthByAccountPresentationLogic {
     func presentSubmit(responce: AuthByAccount.Submit.Response) {
         let viewModel = AuthByAccount.Submit.ViewModel()
         viewController?.displaySubmit(viewModel: viewModel)
+    }
+    
+    // MARK: Установка биометрии
+    func setBiometricAuth(response: AuthByAccount.SetBiometricAuth.Response) {
+        viewController?.setBiometricAuth(viewModel: AuthByAccount.SetBiometricAuth.ViewModel(pinCodeButtonType: response.pinCodeButtonType))
+    }
+    
+    // MARK: Показ проверки биометрии
+    func presentBiometricAuth(response: AuthByAccount.BiometricAuth.Response) {
+        viewController?.displayBiometricAuth(viewModel: AuthByAccount.BiometricAuth.ViewModel())
+    }
+    
+    // MARK: Показ проверки ранней установки
+    func presentCheckLaunchedBefore(response: AuthByAccount.CheckLaunchedBefore.Response) {
+        viewController?.displayCheckLaunchedBefore(viewModel: AuthByAccount.CheckLaunchedBefore.ViewModel(isLaunchedBefore: response.isLaunchedBefore))
     }
 }
 

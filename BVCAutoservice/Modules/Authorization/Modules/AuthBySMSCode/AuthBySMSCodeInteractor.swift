@@ -22,6 +22,7 @@ final class AuthBySMSCodeInteractor: AuthBySMSCodeBusinessLogic {
     private var phoneNumber: String = ""
     private var SMSCode: String = ""
     private var isEnabledButton: Bool = false
+    private var mode: RegistrationMode = .registration
     
     init(presenter: AuthBySMSCodePresentationLogic,
          provider: AuthBySMSCodeProviderProtocol = AuthBySMSCodeProvider()) {
@@ -32,7 +33,8 @@ final class AuthBySMSCodeInteractor: AuthBySMSCodeBusinessLogic {
     // MARK: Запрос на получение экрана
     func getScreen(request: AuthBySMSCode.GetScreens.Request) {
         phoneNumber = request.phoneNumber ?? ""
-        presenter.presentScreen(responce: AuthBySMSCode.GetScreens.Responce())
+        mode = request.mode
+        presenter.presentScreen(responce: AuthBySMSCode.GetScreens.Responce(mode: mode))
     }
     
     // MARK: Установка значения СМС кода
@@ -44,13 +46,28 @@ final class AuthBySMSCodeInteractor: AuthBySMSCodeBusinessLogic {
     
     // MARK: Продолжить
     func submit(request: AuthBySMSCode.Submit.Request) {
-        provider.fetchResultSendPhoneNumber(SMSCode: SMSCode, phoneNumber: phoneNumber) { [weak self] result in
-            switch result {
-            case .success:
-                self?.presenter.presentSubmit(responce: AuthBySMSCode.Submit.Response())
-            case let .failure(message):
-                self?.presenter.presentError(responce: AuthBySMSCode.Error.Response(errorMessage: message.errorMessage))
+        switch mode {
+        case .registration:
+//            presenter.presentSubmit(responce: AuthBySMSCode.Submit.Response(mode: self.mode))
+            provider.fetchResultSendPhoneNumber(SMSCode: SMSCode, phoneNumber: phoneNumber) { [weak self] result in
+                switch result {
+                case .success:
+                    self?.presenter.presentSubmit(responce: AuthBySMSCode.Submit.Response(mode: self?.mode ?? .registration, username: nil, SMSCode: nil))
+                case let .failure(message):
+                    self?.presenter.presentError(responce: AuthBySMSCode.Error.Response(errorMessage: message.errorMessage))
+                }
+            }
+        case .recovery:
+//            presenter.presentSubmit(responce: AuthBySMSCode.Submit.Response(mode: self.mode))
+            provider.fetchResultSendPhoneNumberRecovery(SMSCode: SMSCode, phoneNumber: phoneNumber) { [weak self] result in
+                switch result {
+                case let .success(model):
+                    self?.presenter.presentSubmit(responce: AuthBySMSCode.Submit.Response(mode: self?.mode ?? .recovery, username: model.username, SMSCode: self?.SMSCode))
+                case let .failure(message):
+                    self?.presenter.presentError(responce: AuthBySMSCode.Error.Response(errorMessage: message.errorMessage))
+                }
             }
         }
+        
     }
 }

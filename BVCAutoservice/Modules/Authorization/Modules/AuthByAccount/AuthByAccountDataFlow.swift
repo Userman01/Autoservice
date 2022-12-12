@@ -81,4 +81,41 @@ enum AuthByAccount {
             let errorMessage: String
         }
     }
+    
+    // MARK: Проверка биометрии
+    enum BiometricAuth {
+        struct Request {
+        }
+
+        struct Response {
+        }
+
+        struct ViewModel {
+        }
+    }
+    
+    // MARK: Установка биометрии
+    enum SetBiometricAuth {
+        struct Response {
+            let pinCodeButtonType: PinCodeButtonType
+        }
+
+        struct ViewModel {
+            let pinCodeButtonType: PinCodeButtonType
+        }
+    }
+    
+    // MARK: Проверка ранней установки
+    enum CheckLaunchedBefore {
+        struct Request {
+        }
+
+        struct Response {
+            let isLaunchedBefore: Bool
+        }
+
+        struct ViewModel {
+            let isLaunchedBefore: Bool
+        }
+    }
 }

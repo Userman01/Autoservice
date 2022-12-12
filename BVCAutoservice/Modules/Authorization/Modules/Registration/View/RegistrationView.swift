@@ -21,7 +21,6 @@ final class RegistrationView: UIView {
     lazy private var titlelabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = ViewMetrics.backgroundColorLargeTitle
-        label.text = R.string.localizable.commonRegistration()
         label.font = .font14RegularNeuropol
         label.adjustsFontForContentSizeCategory = true
         label.textColor = ViewMetrics.textColor
@@ -86,6 +85,7 @@ final class RegistrationView: UIView {
     
     func configure(viewModel: RegistrationViewModel) {
         button.isEnabled = viewModel.isEnabled
+        titlelabel.text = viewModel.title
     }
     
     func setButtonState(isEnabled: Bool) {

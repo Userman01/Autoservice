@@ -11,6 +11,9 @@ protocol PassportCreateServiceProtocol {
     
     /// Отправка данных пользователя
     func fetchResultSendUserInfo(userName: String?, phoneNumber: String?, role: String?, password: String?, completion: @escaping (RequestResult<PassportCreateModel>) -> Void)
+    
+    /// Отправка данных пользователя при восстановлении
+    func fetchResultSendUserInfoRecovery(SMSCode: String?, phoneNumber: String?, password: String?, completion: @escaping (RequestResult<PassportCreateRecoveryModel>) -> Void)
 }
 
 struct PassportCreateService: PassportCreateServiceProtocol {
@@ -28,4 +31,16 @@ struct PassportCreateService: PassportCreateServiceProtocol {
         ]
         apiClient.post(url, parameters: parameters, model: PassportCreateModel.self, completion: completion)
   }
+
+    // MARK: Отправка данных пользователя при восстановлении
+    func fetchResultSendUserInfoRecovery(SMSCode: String?, phoneNumber: String?, password: String?, completion: @escaping (RequestResult<PassportCreateRecoveryModel>) -> Void) {
+        let url = AuthorizationEndpoints.signIn
+        let parameters: [String: Any] = [
+            "code": SMSCode ?? "",
+            "number": phoneNumber ?? "",
+            "newPassword": password ?? ""
+        ]
+        apiClient.post(url, parameters: parameters, model: PassportCreateRecoveryModel.self, completion: completion)
+  }
+
 }

@@ -11,6 +11,7 @@ final class AuthByAccountView: UIView {
         static let backgroundColor: UIColor! = .backgroundColor
         static let backgroundColorLargeTitle: UIColor! = .dynamic(light: R.color.barStyleLight(), dark: R.color.barStyleDark())
         static let textColor: UIColor! = .dynamic(light: R.color.white(), dark: R.color.white())
+        static let textFaceIdColor: UIColor! = .dynamic(light: R.color.gray(), dark: R.color.blue())
         static let indicatorsStackViewSpacing: CGFloat = 20.0
         static let labelColor: UIColor! = .dynamic(light: R.color.gray(), dark: R.color.gray())
         static let titleColorAuthButton: UIColor! = .dynamic(light: R.color.authTitleAuthButtonLight(), dark: R.color.authTitleAuthButtonDark())
@@ -173,6 +174,19 @@ final class AuthByAccountView: UIView {
         button.isEnabled = viewModel.isEnabled
     }
     
+    func showActionButton(with buttonType: PinCodeButtonType) {
+        DispatchQueue.main.async {
+            switch buttonType {
+            case .faceID:
+                self.setBiometricButton(text: R.string.localizable.authByAccountFaceIDTarget())
+            case .touchID:
+                self.setBiometricButton(text: R.string.localizable.authByAccountTouchIDTarget())
+            default:
+                break
+            }
+        }
+    }
+    
     func setButtonState(isEnabled: Bool) {
         button.isEnabled = isEnabled
     }
@@ -185,11 +199,31 @@ final class AuthByAccountView: UIView {
         delegate?.setNewPassport(value: text)
     }
     
+    private func setBiometricButton(text: String) {
+        let button = UIButton(type: .system)
+        button.setTitle(text, for: .normal)
+        button.titleLabel?.font = .font14Regular
+        button.setTitleColor(ViewMetrics.textFaceIdColor, for: .normal)
+        button.addTarget(self, action: #selector(authButtonBiometricAuth), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(button)
+        
+        button.snp.makeConstraints { make in
+            make.top.equalTo(self.button.snp.bottom).offset(CGFloat.spacing20Pt)
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+        }
+    }
+    
     @objc private func submit() {
         delegate?.submit()
     }
     
     @objc private func authButtonTupped() {
         delegate?.openCreateNewPassword()
+    }
+    
+    @objc private func authButtonBiometricAuth() {
+        delegate?.showBiometricAuth()
     }
 }

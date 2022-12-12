@@ -23,7 +23,12 @@ final class AuthorizationCoordinator: BaseCoordinator {
     }
     
     override func start() {
-       openAuthChoice()
+        if UserAuthService.shared.isUserAuthorized() {
+            openAuthChoice()
+            openAuthByAccount()
+        } else {
+            openAuthChoice()
+        }
     }
     
     private func openAuthChoice() {
@@ -37,8 +42,8 @@ final class AuthorizationCoordinator: BaseCoordinator {
         }
     }
     
-    private func openRegistration(userRole: UserRoleType) {
-        authorizationRouter.openRegistration { [weak self] cmd in
+    private func openRegistration(mode: RegistrationMode = .registration, userRole: UserRoleType?) {
+        authorizationRouter.openRegistration(mode: mode) { [weak self] cmd in
             switch cmd {
             case let .open(.authBySMSCode(viewModel)):
                 self?.openAuthBySMSCode(viewModel: viewModel, userRole: userRole)
@@ -46,11 +51,11 @@ final class AuthorizationCoordinator: BaseCoordinator {
         }
     }
     
-    private func openAuthBySMSCode(viewModel: AuthBySMSCodeTypeViewModel, userRole: UserRoleType) {
+    private func openAuthBySMSCode(viewModel: AuthBySMSCodeTypeViewModel, userRole: UserRoleType?) {
         authorizationRouter.openAuthBySMSCode(viewModel: viewModel) { [weak self] cmd in
             switch cmd {
-            case .open:
-                self?.authorizationRouter.openPassportCreate(userRole: userRole, phoneNumber: viewModel.phoneNumber, out: { [weak self] cmd in
+            case let .open(.openPassportCreate(mode: mode, username: username, SMSCode: SMSCode)):
+                self?.authorizationRouter.openPassportCreate(userRole: userRole, phoneNumber: viewModel.phoneNumber, mode: mode, username: username, SMSCode: SMSCode, out: { [weak self] cmd in
                     switch cmd {
                     case .open(.openMain):
                         self?.out(.openPrimary)
@@ -64,14 +69,10 @@ final class AuthorizationCoordinator: BaseCoordinator {
         authorizationRouter.openAuthByAccount { [weak self] cmd in
             switch cmd {
             case .open(.openCreateNewPassword):
-                self?.openCreateNewPassword()
+                self?.openRegistration(mode: .recovery, userRole: nil)
             case .open(.openMain):
                 self?.out(.openPrimary)
             }
         }
-    }
-    
-    private func openCreateNewPassword() {
-        print("open create new password")
     }
 }

@@ -11,8 +11,11 @@ final class PassportCreateBuilder {
     
     var role: UserRoleType?
     var phoneNumber: String?
+    var mode: RegistrationMode = .registration
+    var username: String?
+    var SMSCode: String?
     
-    func set(role: UserRoleType) -> PassportCreateBuilder {
+    func set(role: UserRoleType?) -> PassportCreateBuilder {
         self.role = role
         return self
     }
@@ -21,12 +24,27 @@ final class PassportCreateBuilder {
         self.phoneNumber = phoneNumber
         return self
     }
+    
+    func set(mode: RegistrationMode) -> PassportCreateBuilder {
+        self.mode = mode
+        return self
+    }
+    
+    func set(username: String?) -> PassportCreateBuilder {
+        self.username = username
+        return self
+    }
+    
+    func set(SMSCode: String?) -> PassportCreateBuilder {
+        self.SMSCode = SMSCode
+        return self
+    }
 
     func build(out: @escaping PassportCreateOut) -> UIViewController {
-        guard let role = role, let phoneNumber = phoneNumber else { fatalError("set role and phoneNumber") }
+        guard let phoneNumber = phoneNumber else { fatalError("set phoneNumber") }
         let presenter = PassportCreatePresenter()
         let interactor = PassportCreateInteractor(presenter: presenter)
-        let controller = PassportCreateViewController(interactor: interactor, userRole: role, phoneNumber: phoneNumber, out: out)
+        let controller = PassportCreateViewController(interactor: interactor, userRole: role, phoneNumber: phoneNumber, mode: mode, username: username, SMSCode: SMSCode, out: out)
         presenter.viewController = controller
         return controller
     }

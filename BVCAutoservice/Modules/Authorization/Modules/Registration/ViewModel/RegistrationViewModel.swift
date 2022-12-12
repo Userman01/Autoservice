@@ -9,6 +9,7 @@ import UIKit
 
 struct RegistrationViewModel {
     let isEnabled: Bool
+    let title: String
 }
 
 enum RegistrationNavigationType {
@@ -17,4 +18,5 @@ enum RegistrationNavigationType {
 
 struct RegistrationBySMSCodeViewModel: AuthBySMSCodeTypeViewModel {
     var phoneNumber: String?
+    var mode: RegistrationMode
 }

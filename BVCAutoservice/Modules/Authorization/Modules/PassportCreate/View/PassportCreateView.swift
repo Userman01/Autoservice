@@ -14,6 +14,7 @@ final class PassportCreateView: UIView {
         static let backgroundColor: UIColor! = .backgroundColor
         static let backgroundColorLargeTitle: UIColor! = .dynamic(light: R.color.barStyleLight(), dark: R.color.barStyleDark())
         static let textColor: UIColor! = .dynamic(light: R.color.white(), dark: R.color.white())
+        static let textDescribeColor: UIColor! = .dynamic(light: R.color.gray(), dark: R.color.blue())
         static let indicatorsStackViewSpacing: CGFloat = 20.0
         static let labelColor: UIColor! = .dynamic(light: R.color.gray(), dark: R.color.gray())
     }
@@ -60,6 +61,16 @@ final class PassportCreateView: UIView {
         return textField
     }()
     
+    private lazy var describelabel: UILabel = {
+        let label = UILabel()
+        label.font = .font14Regular
+        label.textColor = ViewMetrics.textDescribeColor
+        label.textAlignment = .center
+        label.numberOfLines = .zero
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private lazy var button: ActionButton = {
         let button = ActionButton(title: R.string.localizable.commonNext())
         button.addTarget(self, action: #selector(submit), for: .touchUpInside)
@@ -84,6 +95,7 @@ final class PassportCreateView: UIView {
         addSubview(passportTextField)
         addSubview(passportRepeateTextField)
         addSubview(button)
+        addSubview(describelabel)
         
         titlelabel.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
@@ -115,10 +127,21 @@ final class PassportCreateView: UIView {
             make.right.equalToSuperview().offset(-CGFloat.spacing16Pt)
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-CGFloat.spacing20Pt)
         }
+        
+        describelabel.snp.makeConstraints { make in
+            make.top.equalTo(passportRepeateTextField.snp.bottom).offset(CGFloat.spacing40Pt)
+            make.left.equalToSuperview().offset(CGFloat.spacing32Pt)
+            make.right.equalToSuperview().offset(-CGFloat.spacing32Pt)
+        }
     }
     
     func configure(viewModel: PassportCreateViewModel) {
         button.isEnabled = viewModel.isEnabled
+        titlelabel.text = viewModel.title
+        describelabel.text = viewModel.describeTitle
+        if viewModel.nameUser != nil {
+            setupLabel(text: viewModel.nameUser ?? "")
+        }
     }
     
     func setButtonState(isEnabled: Bool) {
@@ -135,6 +158,24 @@ final class PassportCreateView: UIView {
     
     private func didEditRepeatePassportText(_ text: String) {
         delegate?.setRepeatePassport(value: text)
+    }
+    
+    private func setupLabel(text: String) {
+        nameTextField.isHidden = true
+        let label = UILabel()
+        label.text = text
+        label.font = .font14RegularNeuropol
+        label.adjustsFontForContentSizeCategory = true
+        label.textColor = ViewMetrics.textColor
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(label)
+        
+        label.snp.makeConstraints { make in
+            make.top.equalTo(titlelabel.snp.bottom).offset(CGFloat.spacing120Pt)
+            make.left.equalToSuperview().offset(CGFloat.spacing16Pt)
+            make.right.equalToSuperview().offset(-CGFloat.spacing16Pt)
+        }
     }
     
     @objc private func submit() {

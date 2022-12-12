@@ -11,6 +11,7 @@ enum Registration {
         }
         
         struct Responce {
+            let mode: RegistrationMode
         }
         
         struct ViewModel {
@@ -50,6 +51,7 @@ enum Registration {
 
         struct Response {
             let phoneNumber: String?
+            let mode: RegistrationMode
         }
 
         struct ViewModel {
@@ -68,6 +70,13 @@ enum Registration {
 
         struct ViewModel {
             let errorMessage: String
+        }
+    }
+    
+    // MARK: Установка мода
+    enum Mode {
+        struct Request {
+            let mode: RegistrationMode
         }
     }
 }

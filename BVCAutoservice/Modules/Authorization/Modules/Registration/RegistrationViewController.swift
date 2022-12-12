@@ -42,10 +42,12 @@ final class RegistrationViewController: UIViewController {
     private lazy var customView = self.view as? RegistrationView
     
     private let out: RegistrationOut
+    private let mode: RegistrationMode
     
-    init(interactor: RegistrationBusinessLogic, out: @escaping RegistrationOut) {
+    init(interactor: RegistrationBusinessLogic, mode: RegistrationMode, out: @escaping RegistrationOut) {
         self.interactor = interactor
         self.out = out
+        self.mode = mode
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -61,6 +63,7 @@ final class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setMode(mode: mode)
         getScreen()
     }
     
@@ -71,6 +74,10 @@ final class RegistrationViewController: UIViewController {
     
     private func getScreen() {
         interactor.getScreen(request: Registration.GetScreens.Request())
+    }
+    
+    private func setMode(mode: RegistrationMode) {
+        interactor.setMode(request: Registration.Mode.Request(mode: mode))
     }
 }
 

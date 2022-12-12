@@ -7,9 +7,11 @@ enum AuthBySMSCode {
     enum GetScreens {
         struct Request {
             let phoneNumber: String?
+            let mode: RegistrationMode
         }
         
         struct Responce {
+            let mode: RegistrationMode
         }
         
         struct ViewModel {
@@ -48,9 +50,15 @@ enum AuthBySMSCode {
         }
         
         struct Response {
+            let mode: RegistrationMode
+            let username: String?
+            let SMSCode: String?
         }
         
         struct ViewModel {
+            let mode: RegistrationMode
+            let username: String?
+            let SMSCode: String?
         }
     }
     

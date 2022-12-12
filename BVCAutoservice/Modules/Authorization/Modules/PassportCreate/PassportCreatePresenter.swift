@@ -27,7 +27,23 @@ final class PassportCreatePresenter: PassportCreatePresentationLogic {
     
     // MARK: Показ экранов онбординга
     func presentScreen(responce: PassportCreate.GetScreens.Responce) {
-        let viewModel = PassportCreateViewModel(isEnabled: false, pinCodeLenght: 8)
+        let viewModel: PassportCreateViewModel
+        switch responce.mode {
+        case .registration:
+            viewModel = PassportCreateViewModel(
+                isEnabled: false,
+                pinCodeLenght: 8,
+                title: R.string.localizable.commonRegistration(),
+                describeTitle: R.string.localizable.passportCreateDescribeLabelTitle(),
+                nameUser: nil)
+        case .recovery:
+            viewModel = PassportCreateViewModel(
+                isEnabled: false,
+                pinCodeLenght: 8,
+                title: R.string.localizable.commonRecovery(),
+                describeTitle: R.string.localizable.passportCreateDescribeLabelTitle(),
+                nameUser: responce.username)
+        }
         viewController?.displayScreen(viewModel: PassportCreate.GetScreens.ViewModel(result: viewModel))
     }
     

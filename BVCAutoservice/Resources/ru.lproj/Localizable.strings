@@ -14,6 +14,7 @@
 "common.authorization" = "Авторизация";
 "common.error-message" = "Произошла ошибка";
 "common.OK" = "OK";
+"common.recovery" = "Восстановление";
 
 // MARK: Авторизация выборка
 "auth-choice.button-user.title" = "Ищу Автосервис";
@@ -32,8 +33,12 @@
 "passport-create.textfield-label-name" = "Введите Имя";
 "passport-create.textfield-label-passport" = "Придумайте пароль";
 "passport-create.textfield-label-repeate-passport" = "Повторите пароль";
+"passport-create.describe-label-title" = "Введенный пароль должен содержать не менее 8 символов, иметь не менее одной заглавной буквы и цифры";
 
 // MARK: Войти
 "passport-enter.textfield-label-passport" = "Введите пароль";
 "authByAccount.button-recovery.title" = "Новый пароль";
 "authByAccount.label-forget.title" = "Забыли пароль?";
+"authByAccount.touchID" = "Приложите палец, чтобы войти в приложение";
+"authByAccount.touchID-target" = "Использовать TouchID";
+"authByAccount.faceID-target" = "Использовать FaceID";

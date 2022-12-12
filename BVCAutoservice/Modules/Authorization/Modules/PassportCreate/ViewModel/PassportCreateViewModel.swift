@@ -15,6 +15,9 @@ protocol PassportCreateTypeViewModel {
 struct PassportCreateViewModel {
     let isEnabled: Bool
     let pinCodeLenght: Int
+    let title: String
+    let describeTitle: String
+    let nameUser: String?
 }
 
 enum PassportCreateNavigationType {

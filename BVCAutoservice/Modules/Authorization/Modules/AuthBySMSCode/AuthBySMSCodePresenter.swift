@@ -25,7 +25,14 @@ final class AuthBySMSCodePresenter: AuthBySMSCodePresentationLogic {
     
     // MARK: Показ экранов онбординга
     func presentScreen(responce: AuthBySMSCode.GetScreens.Responce) {
-        let viewModel = AuthBySMSCodeViewModel(isEnabled: false)
+        let viewModel: AuthBySMSCodeViewModel
+        switch responce.mode {
+        case .registration:
+            viewModel = AuthBySMSCodeViewModel(isEnabled: false, title: R.string.localizable.commonRegistration())
+        case .recovery:
+            viewModel = AuthBySMSCodeViewModel(isEnabled: false, title: R.string.localizable.commonRecovery())
+        }
+        
         viewController?.displayScreen(viewModel: AuthBySMSCode.GetScreens.ViewModel(result: viewModel))
     }
     
@@ -41,7 +48,7 @@ final class AuthBySMSCodePresenter: AuthBySMSCodePresentationLogic {
     
     // MARK: Показ продолжения
     func presentSubmit(responce: AuthBySMSCode.Submit.Response) {
-        let viewModel = AuthBySMSCode.Submit.ViewModel()
+        let viewModel = AuthBySMSCode.Submit.ViewModel(mode: responce.mode, username: responce.username, SMSCode: responce.SMSCode)
         viewController?.displaySubmit(viewModel: viewModel)
     }
 }

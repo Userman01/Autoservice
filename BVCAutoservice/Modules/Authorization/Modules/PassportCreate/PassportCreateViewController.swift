@@ -48,14 +48,20 @@ final class PassportCreateViewController: UIViewController {
     private lazy var customView = self.view as? PassportCreateView
     
     private let out: PassportCreateOut
-    private let userRole: UserRoleType
+    private let userRole: UserRoleType?
     private let phoneNumber: String
+    private let mode: RegistrationMode
+    private var username: String?
+    private var SMSCode: String?
     
-    init(interactor: PassportCreateBusinessLogic, userRole: UserRoleType, phoneNumber: String, out: @escaping PassportCreateOut) {
+    init(interactor: PassportCreateBusinessLogic, userRole: UserRoleType?, phoneNumber: String, mode: RegistrationMode, username: String?, SMSCode: String?, out: @escaping PassportCreateOut) {
         self.interactor = interactor
         self.out = out
         self.userRole = userRole
         self.phoneNumber = phoneNumber
+        self.mode = mode
+        self.username = username
+        self.SMSCode = SMSCode
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -71,7 +77,7 @@ final class PassportCreateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getScreen(userRole: userRole, phoneNumber: phoneNumber)
+        getScreen(userRole: userRole, phoneNumber: phoneNumber, mode: mode, username: username, SMSCode: SMSCode)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,8 +85,8 @@ final class PassportCreateViewController: UIViewController {
         setNavigationBarStyle(.primary)
     }
     
-    private func getScreen(userRole: UserRoleType, phoneNumber: String) {
-        interactor.getScreen(request: PassportCreate.GetScreens.Request(userRole: userRole, phoneNumber: phoneNumber))
+    private func getScreen(userRole: UserRoleType?, phoneNumber: String, mode: RegistrationMode, username: String?, SMSCode: String?) {
+        interactor.getScreen(request: PassportCreate.GetScreens.Request(userRole: userRole, phoneNumber: phoneNumber, mode: mode, username: username, SMSCode: SMSCode))
     }
 }
 

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import LocalAuthentication
 
 protocol PassportCreateBusinessLogic {
     /// Запрос на получение экрана
@@ -33,9 +32,12 @@ final class PassportCreateInteractor: PassportCreateBusinessLogic {
     private var name: String = ""
     private var newPassport: String = ""
     private var repeatePassport: String = ""
-    private var userRole: UserRoleType = .user
+    private var userRole: UserRoleType? = .user
     private var phoneNumber: String = ""
     private var isEnabledButton: Bool = false
+    private var mode: RegistrationMode = .registration
+    private var username: String?
+    private var SMSCode: String?
     
     init(presenter: PassportCreatePresentationLogic,
          provider: PassportCreateProviderProtocol = PassportCreateProvider()) {
@@ -47,7 +49,15 @@ final class PassportCreateInteractor: PassportCreateBusinessLogic {
     func getScreen(request: PassportCreate.GetScreens.Request) {
         userRole = request.userRole
         phoneNumber = request.phoneNumber
-        presenter.presentScreen(responce: PassportCreate.GetScreens.Responce())
+        mode = request.mode
+        username = request.username
+        SMSCode = request.SMSCode
+        switch mode {
+        case .registration:
+            presenter.presentScreen(responce: PassportCreate.GetScreens.Responce(mode: mode, model: nil, username: nil))
+        case .recovery:
+            presenter.presentScreen(responce: PassportCreate.GetScreens.Responce(mode: mode, model: nil, username: username))
+        }
     }
     
     // MARK: Установка значения номера телефона
@@ -70,28 +80,50 @@ final class PassportCreateInteractor: PassportCreateBusinessLogic {
     
     // MARK: Продолжить
     func submit(request: PassportCreate.Submit.Request) {
-        provider.fetchResultSendUserInfo(userName: name, phoneNumber: phoneNumber, role: userRole.rawValue, password: newPassport) { [weak self] result in
-            switch result {
-            case .success:
-                self?.presenter.presentSubmit(responce: PassportCreate.Submit.Response())
-            case let .failure(message):
-                self?.presenter.presentError(responce: PassportCreate.Error.Response(errorMessage: message.errorMessage))
+        switch mode {
+        case .registration:
+            guard let userRole = userRole else { return }
+            provider.fetchResultSendUserInfo(userName: name, phoneNumber: phoneNumber, role: userRole.rawValue, password: newPassport) { [weak self] result in
+                switch result {
+                case let .success(model):
+                    self?.presenter.presentSubmit(responce: PassportCreate.Submit.Response())
+                    self?.provider.setToken(model.accessToken)
+                    self?.provider.setLogin(model.username)
+                    self?.provider.setPassword(self?.newPassport ?? "")
+                    self?.provider.setLaunchedBefore()
+                case let .failure(message):
+                    self?.presenter.presentError(responce: PassportCreate.Error.Response(errorMessage: message.errorMessage))
+                }
+            }
+        case .recovery:
+            provider.fetchResultSendUserInfoRecovery(SMSCode: SMSCode, phoneNumber: phoneNumber, password: newPassport) { [weak self] result in
+                switch result {
+                case let .success(model):
+                    self?.presenter.presentSubmit(responce: PassportCreate.Submit.Response())
+                    self?.provider.setToken(model.accessToken)
+                    self?.provider.setLogin(model.username)
+                    self?.provider.setPassword(self?.newPassport ?? "")
+                    self?.provider.setLaunchedBefore()
+                case let .failure(message):
+                    self?.presenter.presentError(responce: PassportCreate.Error.Response(errorMessage: message.errorMessage))
+                }
             }
         }
+        
     }
 }
 
 extension PassportCreateInteractor {
     
     private func setButtonState() {
-        isEnabledButton = name.count > 0 && newPassport.count > 7 && newPassport == repeatePassport
-        presenter.presentSetButtonState(response: PassportCreate.SetButtonState.Response(isEnabledButton: isEnabledButton))
-    }
-    
-    private func checkBiometrics() {
-        let biometricAuthContext: LAContext = LAContext()
-        if biometricAuthContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-            
+        switch mode {
+        case .registration:
+            isEnabledButton = name.count > 0 && newPassport.count > 7 && newPassport == repeatePassport
+            presenter.presentSetButtonState(response: PassportCreate.SetButtonState.Response(isEnabledButton: isEnabledButton))
+        case .recovery:
+            isEnabledButton = newPassport.count > 7 && newPassport == repeatePassport
+            presenter.presentSetButtonState(response: PassportCreate.SetButtonState.Response(isEnabledButton: isEnabledButton))
         }
+        
     }
 }

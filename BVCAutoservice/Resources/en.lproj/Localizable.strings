@@ -14,6 +14,7 @@
 "common.authorization" = "Authorization";
 "common.error-message" = "Error";
 "common.OK" = "OK";
+"common.recovery" = "Recovery";
 
 // MARK: Авторизация выборка
 "auth-choice.button-user.title" = "Looking for a AutoService";
@@ -32,7 +33,12 @@
 "passport-create.textfield-label-name" = "Enter your name";
 "passport-create.textfield-label-passport" = "Create a password";
 "passport-create.textfield-label-repeate-passport" = "Repeat password";
+"passport-create.describe-label-title" = "The entered password must contain at least 8 characters, have at least one capital letter and a number";
+
 // MARK: Войти
 "passport-enter.textfield-label-passport" = "Enter your password";
 "authByAccount.button-recovery.title" = "New password";
 "authByAccount.label-forget.title" = "Forget password?";
+"authByAccount.touchID" = "Place your finger to enter the application";
+"authByAccount.touchID-target" = "Use TouchID";
+"authByAccount.faceID-target" = "Use FaceID";

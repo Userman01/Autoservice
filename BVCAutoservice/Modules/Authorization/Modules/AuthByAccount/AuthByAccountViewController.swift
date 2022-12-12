@@ -20,6 +20,15 @@ protocol AuthByAccountDisplayLogic: AnyObject {
     
     /// Показ продолжения
     func displaySubmit(viewModel: AuthByAccount.Submit.ViewModel)
+    
+    /// Установка биометрии
+    func setBiometricAuth(viewModel: AuthByAccount.SetBiometricAuth.ViewModel)
+    
+    /// Отображение биометрии
+    func displayBiometricAuth(viewModel: AuthByAccount.BiometricAuth.ViewModel)
+    
+    /// Отображение ранее установки
+    func displayCheckLaunchedBefore(viewModel: AuthByAccount.CheckLaunchedBefore.ViewModel)
 }
 
 protocol AuthByAccountViewControllerDelegate: AnyObject {
@@ -34,6 +43,9 @@ protocol AuthByAccountViewControllerDelegate: AnyObject {
     
     /// Продолжить
     func submit()
+    
+    /// Показ биометрии
+    func showBiometricAuth()
 }
 
 typealias AuthByAccountOut = ((AuthByAccountOutCmd) -> Void)
@@ -66,6 +78,7 @@ final class AuthByAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getFields()
+        checkLaunchedBefore()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -76,6 +89,16 @@ final class AuthByAccountViewController: UIViewController {
     // MARK: Получение полей
     private func getFields() {
         interactor.getFields(request: AuthByAccount.GetFields.Request())
+    }
+    
+    // MARK: Проверка биометрии
+    private func biometricAuth() {
+        interactor.biometricAuth(request: AuthByAccount.BiometricAuth.Request())
+    }
+    
+    // MARK: Проверка ранее установки
+    private func checkLaunchedBefore() {
+        interactor.checkLaunchedBefore(request: AuthByAccount.CheckLaunchedBefore.Request())
     }
 }
 
@@ -102,6 +125,23 @@ extension AuthByAccountViewController: AuthByAccountDisplayLogic {
         stopFullScreenAnimatingIndicator()
         out(.open(.openMain))
     }
+    
+    // MARK: Установка биометрии
+    func setBiometricAuth(viewModel: AuthByAccount.SetBiometricAuth.ViewModel) {
+        customView?.showActionButton(with: viewModel.pinCodeButtonType)
+    }
+    
+    // MARK: Отображение биометрии
+    func displayBiometricAuth(viewModel: AuthByAccount.BiometricAuth.ViewModel) {
+        out(.open(.openMain))
+    }
+    
+    // MARK: Отображение ранее установки
+    func displayCheckLaunchedBefore(viewModel: AuthByAccount.CheckLaunchedBefore.ViewModel) {
+        if viewModel.isLaunchedBefore {
+            biometricAuth()
+        }
+    }
 }
 
 extension AuthByAccountViewController: AuthByAccountViewControllerDelegate {
@@ -125,5 +165,10 @@ extension AuthByAccountViewController: AuthByAccountViewControllerDelegate {
     func submit() {
         startFullScreenAnimatingIndicator()
         interactor.submit(request: AuthByAccount.Submit.Request())
+    }
+    
+    // MARK: Показ биометрии
+    func showBiometricAuth() {
+        biometricAuth()
     }
 }

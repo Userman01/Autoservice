@@ -59,7 +59,8 @@ final class AuthBySMSCodeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getScreen(phoneNumber: viewModel?.phoneNumber)
+        guard let viewModel = viewModel else { return }
+        getScreen(phoneNumber: viewModel.phoneNumber, mode: viewModel.mode)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,8 +68,8 @@ final class AuthBySMSCodeViewController: UIViewController {
         setNavigationBarStyle(.primary)
     }
 
-    private func getScreen(phoneNumber: String?) {
-        interactor.getScreen(request: AuthBySMSCode.GetScreens.Request(phoneNumber: phoneNumber))
+    private func getScreen(phoneNumber: String?, mode: RegistrationMode) {
+        interactor.getScreen(request: AuthBySMSCode.GetScreens.Request(phoneNumber: phoneNumber, mode: mode))
     }
 }
 
@@ -93,7 +94,7 @@ extension AuthBySMSCodeViewController: AuthBySMSCodeDisplayLogic {
     // MARK: Показ продолжения
     func displaySubmit(viewModel: AuthBySMSCode.Submit.ViewModel) {
         stopFullScreenAnimatingIndicator()
-        out(.open(.openPassportCreate))
+        out(.open(.openPassportCreate(mode: viewModel.mode, username: viewModel.username, SMSCode: viewModel.SMSCode)))
     }
 }
 

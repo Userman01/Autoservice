@@ -1,13 +1,13 @@
 //
-//  AuthChoiceModel.swift
+//  PassportCreateRecoveryModel.swift
 //  BVCAutoservice
 //
-//  Created by Петр Постников on 24.11.2022.
+//  Created by Петр Постников on 12.12.2022.
 //
 
 import Foundation
 
-struct PassportCreateModel: Decodable {
+struct PassportCreateRecoveryModel: Decodable {
     let id: String
     let username: String
     let phone: String
