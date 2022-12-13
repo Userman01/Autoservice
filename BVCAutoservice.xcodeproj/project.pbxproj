@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		068D82DBBE745D23C1902F5C /* AuthBySMSCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99120EC99A8F454EAC4D5B92 /* AuthBySMSCodeView.swift */; };
+		0FAE758BD214E1CCB231007C /* WelcomeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4618812C7A9E7DCA9513FBE5 /* WelcomeDataStore.swift */; };
+		119F1BB111C95E492A0AD8D9 /* WelcomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6B073EB6DDF7E94CFB75A /* WelcomeProvider.swift */; };
+		2785046D4E17774FA95F6572 /* WelcomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C4287DECEC9FE0DAB38BB /* WelcomeService.swift */; };
 		2BE084AEF96CCAD44CF8F5FB /* AuthByAccountBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AC3E4BDFAF598E7988B26 /* AuthByAccountBuilder.swift */; };
 		2F0FC25F3BE01D8E6B5C9669 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D71A8FA9CE1BBAB43CCCFC /* MainViewModel.swift */; };
 		3522ECC6B6293D9AA0186E15 /* AuthBySMSCodeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4B08B50E4E8CD95D93EAB /* AuthBySMSCodeDataStore.swift */; };
@@ -19,13 +22,19 @@
 		6886FA40854FB51A10F9D8B0 /* AuthByAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FA85EA35D72D236692834E /* AuthByAccountView.swift */; };
 		6898C1486137A676E4697CA4 /* AuthByAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3477FC15FF6A8EA2EDB80C /* AuthByAccountViewController.swift */; };
 		7CE8F56876E0D340DA60B143 /* MainDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A6EAA63742292D1AB4A82D /* MainDataFlow.swift */; };
+		7DEDB7C85E52C968BB96A2AD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB9FE2DEEC5F16B99A04C9 /* WelcomeViewController.swift */; };
 		7FB69CF19129736E2DD8E81E /* AuthByAccountDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4FFD9F03F8E006AFFCF01A /* AuthByAccountDataFlow.swift */; };
+		8686B6ABCABABEE9ACE62EAC /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC6D12A0324179E8C049A8 /* WelcomeInteractor.swift */; };
 		8990A16515CAF17662370B37 /* AuthBySMSCodeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD34F23E7018B5223E701FF /* AuthBySMSCodeProvider.swift */; };
+		8C3DF1E04A59283517C88AA2 /* WelcomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6173CB9DBC9646C956EBF06 /* WelcomeBuilder.swift */; };
 		910A2D518C0E719569D51955 /* AuthByAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296C3DB8762B621F0F3B321A /* AuthByAccountInteractor.swift */; };
 		924254CB6D9338B1B5FC7841 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFC87438618759951CC1D76 /* MainView.swift */; };
+		94F64513A7F814F8F967C986 /* WelcomeDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CB93E6170DD63470D8F9FC /* WelcomeDataFlow.swift */; };
 		9EC8D3527F2B1F13F9670001 /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE873FC5C6835A97C064CF8 /* MainBuilder.swift */; };
+		9F2688604E14493469AC0DB5 /* WelcomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629ADAD964A3BE380B3260B9 /* WelcomeModel.swift */; };
 		A032237D6DE6F2ED227C69CB /* AuthByAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690CC538431ED0690150B8B5 /* AuthByAccountPresenter.swift */; };
 		A26145FA55008B375118E466 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296D7E2FDEB70193A8003223 /* MainInteractor.swift */; };
+		A6FB08C460A9AD18FECB2F63 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9110DBF760A1A1C57D223E /* WelcomeView.swift */; };
 		A80008B40C908A0AD7E03822 /* AuthBySMSCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867E5329EDD48D2A085C56A /* AuthBySMSCodePresenter.swift */; };
 		AEF1E066FAD12A17EDD65658 /* AuthBySMSCodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1CC618EE0B58368D1B3D63 /* AuthBySMSCodeBuilder.swift */; };
 		C1CD9DBAA8D370FA0AB99000 /* AuthBySMSCodeDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AAD8D84CAE4FDDFA308BD /* AuthBySMSCodeDataFlow.swift */; };
@@ -123,9 +132,11 @@
 		CC5ED7F5326D054B633C1072 /* AuthBySMSCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020CA0C37B1F95F3FBF529FE /* AuthBySMSCodeModel.swift */; };
 		CF72C06B8FC979D110F758EC /* AuthByAccountDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3957D7B28CB67C91B6205FFF /* AuthByAccountDataStore.swift */; };
 		CF7FA6702E4F55A92D235887 /* MainDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8208A08790A89D4AB011060 /* MainDataStore.swift */; };
+		D0BDAB2B610310D734B33D2A /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07297676832391E29D0A967D /* WelcomeViewModel.swift */; };
 		DBCB063AE66AFF530609F948 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6CA191F6C6E7A22A90FC45 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework */; };
 		DF6313F59C67F0C014FA19E9 /* AuthByAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD9DD0DE11057BBFA340699 /* AuthByAccountViewModel.swift */; };
 		E0308BD1E9AB10F6A9F37C21 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673F9153B2BC1E425EA97958 /* MainPresenter.swift */; };
+		E321C84104FFAA8834DE087F /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0881AE1AFEF076A20DB77BBE /* WelcomePresenter.swift */; };
 		E32D83AA270DFFA6D8E04807 /* AuthByAccountProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF018E65547BDB0D1E64059 /* AuthByAccountProvider.swift */; };
 		E471274486A5B439515F6B86 /* AuthByAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC021CB7CCCC1A374889CB /* AuthByAccountModel.swift */; };
 		E963050B04E6EB2BCB4061F6 /* AuthBySMSCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5FE7887AFAE3D0E672B78 /* AuthBySMSCodeService.swift */; };
@@ -152,8 +163,13 @@
 
 /* Begin PBXFileReference section */
 		020CA0C37B1F95F3FBF529FE /* AuthBySMSCodeModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeModel.swift; sourceTree = "<group>"; };
+		07297676832391E29D0A967D /* WelcomeViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		087867F1C63B6406E81584D6 /* MainService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		0881AE1AFEF076A20DB77BBE /* WelcomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		0F9110DBF760A1A1C57D223E /* WelcomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		10F6B7C9CDFABA3845EEF15F /* Pods-BVCAutoservice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice.release.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice/Pods-BVCAutoservice.release.xcconfig"; sourceTree = "<group>"; };
+		122C4287DECEC9FE0DAB38BB /* WelcomeService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeService.swift; sourceTree = "<group>"; };
+		17DC6D12A0324179E8C049A8 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
 		1D6CA191F6C6E7A22A90FC45 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVCAutoservice_BVCAutoserviceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E2DAD6784F7BC2D63ACDEE8 /* MainViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		20FC021CB7CCCC1A374889CB /* AuthByAccountModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountModel.swift; sourceTree = "<group>"; };
@@ -164,12 +180,16 @@
 		2B7754E95D7E36D30D827B75 /* MainModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		3867E5329EDD48D2A085C56A /* AuthBySMSCodePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodePresenter.swift; sourceTree = "<group>"; };
 		3957D7B28CB67C91B6205FFF /* AuthByAccountDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountDataStore.swift; sourceTree = "<group>"; };
+		4618812C7A9E7DCA9513FBE5 /* WelcomeDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeDataStore.swift; sourceTree = "<group>"; };
 		478AAD8D84CAE4FDDFA308BD /* AuthBySMSCodeDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeDataFlow.swift; sourceTree = "<group>"; };
 		47B3C98763DD89BABD6A2ADC /* MainProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainProvider.swift; sourceTree = "<group>"; };
+		47F6B073EB6DDF7E94CFB75A /* WelcomeProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeProvider.swift; sourceTree = "<group>"; };
 		498AC3E4BDFAF598E7988B26 /* AuthByAccountBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountBuilder.swift; sourceTree = "<group>"; };
 		51E527D5B59D21B8A545A1EF /* AuthBySMSCodeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeInteractor.swift; sourceTree = "<group>"; };
+		56CB93E6170DD63470D8F9FC /* WelcomeDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeDataFlow.swift; sourceTree = "<group>"; };
 		5D3477FC15FF6A8EA2EDB80C /* AuthByAccountViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountViewController.swift; sourceTree = "<group>"; };
 		5DE873FC5C6835A97C064CF8 /* MainBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		629ADAD964A3BE380B3260B9 /* WelcomeModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
 		673F9153B2BC1E425EA97958 /* MainPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		690CC538431ED0690150B8B5 /* AuthByAccountPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountPresenter.swift; sourceTree = "<group>"; };
 		6B4FFD9F03F8E006AFFCF01A /* AuthByAccountDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountDataFlow.swift; sourceTree = "<group>"; };
@@ -270,6 +290,7 @@
 		C9C69666293E1610000CB92F /* ContactWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWorker.swift; sourceTree = "<group>"; };
 		C9C69669293E1833000CB92F /* MaskedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedString.swift; sourceTree = "<group>"; };
 		C9C69671293E2E5C000CB92F /* neuropol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = neuropol.ttf; path = ../../../../../Downloads/neuropol_x/neuropol.ttf; sourceTree = "<group>"; };
+		C9CB9FE2DEEC5F16B99A04C9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C9D8B35229138DD400B68EFE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C9D8B35B2913BEE700B68EFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C9D8B35F2913C19900B68EFE /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -285,6 +306,7 @@
 		CAF018E65547BDB0D1E64059 /* AuthByAccountProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountProvider.swift; sourceTree = "<group>"; };
 		D0BB065EC1F38B4FD620510F /* Pods-BVCAutoservice-BVCAutoserviceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice-BVCAutoserviceUITests.release.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice-BVCAutoserviceUITests/Pods-BVCAutoservice-BVCAutoserviceUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F3A5FE7887AFAE3D0E672B78 /* AuthBySMSCodeService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeService.swift; sourceTree = "<group>"; };
+		F6173CB9DBC9646C956EBF06 /* WelcomeBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeBuilder.swift; sourceTree = "<group>"; };
 		FE1CC618EE0B58368D1B3D63 /* AuthBySMSCodeBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -373,6 +395,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		57B000C7AA6CFC3BB0D08580 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F9110DBF760A1A1C57D223E /* WelcomeView.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
 		60507D131C56E68959D53746 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +418,32 @@
 				DD75853B1FA8CD9DC290AB1A /* View */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		73DF3A8539A3336ED8668A48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				629ADAD964A3BE380B3260B9 /* WelcomeModel.swift */,
+			);
+			name = Model;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B0D79ED23BFD08AD1EAC16B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				F6173CB9DBC9646C956EBF06 /* WelcomeBuilder.swift */,
+				C9CB9FE2DEEC5F16B99A04C9 /* WelcomeViewController.swift */,
+				17DC6D12A0324179E8C049A8 /* WelcomeInteractor.swift */,
+				0881AE1AFEF076A20DB77BBE /* WelcomePresenter.swift */,
+				56CB93E6170DD63470D8F9FC /* WelcomeDataFlow.swift */,
+				73DF3A8539A3336ED8668A48 /* Model */,
+				D1F4CAD495CDDE491A0E3639 /* ViewModel */,
+				D2B63D8C1419DF1CDF298014 /* Provider */,
+				57B000C7AA6CFC3BB0D08580 /* View */,
+			);
+			name = Welcome;
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		AE62BD8D0B95AD472E02D90C /* View */ = {
@@ -476,6 +533,7 @@
 				C932E9A429169F1F008D7057 /* AuthChoice */,
 				EE025E9846A010A7F30F0305 /* AuthBySMSCode */,
 				B7EF83455A991ADDD381F4CA /* AuthByAccount */,
+				8B0D79ED23BFD08AD1EAC16B /* Welcome */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1031,6 +1089,26 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		D1F4CAD495CDDE491A0E3639 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				07297676832391E29D0A967D /* WelcomeViewModel.swift */,
+			);
+			name = ViewModel;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D2B63D8C1419DF1CDF298014 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				47F6B073EB6DDF7E94CFB75A /* WelcomeProvider.swift */,
+				4618812C7A9E7DCA9513FBE5 /* WelcomeDataStore.swift */,
+				122C4287DECEC9FE0DAB38BB /* WelcomeService.swift */,
+			);
+			name = Provider;
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		DD75853B1FA8CD9DC290AB1A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1309,7 +1387,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1468,6 +1546,17 @@
 				CF72C06B8FC979D110F758EC /* AuthByAccountDataStore.swift in Sources */,
 				CBA5459183292E9B0C85CB9A /* AuthByAccountService.swift in Sources */,
 				6886FA40854FB51A10F9D8B0 /* AuthByAccountView.swift in Sources */,
+				8C3DF1E04A59283517C88AA2 /* WelcomeBuilder.swift in Sources */,
+				7DEDB7C85E52C968BB96A2AD /* WelcomeViewController.swift in Sources */,
+				8686B6ABCABABEE9ACE62EAC /* WelcomeInteractor.swift in Sources */,
+				E321C84104FFAA8834DE087F /* WelcomePresenter.swift in Sources */,
+				94F64513A7F814F8F967C986 /* WelcomeDataFlow.swift in Sources */,
+				9F2688604E14493469AC0DB5 /* WelcomeModel.swift in Sources */,
+				D0BDAB2B610310D734B33D2A /* WelcomeViewModel.swift in Sources */,
+				119F1BB111C95E492A0AD8D9 /* WelcomeProvider.swift in Sources */,
+				0FAE758BD214E1CCB231007C /* WelcomeDataStore.swift in Sources */,
+				2785046D4E17774FA95F6572 /* WelcomeService.swift in Sources */,
+				A6FB08C460A9AD18FECB2F63 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

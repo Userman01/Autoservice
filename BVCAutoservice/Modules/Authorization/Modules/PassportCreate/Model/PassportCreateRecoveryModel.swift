@@ -8,7 +8,7 @@
 import Foundation
 
 struct PassportCreateRecoveryModel: Decodable {
-    let id: String
+    let id: Int
     let username: String
     let phone: String
     let roles: [String]

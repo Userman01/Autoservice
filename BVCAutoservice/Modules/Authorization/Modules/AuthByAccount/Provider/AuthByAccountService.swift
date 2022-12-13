@@ -19,7 +19,7 @@ final class AuthByAccountService: AuthByAccountServiceProtocol {
 
     // MARK: Отправка данных пользователя
     func fetchResultSendUserInfo(userName: String?, password: String?, completion: @escaping (RequestResult<AuthByAccountModel>) -> Void) {
-        let url = AuthorizationEndpoints.signUp
+        let url = AuthorizationEndpoints.signIn
         let parameters: [String: Any] = [
             "username": userName ?? "",
             "password": password ?? ""

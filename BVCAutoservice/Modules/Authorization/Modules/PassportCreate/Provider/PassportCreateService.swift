@@ -22,7 +22,7 @@ struct PassportCreateService: PassportCreateServiceProtocol {
 
     // MARK: Отправка данных пользователя
     func fetchResultSendUserInfo(userName: String?, phoneNumber: String?, role: String?, password: String?, completion: @escaping (RequestResult<PassportCreateModel>) -> Void) {
-        let url = AuthorizationEndpoints.signIn
+        let url = AuthorizationEndpoints.signUp
         let parameters: [String: Any] = [
             "username": userName ?? "",
             "phone": phoneNumber ?? "",
@@ -34,7 +34,7 @@ struct PassportCreateService: PassportCreateServiceProtocol {
 
     // MARK: Отправка данных пользователя при восстановлении
     func fetchResultSendUserInfoRecovery(SMSCode: String?, phoneNumber: String?, password: String?, completion: @escaping (RequestResult<PassportCreateRecoveryModel>) -> Void) {
-        let url = AuthorizationEndpoints.signIn
+        let url = AuthorizationEndpoints.signInRecovery
         let parameters: [String: Any] = [
             "code": SMSCode ?? "",
             "number": phoneNumber ?? "",

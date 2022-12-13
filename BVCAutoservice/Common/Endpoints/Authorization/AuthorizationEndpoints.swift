@@ -21,7 +21,7 @@ struct AuthorizationEndpoints {
     }
     
     static var clientSMSCodeRecovery: String {
-        return "\(BaseURL.BVC)/api/sms/check/"
+        return "\(BaseURL.BVC)/api/sms/check/forget-password/"
     }
     
     static var signUp: String {
@@ -30,5 +30,9 @@ struct AuthorizationEndpoints {
     
     static var signIn: String {
         return "\(BaseURL.BVC)/api/auth/signin"
+    }
+    
+    static var signInRecovery: String {
+        return "\(BaseURL.BVC)/api/auth/forget-password"
     }
 }
