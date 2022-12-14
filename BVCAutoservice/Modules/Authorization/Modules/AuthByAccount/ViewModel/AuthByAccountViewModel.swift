@@ -8,6 +8,6 @@ struct AuthByAccountViewModel {
 }
 
 enum AuthByAccountNavigationType {
-    case openMain
+    case openWelcome(RegistrationMode)
     case openCreateNewPassword
 }

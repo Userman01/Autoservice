@@ -15,6 +15,7 @@
 "common.error-message" = "Error";
 "common.OK" = "OK";
 "common.recovery" = "Recovery";
+"common.user" = "User";
 
 // MARK: Авторизация выборка
 "auth-choice.button-user.title" = "Looking for a AutoService";
@@ -42,3 +43,14 @@
 "authByAccount.touchID" = "Place your finger to enter the application";
 "authByAccount.touchID-target" = "Use TouchID";
 "authByAccount.faceID-target" = "Use FaceID";
+
+// MARK: Welcome user
+"welcome-user.button-title" = "Find a car service";
+
+// MARK: Welcome service
+"welcome-service.button-title" = "Suggest a car service";
+
+// MARK: Welcome common
+"welcome-common.describe-regitration" = "Registration successfully completed";
+"welcome-common.describe-recovery" = "Your account has been successfully restored";
+"welcome-common.describe-enter" = "Welcome!";

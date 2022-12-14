@@ -67,8 +67,12 @@ final class AuthByAccountInteractor: AuthByAccountBusinessLogic {
     func submit(request: AuthByAccount.Submit.Request) {
         provider.fetchResultSendUserInfo(userName: name, password: passwort) { [weak self] result in
             switch result {
-            case .success:
+            case let .success(model):
                 self?.presenter.presentSubmit(responce: AuthByAccount.Submit.Response())
+                self?.provider.setToken(model.accessToken)
+                self?.provider.setLogin(model.username)
+                self?.provider.setLaunchedBefore()
+                self?.provider.setRole(model.role)
             case let .failure(message):
                 self?.presenter.presentError(responce: AuthByAccount.Error.Response(errorMessage: message.errorMessage))
             }

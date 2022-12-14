@@ -57,8 +57,8 @@ final class AuthorizationCoordinator: BaseCoordinator {
             case let .open(.openPassportCreate(mode: mode, username: username, SMSCode: SMSCode)):
                 self?.authorizationRouter.openPassportCreate(userRole: userRole, phoneNumber: viewModel.phoneNumber, mode: mode, username: username, SMSCode: SMSCode, out: { [weak self] cmd in
                     switch cmd {
-                    case .open(.openMain):
-                        self?.out(.openPrimary)
+                    case let .open(.openWelcom(mode)):
+                        self?.openWelcome(mode: mode)
                     }
                 })
             }
@@ -70,6 +70,15 @@ final class AuthorizationCoordinator: BaseCoordinator {
             switch cmd {
             case .open(.openCreateNewPassword):
                 self?.openRegistration(mode: .recovery, userRole: nil)
+            case let .open(.openWelcome(mode)):
+                self?.openWelcome(mode: mode)
+            }
+        }
+    }
+    
+    private func openWelcome(mode: RegistrationMode, inMode: WelcomeInModel = WelcomeInModel()) {
+        authorizationRouter.openWelcome(mode: mode, inMode: inMode) { [weak self] cmd in
+            switch cmd {
             case .open(.openMain):
                 self?.out(.openPrimary)
             }

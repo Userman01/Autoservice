@@ -22,8 +22,8 @@ protocol PassportCreateProviderProtocol {
     /// Сохранения логина
     func setLogin(_ login: String)
     
-    /// Сохранеия пароля
-    func setPassword(_ password: String)
+    /// Сохранения роли
+    func setRole(_ role: String)
     
     // Установка раннего запуска
     func setLaunchedBefore()
@@ -63,9 +63,9 @@ struct PassportCreateProvider: PassportCreateProviderProtocol {
         keychain.set(login, forKey: KeychainKeys.userName, withAccess: .accessibleWhenUnlockedThisDeviceOnly)
     }
     
-    // MARK: Сохранеия пароля
-    func setPassword(_ password: String) {
-        keychain.set(password, forKey: KeychainKeys.password, withAccess: .accessibleWhenUnlockedThisDeviceOnly)
+    // MARK: Сохранения роли
+    func setRole(_ role: String) {
+        keychain.set(role, forKey: KeychainKeys.userRole, withAccess: .accessibleWhenUnlockedThisDeviceOnly)
     }
     
     func setLaunchedBefore() {

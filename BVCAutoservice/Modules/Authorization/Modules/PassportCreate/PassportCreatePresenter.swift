@@ -43,6 +43,13 @@ final class PassportCreatePresenter: PassportCreatePresentationLogic {
                 title: R.string.localizable.commonRecovery(),
                 describeTitle: R.string.localizable.passportCreateDescribeLabelTitle(),
                 nameUser: responce.username)
+        default:
+            viewModel = PassportCreateViewModel(
+                isEnabled: false,
+                pinCodeLenght: 8,
+                title: R.string.localizable.commonRegistration(),
+                describeTitle: R.string.localizable.passportCreateDescribeLabelTitle(),
+                nameUser: nil)
         }
         viewController?.displayScreen(viewModel: PassportCreate.GetScreens.ViewModel(result: viewModel))
     }

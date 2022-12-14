@@ -31,6 +31,8 @@ final class AuthBySMSCodePresenter: AuthBySMSCodePresentationLogic {
             viewModel = AuthBySMSCodeViewModel(isEnabled: false, title: R.string.localizable.commonRegistration())
         case .recovery:
             viewModel = AuthBySMSCodeViewModel(isEnabled: false, title: R.string.localizable.commonRecovery())
+        default:
+            viewModel = AuthBySMSCodeViewModel(isEnabled: false, title: "")
         }
         
         viewController?.displayScreen(viewModel: AuthBySMSCode.GetScreens.ViewModel(result: viewModel))

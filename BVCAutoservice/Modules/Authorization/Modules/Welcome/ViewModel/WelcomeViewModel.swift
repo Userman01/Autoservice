@@ -4,5 +4,8 @@
 //
 
 struct WelcomeViewModel {
-    
+    let userName: String
+    let title: String
+    let buttonTitle: String
+    let describe: String
 }

@@ -8,4 +8,5 @@
 enum RegistrationMode {
     case registration
     case recovery
+    case enter
 }

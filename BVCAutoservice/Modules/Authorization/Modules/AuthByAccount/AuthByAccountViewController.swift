@@ -123,7 +123,7 @@ extension AuthByAccountViewController: AuthByAccountDisplayLogic {
     // MARK: Показ продолжения
     func displaySubmit(viewModel: AuthByAccount.Submit.ViewModel) {
         stopFullScreenAnimatingIndicator()
-        out(.open(.openMain))
+        out(.open(.openWelcome(.enter)))
     }
     
     // MARK: Установка биометрии
@@ -133,7 +133,7 @@ extension AuthByAccountViewController: AuthByAccountDisplayLogic {
     
     // MARK: Отображение биометрии
     func displayBiometricAuth(viewModel: AuthByAccount.BiometricAuth.ViewModel) {
-        out(.open(.openMain))
+        out(.open(.openWelcome(.enter)))
     }
     
     // MARK: Отображение ранее установки

@@ -13,6 +13,18 @@ protocol AuthByAccountProviderProtocol {
     
     // Проверка раннего запуска
     func checkIsLaunchedBefore() -> Bool
+    
+    /// Сохранения токена
+    func setToken(_ token: String)
+    
+    /// Сохранения логина
+    func setLogin(_ login: String)
+    
+    /// Сохранения роли
+    func setRole(_ role: String)
+    
+    // Установка раннего запуска
+    func setLaunchedBefore()
 }
 
 final class AuthByAccountProvider: AuthByAccountProviderProtocol {
@@ -37,5 +49,24 @@ final class AuthByAccountProvider: AuthByAccountProviderProtocol {
     
     func checkIsLaunchedBefore() -> Bool {
         UserDefaults.standard.bool(forKey: UserDefaultsKeys.isLaunchedBefore)
+    }
+    
+    // MARK: Сохранения логина
+    func setLogin(_ login: String) {
+        keychain.set(login, forKey: KeychainKeys.userName, withAccess: .accessibleWhenUnlockedThisDeviceOnly)
+    }
+    
+    // MARK: Сохранения токена
+    func setToken(_ token: String) {
+        keychain.set(token, forKey: KeychainKeys.accessToken, withAccess: .accessibleWhenUnlockedThisDeviceOnly)
+    }
+    
+    // MARK: Сохранения роли
+    func setRole(_ role: String) {
+        keychain.set(role, forKey: KeychainKeys.userRole, withAccess: .accessibleWhenUnlockedThisDeviceOnly)
+    }
+    
+    func setLaunchedBefore() {
+        UserDefaults.standard.set(true, forKey: UserDefaultsKeys.isLaunchedBefore)
     }
 }

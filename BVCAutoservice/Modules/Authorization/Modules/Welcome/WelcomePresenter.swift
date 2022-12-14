@@ -16,14 +16,29 @@ final class WelcomePresenter: WelcomePresentationLogic {
 
     // MARK: Показ полей
     func presentFields(response: Welcome.GetFields.Response) {
-        let viewModel = getViewModel()
+        let viewModel = getViewModel(response)
         viewController?.displayFields(viewModel: Welcome.GetFields.ViewModel(result: viewModel))
     }
 }
 
 extension WelcomePresenter {
 
-    private func getViewModel() -> WelcomeViewModel {
-        WelcomeViewModel()
+    private func getViewModel(_ response: Welcome.GetFields.Response) -> WelcomeViewModel {
+        let viewModel: WelcomeViewModel
+        let buttonTitle: String
+        if response.role == UserRoleType.user.rawValue {
+            buttonTitle = R.string.localizable.welcomeUserButtonTitle()
+        } else {
+            buttonTitle = R.string.localizable.welcomeServiceButtonTitle()
+        }
+        switch response.mode {
+        case .registration:
+            viewModel = WelcomeViewModel(userName: response.userName, title: R.string.localizable.commonRegistration(), buttonTitle: buttonTitle, describe: R.string.localizable.welcomeCommonDescribeRegitration())
+        case .recovery:
+            viewModel = WelcomeViewModel(userName: response.userName, title: R.string.localizable.commonRecovery(), buttonTitle: buttonTitle, describe: R.string.localizable.welcomeCommonDescribeRecovery())
+        case .enter:
+            viewModel = WelcomeViewModel(userName: response.userName, title: R.string.localizable.commonAuthorization(), buttonTitle: buttonTitle, describe: R.string.localizable.welcomeCommonDescribeEnter())
+        }
+        return viewModel
     }
 }

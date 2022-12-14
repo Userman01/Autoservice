@@ -74,6 +74,8 @@ final class RegistrationInteractor: RegistrationBusinessLogic {
                    strongSelf.presenter.presentError(responce: Registration.Error.Response(errorMessage: error.errorMessage))
                 }
             }
+        default:
+            break
         }
     }
     

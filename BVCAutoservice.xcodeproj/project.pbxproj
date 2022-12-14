@@ -109,6 +109,8 @@
 		C9B72C2D293A4A8A00FA9AC5 /* PassportTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B72C2C293A4A8A00FA9AC5 /* PassportTextFieldView.swift */; };
 		C9B889EA29475F3D00E49BBC /* UserAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B889E929475F3D00E49BBC /* UserAuthService.swift */; };
 		C9B889EC294773A100E49BBC /* PinCodeButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B889EB294773A100E49BBC /* PinCodeButtonType.swift */; };
+		C9B889EE2949833700E49BBC /* WelcomeOutNavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B889ED2949833700E49BBC /* WelcomeOutNavigationType.swift */; };
+		C9B889F22949885000E49BBC /* WelcomeInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B889F12949885000E49BBC /* WelcomeInModel.swift */; };
 		C9C6965A293DA3EB000CB92F /* preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = C9C69659293DA3EA000CB92F /* preloader.json */; };
 		C9C6965F293DA858000CB92F /* PrimaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C6965E293DA858000CB92F /* PrimaryCoordinator.swift */; };
 		C9C69661293DA867000CB92F /* PrimaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C69660293DA867000CB92F /* PrimaryRouter.swift */; };
@@ -283,6 +285,8 @@
 		C9B72C2C293A4A8A00FA9AC5 /* PassportTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportTextFieldView.swift; sourceTree = "<group>"; };
 		C9B889E929475F3D00E49BBC /* UserAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthService.swift; sourceTree = "<group>"; };
 		C9B889EB294773A100E49BBC /* PinCodeButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeButtonType.swift; sourceTree = "<group>"; };
+		C9B889ED2949833700E49BBC /* WelcomeOutNavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeOutNavigationType.swift; sourceTree = "<group>"; };
+		C9B889F12949885000E49BBC /* WelcomeInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInModel.swift; sourceTree = "<group>"; };
 		C9C69659293DA3EA000CB92F /* preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = preloader.json; sourceTree = "<group>"; };
 		C9C6965E293DA858000CB92F /* PrimaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryCoordinator.swift; sourceTree = "<group>"; };
 		C9C69660293DA867000CB92F /* PrimaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryRouter.swift; sourceTree = "<group>"; };
@@ -400,7 +404,6 @@
 			children = (
 				0F9110DBF760A1A1C57D223E /* WelcomeView.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -424,8 +427,9 @@
 			isa = PBXGroup;
 			children = (
 				629ADAD964A3BE380B3260B9 /* WelcomeModel.swift */,
+				C9B889ED2949833700E49BBC /* WelcomeOutNavigationType.swift */,
+				C9B889F12949885000E49BBC /* WelcomeInModel.swift */,
 			);
-			name = Model;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -442,7 +446,6 @@
 				D2B63D8C1419DF1CDF298014 /* Provider */,
 				57B000C7AA6CFC3BB0D08580 /* View */,
 			);
-			name = Welcome;
 			path = Welcome;
 			sourceTree = "<group>";
 		};
@@ -1094,7 +1097,6 @@
 			children = (
 				07297676832391E29D0A967D /* WelcomeViewModel.swift */,
 			);
-			name = ViewModel;
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
@@ -1105,7 +1107,6 @@
 				4618812C7A9E7DCA9513FBE5 /* WelcomeDataStore.swift */,
 				122C4287DECEC9FE0DAB38BB /* WelcomeService.swift */,
 			);
-			name = Provider;
 			path = Provider;
 			sourceTree = "<group>";
 		};
@@ -1387,7 +1388,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1489,6 +1490,7 @@
 				C9B72BDE29365C9400FA9AC5 /* PhoneValidator.swift in Sources */,
 				C9938B1F292BEED600B43B05 /* AuthChoiceView.swift in Sources */,
 				C9B72C1A2937B93700FA9AC5 /* LoadingAnimation.swift in Sources */,
+				C9B889F22949885000E49BBC /* WelcomeInModel.swift in Sources */,
 				C9A8AA87292D16380065A736 /* ThemeColor.swift in Sources */,
 				C932E9AA29169FF7008D7057 /* AuthChoiceInteractor.swift in Sources */,
 				C9D8B3652913C1DC00B68EFE /* Router.swift in Sources */,
@@ -1541,6 +1543,7 @@
 				A032237D6DE6F2ED227C69CB /* AuthByAccountPresenter.swift in Sources */,
 				7FB69CF19129736E2DD8E81E /* AuthByAccountDataFlow.swift in Sources */,
 				E471274486A5B439515F6B86 /* AuthByAccountModel.swift in Sources */,
+				C9B889EE2949833700E49BBC /* WelcomeOutNavigationType.swift in Sources */,
 				DF6313F59C67F0C014FA19E9 /* AuthByAccountViewModel.swift in Sources */,
 				E32D83AA270DFFA6D8E04807 /* AuthByAccountProvider.swift in Sources */,
 				CF72C06B8FC979D110F758EC /* AuthByAccountDataStore.swift in Sources */,

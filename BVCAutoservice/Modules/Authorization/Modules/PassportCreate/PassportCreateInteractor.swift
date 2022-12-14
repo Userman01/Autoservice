@@ -57,6 +57,8 @@ final class PassportCreateInteractor: PassportCreateBusinessLogic {
             presenter.presentScreen(responce: PassportCreate.GetScreens.Responce(mode: mode, model: nil, username: nil))
         case .recovery:
             presenter.presentScreen(responce: PassportCreate.GetScreens.Responce(mode: mode, model: nil, username: username))
+        default:
+            break
         }
     }
     
@@ -89,27 +91,29 @@ final class PassportCreateInteractor: PassportCreateBusinessLogic {
                     self?.presenter.presentSubmit(responce: PassportCreate.Submit.Response())
                     self?.provider.setToken(model.accessToken)
                     self?.provider.setLogin(model.username)
-                    self?.provider.setPassword(self?.newPassport ?? "")
                     self?.provider.setLaunchedBefore()
+                    self?.provider.setRole(model.role)
                 case let .failure(message):
                     self?.presenter.presentError(responce: PassportCreate.Error.Response(errorMessage: message.errorMessage))
                 }
             }
         case .recovery:
+            guard let userRole = userRole else { return }
             provider.fetchResultSendUserInfoRecovery(SMSCode: SMSCode, phoneNumber: phoneNumber, password: newPassport) { [weak self] result in
                 switch result {
                 case let .success(model):
                     self?.presenter.presentSubmit(responce: PassportCreate.Submit.Response())
                     self?.provider.setToken(model.accessToken)
                     self?.provider.setLogin(model.username)
-                    self?.provider.setPassword(self?.newPassport ?? "")
                     self?.provider.setLaunchedBefore()
+                    self?.provider.setRole(model.role)
                 case let .failure(message):
                     self?.presenter.presentError(responce: PassportCreate.Error.Response(errorMessage: message.errorMessage))
                 }
             }
+        default:
+            break
         }
-        
     }
 }
 
@@ -123,6 +127,8 @@ extension PassportCreateInteractor {
         case .recovery:
             isEnabledButton = newPassport.count > 7 && newPassport == repeatePassport
             presenter.presentSetButtonState(response: PassportCreate.SetButtonState.Response(isEnabledButton: isEnabledButton))
+        default:
+            break
         }
         
     }

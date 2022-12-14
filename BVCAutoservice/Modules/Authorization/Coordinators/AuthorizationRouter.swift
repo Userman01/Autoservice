@@ -16,6 +16,8 @@ protocol AuthorizationRouterProtocol {
     func openPassportCreate(userRole: UserRoleType?, phoneNumber: String?, mode: RegistrationMode, username: String?, SMSCode: String?, out: @escaping PassportCreateOut)
     
     func openAuthByAccount(out: @escaping AuthByAccountOut)
+    
+    func openWelcome(mode: RegistrationMode, inMode: WelcomeInModel, out: @escaping WelcomeOut)
 }
 
 final class AuthorizationRouter: AuthorizationRouterProtocol {
@@ -61,5 +63,13 @@ final class AuthorizationRouter: AuthorizationRouterProtocol {
         let authByAccount = AuthByAccountBuilder()
             .build(out: out)
         router.push(authByAccount)
+    }
+    
+    func openWelcome(mode: RegistrationMode, inMode: WelcomeInModel, out: @escaping WelcomeOut) {
+        let welcome = WelcomeBuilder()
+            .set(mode: mode)
+            .set(inModel: inMode)
+            .build(out: out)
+        router.setRootModules([welcome])
     }
 }

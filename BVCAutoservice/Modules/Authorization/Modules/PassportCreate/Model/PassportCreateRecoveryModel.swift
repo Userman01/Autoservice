@@ -11,7 +11,7 @@ struct PassportCreateRecoveryModel: Decodable {
     let id: Int
     let username: String
     let phone: String
-    let roles: [String]
+    let role: String
     let accessToken: String
     let tokenType: String
 }

@@ -48,7 +48,6 @@ final class AuthBySMSCodeInteractor: AuthBySMSCodeBusinessLogic {
     func submit(request: AuthBySMSCode.Submit.Request) {
         switch mode {
         case .registration:
-//            presenter.presentSubmit(responce: AuthBySMSCode.Submit.Response(mode: self.mode))
             provider.fetchResultSendPhoneNumber(SMSCode: SMSCode, phoneNumber: phoneNumber) { [weak self] result in
                 switch result {
                 case .success:
@@ -58,7 +57,6 @@ final class AuthBySMSCodeInteractor: AuthBySMSCodeBusinessLogic {
                 }
             }
         case .recovery:
-//            presenter.presentSubmit(responce: AuthBySMSCode.Submit.Response(mode: self.mode))
             provider.fetchResultSendPhoneNumberRecovery(SMSCode: SMSCode, phoneNumber: phoneNumber) { [weak self] result in
                 switch result {
                 case let .success(model):
@@ -67,6 +65,8 @@ final class AuthBySMSCodeInteractor: AuthBySMSCodeBusinessLogic {
                     self?.presenter.presentError(responce: AuthBySMSCode.Error.Response(errorMessage: message.errorMessage))
                 }
             }
+        default:
+            break
         }
         
     }

@@ -10,7 +10,7 @@ import UIKit
 struct KeychainKeys {
     static let accessToken = "accessToken"
     static let userName = "userName"
-    static let password = "userPassword"
+    static let userRole = "userRole"
 }
 
 struct UserDefaultsKeys {

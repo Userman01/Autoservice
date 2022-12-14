@@ -14,7 +14,13 @@ protocol WelcomeDisplayLogic: AnyObject {
 }
 
 protocol WelcomeViewControllerDelegate: AnyObject {
+    /// Переход
+    func tupButton()
+}
 
+typealias WelcomeOut = ((WelcomeOutCmd) -> Void)
+enum WelcomeOutCmd {
+    case open(WelcomeOutNavigationType)
 }
 
 final class WelcomeViewController: UIViewController {
@@ -22,9 +28,15 @@ final class WelcomeViewController: UIViewController {
     private let interactor: WelcomeBusinessLogic
 
     private lazy var customView = view as? WelcomeView
+    private var out: WelcomeOut
+    private let mode: RegistrationMode
+    private var inModel: WelcomeInModel?
 
-    init(interactor: WelcomeBusinessLogic) {
+    init(interactor: WelcomeBusinessLogic, mode: RegistrationMode, inModel: WelcomeInModel?, out: @escaping WelcomeOut) {
         self.interactor = interactor
+        self.out = out
+        self.mode = mode
+        self.inModel = inModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -39,7 +51,7 @@ final class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getFields()
+        getFields(mode, inModel)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -48,8 +60,8 @@ final class WelcomeViewController: UIViewController {
     }
 
     // MARK: Получение полей
-    private func getFields() {
-        interactor.getFields(request: Welcome.GetFields.Request())
+    private func getFields(_ mode: RegistrationMode, _ inModel: WelcomeInModel?) {
+        interactor.getFields(request: Welcome.GetFields.Request(mode: mode, inModel: inModel))
     }
 }
 
@@ -62,5 +74,8 @@ extension WelcomeViewController: WelcomeDisplayLogic {
 }
 
 extension WelcomeViewController: WelcomeViewControllerDelegate {
-
+    // MARK: Переход
+    func tupButton() {
+        out(.open(.openMain))
+    }
 }

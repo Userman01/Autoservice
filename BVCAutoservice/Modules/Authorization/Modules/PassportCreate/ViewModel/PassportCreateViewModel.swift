@@ -21,5 +21,5 @@ struct PassportCreateViewModel {
 }
 
 enum PassportCreateNavigationType {
-    case openMain
+    case openWelcom(RegistrationMode)
 }

@@ -111,7 +111,7 @@ extension PassportCreateViewController: PassportCreateDisplayLogic {
     // MARK: Показ продолжения
     func displaySubmit(viewModel: PassportCreate.Submit.ViewModel) {
         stopFullScreenAnimatingIndicator()
-        out(.open(.openMain))
+        out(.open(.openWelcom(mode)))
     }
 }
 

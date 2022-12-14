@@ -4,10 +4,6 @@
 //
 
 protocol WelcomeServiceProtocol {
-
-    // Получение полей
-    // https://wiki.albank.ru
-    func fetchFields(params: [String: Any], completion: @escaping (RequestResult<WelcomeModel>) -> Void)
 }
 
 final class WelcomeService: WelcomeServiceProtocol {
@@ -16,12 +12,5 @@ final class WelcomeService: WelcomeServiceProtocol {
 
     init(apiClient: APIClient = APIClient()) {
         self.apiClient = apiClient
-    }
-
-    // MARK: Получение полей
-    // https://wiki.albank.ru
-    func fetchFields(params: [String: Any], completion: @escaping (RequestResult<WelcomeModel>) -> Void) {
-        let url = ""
-        apiClient.post(url, parameters: params, model: WelcomeModel.self, completion: completion)
     }
 }

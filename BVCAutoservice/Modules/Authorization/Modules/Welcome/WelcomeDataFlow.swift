@@ -9,9 +9,14 @@ enum Welcome {
     // MARK: Получение полей
     enum GetFields {
         struct Request {
+            let mode: RegistrationMode
+            var inModel: WelcomeInModel?
         }
 
         struct Response {
+            let mode: RegistrationMode
+            let userName: String
+            let role: String
         }
 
         struct ViewModel {

@@ -33,6 +33,8 @@ final class RegistrationPresenter: RegistrationPresentationLogic {
             viewModel = RegistrationViewModel(isEnabled: false, title: R.string.localizable.commonRegistration())
         case .recovery:
             viewModel = RegistrationViewModel(isEnabled: false, title: R.string.localizable.commonRecovery())
+        default:
+            viewModel = RegistrationViewModel(isEnabled: false, title: "")
         }
         
         viewController?.displayScreen(viewModel: Registration.GetScreens.ViewModel(result: viewModel))

@@ -68,7 +68,6 @@ class ActionButton: UIButton {
         buttonStyle = style
         setup(title: titleLabel?.text)
     }
-    
 }
 extension ActionButton {
     

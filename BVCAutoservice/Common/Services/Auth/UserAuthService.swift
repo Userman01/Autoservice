@@ -16,6 +16,6 @@ final class UserAuthService {
     
     func isUserAuthorized() -> Bool {
         let keychain = KeychainSwift()
-        return keychain.get(KeychainKeys.userName) != nil && keychain.get(KeychainKeys.password) != nil && keychain.get(KeychainKeys.accessToken) != nil
+        return keychain.get(KeychainKeys.userName) != nil && keychain.get(KeychainKeys.accessToken) != nil
     }
 }

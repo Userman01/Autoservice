@@ -14,7 +14,10 @@ final class WelcomeInteractor: WelcomeBusinessLogic {
 
     private let provider: WelcomeProviderProtocol
     private let presenter: WelcomePresentationLogic
-
+    private var mode: RegistrationMode = .registration
+    private var inModel: WelcomeInModel?
+    private var userName: String = ""
+    private var role: String = ""
     init(provider: WelcomeProviderProtocol = WelcomeProvider(),
          presenter: WelcomePresentationLogic) {
         self.provider = provider
@@ -23,15 +26,10 @@ final class WelcomeInteractor: WelcomeBusinessLogic {
 
     // MARK: Получение полей
     func getFields(request: Welcome.GetFields.Request) {
-        provider.fetchFields(params: [:]) { [weak self] result in
-            guard let strongSelf = self else { return }
-            switch result {
-            case let .success(model):
-                print(model)
-                strongSelf.presenter.presentFields(response: Welcome.GetFields.Response())
-            case let .failure(error):
-                print(error.errorMessage)
-            }
-        }
+        mode = request.mode
+        inModel = request.inModel
+        userName = provider.getUserName() ?? R.string.localizable.commonUser()
+        role = provider.getRole() ?? UserRoleType.user.rawValue
+        presenter.presentFields(response: Welcome.GetFields.Response(mode: mode, userName: userName, role: role))
     }
 }
