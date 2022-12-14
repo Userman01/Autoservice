@@ -55,14 +55,18 @@ final class AuthorizationCoordinator: BaseCoordinator {
         authorizationRouter.openAuthBySMSCode(viewModel: viewModel) { [weak self] cmd in
             switch cmd {
             case let .open(.openPassportCreate(mode: mode, username: username, SMSCode: SMSCode)):
-                self?.authorizationRouter.openPassportCreate(userRole: userRole, phoneNumber: viewModel.phoneNumber, mode: mode, username: username, SMSCode: SMSCode, out: { [weak self] cmd in
-                    switch cmd {
-                    case let .open(.openWelcom(mode)):
-                        self?.openWelcome(mode: mode)
-                    }
-                })
+                self?.openPassportCreate(userRole: userRole, phoneNumber: viewModel.phoneNumber, mode: mode, username: username, SMSCode: SMSCode)
             }
         }
+    }
+    
+    private func openPassportCreate(userRole: UserRoleType?, phoneNumber: String?, mode: RegistrationMode, username: String?, SMSCode: String?) {
+        authorizationRouter.openPassportCreate(userRole: userRole, phoneNumber: phoneNumber, mode: mode, username: username, SMSCode: SMSCode, out: { [weak self] cmd in
+            switch cmd {
+            case let .open(.openWelcom(mode)):
+                self?.openWelcome(mode: mode)
+            }
+        })
     }
     
     private func openAuthByAccount() {
