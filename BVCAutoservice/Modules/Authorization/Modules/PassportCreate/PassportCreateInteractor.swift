@@ -98,7 +98,6 @@ final class PassportCreateInteractor: PassportCreateBusinessLogic {
                 }
             }
         case .recovery:
-            guard let userRole = userRole else { return }
             provider.fetchResultSendUserInfoRecovery(SMSCode: SMSCode, phoneNumber: phoneNumber, password: newPassport) { [weak self] result in
                 switch result {
                 case let .success(model):
