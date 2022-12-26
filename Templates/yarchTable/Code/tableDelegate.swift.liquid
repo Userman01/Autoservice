@@ -1,0 +1,22 @@
+//
+//  {{ module_info.description }}
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright (c) {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}TableDelegate: NSObject, UITableViewDelegate {
+
+    weak var delegate: {{ module_info.name }}ViewControllerDelegate?
+
+    var representableViewModels: [String]
+
+    init(viewModels: [String] = []) {
+        representableViewModels = viewModels
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}

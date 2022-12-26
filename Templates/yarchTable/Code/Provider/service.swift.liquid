@@ -1,0 +1,27 @@
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright (c) {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+protocol {{ module_info.name }}ServiceProtocol {
+
+    // Получение полей
+    // https://wiki.albank.ru
+    func fetchFields(params: [String: Any], completion: @escaping (RequestResult<{{ module_info.name }}Model>) -> Void)
+}
+
+final class {{ module_info.name }}Service: {{ module_info.name }}ServiceProtocol {
+
+    private let apiClient: APIClient
+
+    init(apiClient: APIClient = APIClient()) {
+        self.apiClient = apiClient
+    }
+
+    // MARK: Получение полей
+    // https://wiki.albank.ru
+    func fetchFields(params: [String: Any], completion: @escaping (RequestResult<{{ module_info.name }}Model>) -> Void) {
+        let url = ""
+        apiClient.post(url, parameters: params, model: {{ module_info.name }}Model.self, completion: completion)
+    }
+}

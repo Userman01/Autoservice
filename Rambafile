@@ -1,0 +1,29 @@
+### Headers settings
+company: BVC
+
+### Xcode project settings
+project_name: BVCAutoservice
+xcodeproj_path: BVCAutoservice.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: BVCAutoservice
+
+# The file path for new modules
+project_file_path: BVCAutoservice/Modules/Authorization/Modules
+
+# The Xcode group path to new modules
+project_group_path: BVCAutoservice/Modules/Authorization/Modules
+
+### Dependencies settings section
+podfile_path: Podfile
+
+catalogs:
+- 'https://github.com/alfa-laboratory/YARCH-Template'
+
+### Templates
+templates:
+#- {name: local_template_name, local: 'absolute/file/path'}
+#- {name: remote_template_name, git: 'https://github.com/igrekde/remote_template'}
+#- {name: catalog_template_name}
+- {name: yarch}

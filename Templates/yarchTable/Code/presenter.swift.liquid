@@ -1,0 +1,29 @@
+//
+//  {{ module_info.description }}
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright (c) {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+protocol {{ module_info.name }}PresentationLogic {
+
+    // Показ полей
+    func presentFields(response: {{ module_info.name }}.GetFields.Response)
+}
+
+final class {{ module_info.name }}Presenter: {{ module_info.name }}PresentationLogic {
+
+    weak var viewController: {{ module_info.name }}DisplayLogic?
+
+    // MARK: Показ полей
+    func presentFields(response: {{ module_info.name }}.GetFields.Response) {
+        let viewModel = getViewModel()
+        viewController?.displayFields(viewModel: {{ module_info.name }}.GetFields.ViewModel(result: viewModel))
+    }
+}
+
+extension {{ module_info.name }}Presenter {
+
+    private func getViewModel() -> {{ module_info.name }}ViewModel {
+        {{ module_info.name }}ViewModel()
+    }
+}

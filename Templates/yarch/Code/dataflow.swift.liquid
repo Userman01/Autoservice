@@ -1,0 +1,21 @@
+//
+//  {{ module_info.description }}
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright (c) {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+enum {{ module_info.name }} {
+
+    // MARK: Получение полей
+    enum GetFields {
+        struct Request {
+        }
+
+        struct Response {
+        }
+
+        struct ViewModel {
+            let result: {{ module_info.name }}ViewModel
+        }
+    }
+}

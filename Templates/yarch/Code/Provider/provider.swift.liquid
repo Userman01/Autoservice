@@ -1,0 +1,26 @@
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright (c) {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+protocol {{ module_info.name }}ProviderProtocol {
+
+    // Получение полей
+    // https://wiki.albank.ru
+    func fetchFields(params: [String: Any], completion: @escaping (RequestResult<{{ module_info.name }}Model>) -> Void)
+}
+
+final class {{ module_info.name }}Provider: {{ module_info.name }}ProviderProtocol {
+
+    private let service: {{ module_info.name }}ServiceProtocol
+
+    init(service: {{ module_info.name }}ServiceProtocol = {{ module_info.name }}Service()) {
+        self.service = service
+    }
+
+    // MARK: Получение полей
+    // https://wiki.albank.ru
+    func fetchFields(params: [String: Any], completion: @escaping (RequestResult<{{ module_info.name }}Model>) -> Void) {
+        service.fetchFields(params: params, completion: completion)
+    }
+}

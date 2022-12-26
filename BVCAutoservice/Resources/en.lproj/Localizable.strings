@@ -5,3 +5,52 @@
   Created by Петр Постников on 03.11.2022.
   
 */
+
+// MARK: Общие
+"common.logo-title" = "AutoService";
+"common.enter" = "Enter";
+"common.next" = "Next";
+"common.registration" = "Registration";
+"common.authorization" = "Authorization";
+"common.error-message" = "Error";
+"common.OK" = "OK";
+"common.recovery" = "Recovery";
+"common.user" = "User";
+
+// MARK: Авторизация выборка
+"auth-choice.button-user.title" = "Looking for a AutoService";
+"auth-choice.button-service.title" = "Offer AutoService";
+"auth-choice.labelAuth" = "Already have an account?";
+
+// MARK: Регистрация
+"registration.enter-phone-number.title" = "Enter phone number";
+"registration.enter-sms-code.title" = "Enter code from sms";
+
+// MARK: SMS регситрация
+"auth-sms.go" = "Go";
+
+// MARK: Создание паспорта
+"passport-create.title" = "Confirm";
+"passport-create.textfield-label-name" = "Enter your name";
+"passport-create.textfield-label-passport" = "Create a password";
+"passport-create.textfield-label-repeate-passport" = "Repeat password";
+"passport-create.describe-label-title" = "The entered password must contain at least 8 characters, have at least one capital letter and a number";
+
+// MARK: Войти
+"passport-enter.textfield-label-passport" = "Enter your password";
+"authByAccount.button-recovery.title" = "New password";
+"authByAccount.label-forget.title" = "Forget password?";
+"authByAccount.touchID" = "Place your finger to enter the application";
+"authByAccount.touchID-target" = "Use TouchID";
+"authByAccount.faceID-target" = "Use FaceID";
+
+// MARK: Welcome user
+"welcome-user.button-title" = "Find a car service";
+
+// MARK: Welcome service
+"welcome-service.button-title" = "Suggest a car service";
+
+// MARK: Welcome common
+"welcome-common.describe-regitration" = "Registration successfully completed";
+"welcome-common.describe-recovery" = "Your account has been successfully restored";
+"welcome-common.describe-enter" = "Welcome!";

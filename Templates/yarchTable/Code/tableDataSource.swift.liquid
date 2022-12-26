@@ -1,0 +1,26 @@
+//
+//  {{ module_info.description }}
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright (c) {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}TableDataSource: NSObject, UITableViewDataSource {
+
+    weak var delegate: {{ module_info.name }}ViewControllerDelegate?
+
+    var representableViewModels: [String]
+
+    init(viewModels: [String] = []) {
+        representableViewModels = viewModels
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        representableViewModels.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
+}
