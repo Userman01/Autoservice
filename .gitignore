@@ -12,3 +12,5 @@ Pods/
 
 # R.swift
 *.generated.swift
+
+Templates/

@@ -1,0 +1,37 @@
+//
+//  {{ module_info.description }}
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright (c) {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+protocol {{ module_info.name }}BusinessLogic {
+
+    // Получение полей
+    func getFields(request: {{ module_info.name }}.GetFields.Request)
+}
+
+final class {{ module_info.name }}Interactor: {{ module_info.name }}BusinessLogic {
+
+    private let provider: {{ module_info.name }}ProviderProtocol
+    private let presenter: {{ module_info.name }}PresentationLogic
+
+    init(provider: {{ module_info.name }}ProviderProtocol = {{ module_info.name }}Provider(),
+         presenter: {{ module_info.name }}PresentationLogic) {
+        self.provider = provider
+        self.presenter = presenter
+    }
+
+    // MARK: Получение полей
+    func getFields(request: {{ module_info.name }}.GetFields.Request) {
+        provider.fetchFields(params: [:]) { [weak self] result in
+            guard let strongSelf = self else { return }
+            switch result {
+            case let .success(model):
+                print(model)
+                strongSelf.presenter.presentFields(response: {{ module_info.name }}.GetFields.Response())
+            case let .failure(error):
+                print(error.errorMessage)
+            }
+        }
+    }
+}

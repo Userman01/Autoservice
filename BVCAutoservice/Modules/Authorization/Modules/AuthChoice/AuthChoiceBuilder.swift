@@ -9,10 +9,10 @@ import UIKit
 
 final class AuthChoiceBuilder {
     
-    func build() -> UIViewController {
+    func build(out: @escaping AuthChoiceOut) -> UIViewController {
         let presenter = AuthChoicePresenter()
         let interactor = AuthChoiceInteractor(presenter: presenter)
-        let controller = AuthChoiceViewController(interactor: interactor)
+        let controller = AuthChoiceViewController(interactor: interactor, out: out)
         presenter.viewController = controller
         return controller
     }

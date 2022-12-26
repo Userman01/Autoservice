@@ -8,6 +8,7 @@ target 'BVCAutoservice' do
   pod 'R.swift'
   pod 'SwiftLint'
   pod 'SnapKit', '5.6.0'
+  pod 'lottie-ios', '3.5.0'
 
   target 'BVCAutoserviceTests' do
     inherit! :search_paths

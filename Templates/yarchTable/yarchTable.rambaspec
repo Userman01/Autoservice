@@ -1,0 +1,32 @@
+# Template information section
+name: "Yarch table"
+summary: "Yarch module template from Alfa-Bank (alfalab)."
+author: "Alfa-Bank"
+version: "0.2.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+- {name: Builder.swift, path: Code/builder.swift.liquid}
+- {name: ViewController.swift, path: Code/viewcontroller.swift.liquid}
+- {name: TableDataSource.swift, path: Code/tableDataSource.swift.liquid}
+- {name: TableDelegate.swift, path: Code/tableDelegate.swift.liquid}
+- {name: Interactor.swift, path: Code/interactor.swift.liquid}
+- {name: Presenter.swift, path: Code/presenter.swift.liquid}
+- {name: DataFlow.swift, path: Code/dataflow.swift.liquid}
+
+# Model layer
+- {name: Model/Model.swift, path: Code/Model/model.swift.liquid}
+
+# ViewModel layer
+- {name: ViewModel/ViewModel.swift, path: Code/ViewModel/viewmodel.swift.liquid}
+
+# Provider layer
+- {name: Provider/Provider.swift, path: Code/Provider/provider.swift.liquid}
+- {name: Provider/DataStore.swift, path: Code/Provider/datastore.swift.liquid}
+- {name: Provider/Service.swift, path: Code/Provider/service.swift.liquid}
+
+# View layer
+- {name: View/View.swift, path: Code/View/view.swift.liquid}
