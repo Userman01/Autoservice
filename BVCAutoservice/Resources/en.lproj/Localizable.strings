@@ -10,6 +10,7 @@
 "common.logo-title" = "AutoService";
 "common.enter" = "Enter";
 "common.next" = "Next";
+"common.next-points" = "Next...";
 "common.registration" = "Registration";
 "common.authorization" = "Authorization";
 "common.error-message" = "Error";
@@ -54,3 +55,8 @@
 "welcome-common.describe-regitration" = "Registration successfully completed";
 "welcome-common.describe-recovery" = "Your account has been successfully restored";
 "welcome-common.describe-enter" = "Welcome!";
+
+// MARK: MainUser
+"main-user.menu-title.auto-service" = "AutoService";
+"main-user.menu-title.auto-washing" = "AutoWashing";
+"main-user.menu-title.oil-change" = "OilChange";

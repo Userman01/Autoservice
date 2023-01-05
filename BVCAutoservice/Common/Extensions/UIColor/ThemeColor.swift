@@ -14,4 +14,6 @@ extension UIColor {
     }
     
     static let backgroundColor = dynamic(light: R.color.backgroundColorLight(), dark: R.color.backgroundColorDark())
+    
+    static let backgroundColorLargeTitle: UIColor! = .dynamic(light: R.color.barStyleLight(), dark: R.color.barStyleDark())
 }

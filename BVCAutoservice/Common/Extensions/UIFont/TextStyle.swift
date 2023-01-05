@@ -67,7 +67,11 @@ extension UIFont {
 
 extension UIFont {
     
+    static let font12RegularNeuropol: UIFont! = UIFont(name: R.font.neuropolXRgRegular.fontName, size: .spacing12Pt)
+    
     static let font14RegularNeuropol: UIFont! = UIFont(name: R.font.neuropolXRgRegular.fontName, size: .spacing14Pt)
     
     static let font16RegularNeuropol: UIFont! = UIFont(name: R.font.neuropolXRgRegular.fontName, size: .spacing16Pt)
+    
+    static let font20RegularNeuropol: UIFont! = UIFont(name: R.font.neuropolXRgRegular.fontName, size: .spacing20Pt)
 }
