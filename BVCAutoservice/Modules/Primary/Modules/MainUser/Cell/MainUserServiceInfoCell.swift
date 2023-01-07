@@ -43,6 +43,7 @@ final class MainUserServiceInfoCell: UICollectionViewCell {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 300))
         imageView.setContentHuggingPriority(.defaultLow, for: .vertical)
         imageView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
@@ -71,6 +72,12 @@ final class MainUserServiceInfoCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    private lazy var reviewsView: MainUserReviewsView = {
+        let reviewsView = MainUserReviewsView()
+        reviewsView.translatesAutoresizingMaskIntoConstraints = false
+        return reviewsView
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -89,6 +96,7 @@ final class MainUserServiceInfoCell: UICollectionViewCell {
         contentView.addSubview(serviceImageView)
         contentView.addSubview(infoLabel)
         contentView.addSubview(nextLabel)
+        contentView.addSubview(reviewsView)
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(CGFloat.spacing8Pt)
@@ -116,6 +124,10 @@ final class MainUserServiceInfoCell: UICollectionViewCell {
             make.right.equalToSuperview().offset(-CGFloat.spacing16Pt)
             make.bottom.equalToSuperview().offset(-CGFloat.spacing8Pt)
         }
+        reviewsView.snp.makeConstraints { make in
+            make.left.equalTo(serviceImageView.snp.left).offset(CGFloat.spacing16Pt)
+            make.bottom.equalTo(serviceImageView.snp.bottom).offset(-CGFloat.spacing8Pt)
+        }
     }
     
     func configure(with viewModel: MainUserServicesViewModel) {
@@ -123,6 +135,7 @@ final class MainUserServiceInfoCell: UICollectionViewCell {
         nameCityLabel.text = viewModel.nameCityText
         serviceImageView.image = viewModel.image
         infoLabel.text = viewModel.infoText
+        reviewsView.configure(countHeart: viewModel.countHeartText, countChat: viewModel.countChatText)
     }
 }
 

@@ -27,4 +27,6 @@ struct MainUserServicesViewModel {
     let nameCityText: String
     let image: UIImage
     let infoText: String
+    let countHeartText: String
+    let countChatText: String
 }

@@ -14,12 +14,16 @@ class ActionButton: UIButton {
         
         static let primaryBackgroundColor: UIColor! = .dynamic(light: R.color.primaryBackgroundColorLight(), dark: R.color.primaryBackgroundColorDark())
         static let primaryHighlightedColor: UIColor! = .dynamic(light: R.color.primaryHighlightedColorLight(), dark: R.color.primaryHighlightedColorDark())
+        static let secondBackgroundColor: UIColor! = .dynamic(light: R.color.primaryBackgroundColorLight(), dark: R.color.blue())
+        static let secondHighlightedColor: UIColor! = .dynamic(light: R.color.primaryHighlightedColorLight(), dark: R.color.lightBlue())
         static let heightNormal: CGFloat = 56.0
         static let cornerRadius: CGFloat = 28.0
+        static let secondCornerRadius: CGFloat = 5.0
     }
     
     enum ButtonStyle {
         case primary
+        case second
     }
     
     enum ButtonHeightType {
@@ -54,6 +58,12 @@ class ActionButton: UIButton {
             setTitle(title, for: .normal)
             backgroundColor = ViewMetrics.primaryBackgroundColor
             layer.cornerRadius = ViewMetrics.cornerRadius
+        case .second:
+            titleLabel?.font = .font16Regular
+            setTitleColor(ViewMetrics.primaryTitleColor, for: .normal)
+            setTitle(title, for: .normal)
+            backgroundColor = ViewMetrics.secondBackgroundColor
+            layer.cornerRadius = ViewMetrics.secondCornerRadius
         }
     }
 
@@ -84,6 +94,8 @@ extension ActionButton {
             switch buttonStyle {
             case .primary:
                 backgroundColor = isHighlighted ? ViewMetrics.primaryHighlightedColor : ViewMetrics.primaryBackgroundColor
+            case .second:
+                backgroundColor = isHighlighted ? ViewMetrics.secondHighlightedColor : ViewMetrics.secondBackgroundColor
             }
         }
     }

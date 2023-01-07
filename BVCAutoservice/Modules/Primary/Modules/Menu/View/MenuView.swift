@@ -1,22 +1,18 @@
 //
-//  Created by postnikov_pp on 22/12/2022.
-//  Copyright (c) 2022 BVC. All rights reserved.
+//  Created by postnikov_pp on 06/01/2023.
+//  Copyright (c) 2023 BVC. All rights reserved.
 //
 
 import UIKit
-import SnapKit
 
-final class MainUserView: UIView {
+final class MenuView: UIView {
 
     private enum ViewMetrics {
         static let backgroundColor: UIColor! = .backgroundColor
     }
     
     private lazy var title: TitleLargeMenuView = {
-        let title = TitleLargeMenuView()
-        title.didTupMenu = {
-            self.didTupMenu()
-        }
+        let title = TitleLargeMenuView(titleLargeMenuType: .withoutMenu)
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
@@ -28,13 +24,6 @@ final class MainUserView: UIView {
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
-    }()
-    
-    private lazy var button: ActionButton = {
-        let button = ActionButton(style: .second)
-        button.setTitle(R.string.localizable.mainUserButtonFilterTitle(), for: .normal)
-        button.addTarget(self, action: #selector(didTupButton), for: .touchUpInside)
-        return button
     }()
 
     override init(frame: CGRect = .zero) {
@@ -48,9 +37,9 @@ final class MainUserView: UIView {
 
     private func setupLayout() {
         backgroundColor = ViewMetrics.backgroundColor
+        
         addSubview(title)
         addSubview(tableView)
-        addSubview(button)
         
         title.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide.snp.top)
@@ -63,24 +52,11 @@ final class MainUserView: UIView {
             make.right.equalToSuperview()
             make.bottom.equalToSuperview()
         }
-        button.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(CGFloat.spacing16Pt)
-            make.right.equalToSuperview().offset(-CGFloat.spacing16Pt)
-            make.bottom.equalToSuperview().offset(-CGFloat.spacing60Pt)
-        }
     }
 
     func updateTableView(dataSource: UITableViewDataSource, delegate: UITableViewDelegate) {
         tableView.dataSource = dataSource
         tableView.delegate = delegate
         tableView.reloadData()
-    }
-    
-    private func didTupMenu() {
-        print("tup")
-    }
-    
-    @objc private func didTupButton() {
-        print("tupButton")
     }
 }
