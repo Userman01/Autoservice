@@ -8,19 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0438E11464B22181859B494F /* MainUserTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84364ED1886D6984E4D313 /* MainUserTableDataSource.swift */; };
+		05CB2A93F9B26F109BB01000 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AD435D17D86AE206267984 /* ProfileInteractor.swift */; };
 		068D82DBBE745D23C1902F5C /* AuthBySMSCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99120EC99A8F454EAC4D5B92 /* AuthBySMSCodeView.swift */; };
 		0FAE758BD214E1CCB231007C /* WelcomeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4618812C7A9E7DCA9513FBE5 /* WelcomeDataStore.swift */; };
 		119F1BB111C95E492A0AD8D9 /* WelcomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F6B073EB6DDF7E94CFB75A /* WelcomeProvider.swift */; };
 		152CAB9580231F77EE33361C /* MenuProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA451DC51D682A3D9E24AAAE /* MenuProvider.swift */; };
 		1E1BF5CC4275D05A2094FDDC /* MenuTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD69E7605BD5B90C2C89334B /* MenuTableDelegate.swift */; };
+		243AB892987D83C13DFDACAF /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE95CE4AA6147B91356FBFD /* ProfileDataStore.swift */; };
 		2785046D4E17774FA95F6572 /* WelcomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122C4287DECEC9FE0DAB38BB /* WelcomeService.swift */; };
 		2A060828377B0179BD26763B /* MainUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F352940B91D8FC4E1249D1 /* MainUserProvider.swift */; };
 		2BE084AEF96CCAD44CF8F5FB /* AuthByAccountBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AC3E4BDFAF598E7988B26 /* AuthByAccountBuilder.swift */; };
 		3522ECC6B6293D9AA0186E15 /* AuthBySMSCodeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4B08B50E4E8CD95D93EAB /* AuthBySMSCodeDataStore.swift */; };
+		374733AF416798767C9EBDD5 /* ProfileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD582B0BF105BE74750390 /* ProfileProvider.swift */; };
 		3D20F03610445F174BA1D54D /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FCA245DDBB9FE493CB8509 /* MenuModel.swift */; };
+		416DA11DCB84DA77527D1A86 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193145D8607DE7CEDA8877B /* ProfileView.swift */; };
 		43B8EAD16258B531CF2DAE9A /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3639BB7B50BAD9B67132396E /* MenuService.swift */; };
 		45828B04B1D37B4698BF2530 /* AuthBySMSCodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E527D5B59D21B8A545A1EF /* AuthBySMSCodeInteractor.swift */; };
 		460511920BBB6D16B80164EA /* AuthBySMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A71394A4FA7289B9DFAFD7 /* AuthBySMSCodeViewController.swift */; };
+		51D7A60860E785449630A254 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4495595EE7000E13E725231D /* ProfilePresenter.swift */; };
 		5585637969EC5BC686037679 /* MainUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BC88FB95AC8CB5F091C065 /* MainUserView.swift */; };
 		578DE93264BD1A7AF577C8D2 /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BC1EF3DD15A25AC4055A28 /* MenuInteractor.swift */; };
 		5DE285111ADA36B0D71655B0 /* MenuDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85181C23D2EEA7BEC8935CE3 /* MenuDataFlow.swift */; };
@@ -34,6 +39,7 @@
 		7FB69CF19129736E2DD8E81E /* AuthByAccountDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4FFD9F03F8E006AFFCF01A /* AuthByAccountDataFlow.swift */; };
 		86495C2EAAADCC4FDF21D073 /* MainUserTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD76CF6A09BD7698415C7D0 /* MainUserTableDelegate.swift */; };
 		8686B6ABCABABEE9ACE62EAC /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC6D12A0324179E8C049A8 /* WelcomeInteractor.swift */; };
+		8898C79857042C2EE377794C /* ProfileDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC470BFF20DB93D8E7B01E /* ProfileDataFlow.swift */; };
 		8990A16515CAF17662370B37 /* AuthBySMSCodeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD34F23E7018B5223E701FF /* AuthBySMSCodeProvider.swift */; };
 		8C3DF1E04A59283517C88AA2 /* WelcomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6173CB9DBC9646C956EBF06 /* WelcomeBuilder.swift */; };
 		910A2D518C0E719569D51955 /* AuthByAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296C3DB8762B621F0F3B321A /* AuthByAccountInteractor.swift */; };
@@ -43,6 +49,7 @@
 		A0C86EC5D22E402CA1F7F3D1 /* MainUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE4F8B5A575FBA1B418397 /* MainUserViewController.swift */; };
 		A6B3C175C24397FDD65434C6 /* MainUserDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2797E29662EA11D84902F8D /* MainUserDataFlow.swift */; };
 		A6FB08C460A9AD18FECB2F63 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9110DBF760A1A1C57D223E /* WelcomeView.swift */; };
+		A74480362F53A408B70953CC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF3423B0872794DA758A127 /* ProfileViewController.swift */; };
 		A80008B40C908A0AD7E03822 /* AuthBySMSCodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3867E5329EDD48D2A085C56A /* AuthBySMSCodePresenter.swift */; };
 		AEF1E066FAD12A17EDD65658 /* AuthBySMSCodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1CC618EE0B58368D1B3D63 /* AuthBySMSCodeBuilder.swift */; };
 		B8CDD2089B1996BEDFFBCA18 /* MainUserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AE9F6BC0C553CF56A61CEA /* MainUserDataStore.swift */; };
@@ -50,6 +57,7 @@
 		B95ED428032244050DEE9CA0 /* MainUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91AED5BE0D6750693849E1F /* MainUserInteractor.swift */; };
 		C09262CA579E97BC17B5E43C /* MainUserBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B60592A201B53B5CAE5A40 /* MainUserBuilder.swift */; };
 		C1CD9DBAA8D370FA0AB99000 /* AuthBySMSCodeDataFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AAD8D84CAE4FDDFA308BD /* AuthBySMSCodeDataFlow.swift */; };
+		C280FE0278B629EDD1F58BC6 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E9861127506310A350BD3C /* ProfileService.swift */; };
 		C932E9A629169FDC008D7057 /* AuthChoiceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9A529169FDC008D7057 /* AuthChoiceBuilder.swift */; };
 		C932E9A829169FE7008D7057 /* AuthChoicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9A729169FE7008D7057 /* AuthChoicePresenter.swift */; };
 		C932E9AA29169FF7008D7057 /* AuthChoiceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C932E9A929169FF7008D7057 /* AuthChoiceInteractor.swift */; };
@@ -65,6 +73,13 @@
 		C93F5F7729137B0800B74065 /* BVCAutoserviceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F5F7629137B0800B74065 /* BVCAutoserviceUITests.swift */; };
 		C93F5F7929137B0800B74065 /* BVCAutoserviceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F5F7829137B0800B74065 /* BVCAutoserviceUITestsLaunchTests.swift */; };
 		C94FDC51293494740025A87D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94FDC50293494740025A87D /* ActionButton.swift */; };
+		C96AD180296C8641007A323E /* ActionButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AD17F296C8641007A323E /* ActionButtonCell.swift */; };
+		C96AD182296C86DC007A323E /* ActionButtonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AD181296C86DC007A323E /* ActionButtonCellViewModel.swift */; };
+		C96EB58A296BEE7A00D42CEC /* TitleLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EB589296BEE7A00D42CEC /* TitleLargeView.swift */; };
+		C96EB58C296BFE1400D42CEC /* MainTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EB58B296BFE1400D42CEC /* MainTextFieldView.swift */; };
+		C96EB58F296C060F00D42CEC /* ProfileTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EB58E296C060F00D42CEC /* ProfileTextFieldCell.swift */; };
+		C96EB591296C3E3D00D42CEC /* UpdateSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EB590296C3E3D00D42CEC /* UpdateSpacer.swift */; };
+		C96EB594296C47F500D42CEC /* SpacedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EB593296C47F500D42CEC /* SpacedTableView.swift */; };
 		C97C0D02296983D9001A4C27 /* SpacerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97C0D01296983D9001A4C27 /* SpacerCell.swift */; };
 		C97C0D0429698753001A4C27 /* MenuContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97C0D0329698753001A4C27 /* MenuContactsCell.swift */; };
 		C990580A295CB68C00016867 /* MainUserServiceCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9905809295CB68C00016867 /* MainUserServiceCollectionDataSource.swift */; };
@@ -161,6 +176,7 @@
 		D0BDAB2B610310D734B33D2A /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07297676832391E29D0A967D /* WelcomeViewModel.swift */; };
 		D42554256D319273A21C96D3 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8854107A569915D8B51CE827 /* MenuPresenter.swift */; };
 		D76CF0B295B5F49876367673 /* MainUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062FBA23D101CD6FD4CE524 /* MainUserService.swift */; };
+		D79C19D2C7CB1D70C0B1F7C0 /* ProfileTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C90F7303F42C989090B1D1 /* ProfileTableDataSource.swift */; };
 		D8E3A1C296233F88495BE639 /* MainUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDC87D0AE357DCA2E3AB7D /* MainUserModel.swift */; };
 		DBCB063AE66AFF530609F948 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6CA191F6C6E7A22A90FC45 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework */; };
 		DF6313F59C67F0C014FA19E9 /* AuthByAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD9DD0DE11057BBFA340699 /* AuthByAccountViewModel.swift */; };
@@ -168,9 +184,13 @@
 		E321C84104FFAA8834DE087F /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0881AE1AFEF076A20DB77BBE /* WelcomePresenter.swift */; };
 		E32D83AA270DFFA6D8E04807 /* AuthByAccountProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF018E65547BDB0D1E64059 /* AuthByAccountProvider.swift */; };
 		E471274486A5B439515F6B86 /* AuthByAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC021CB7CCCC1A374889CB /* AuthByAccountModel.swift */; };
+		E8CD7698BAC6CE046B2E115A /* ProfileBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5DFBF48681C6F1623030BB /* ProfileBuilder.swift */; };
 		E963050B04E6EB2BCB4061F6 /* AuthBySMSCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A5FE7887AFAE3D0E672B78 /* AuthBySMSCodeService.swift */; };
+		EC4366DD2B2F1EF39AB81C4B /* ProfileTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35030FDFE8B528FE38E9C006 /* ProfileTableDelegate.swift */; };
 		EE5457C6A76415A396EA6F6B /* Pods_BVCAutoserviceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF1D443C16372D5F84627F /* Pods_BVCAutoserviceTests.framework */; };
 		F0E139A4F1B8E54C2D05CBE2 /* Pods_BVCAutoservice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5D753B99806416BF11D6D1 /* Pods_BVCAutoservice.framework */; };
+		F2181D546F9680C48058BB32 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9915D2F8231C447371B7FC /* ProfileViewModel.swift */; };
+		F3A20FC3888AAE7B1FE914BB /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DA962F10F4D846455E1E21 /* ProfileModel.swift */; };
 		F4AB1C7B3C4C1E749EC0A25D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDD09A07701CAB21DE1363F /* MenuViewController.swift */; };
 		F7ECA740F375E6CB5DD80EBB /* MenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF7B22AD95B4BE4C98E113 /* MenuBuilder.swift */; };
 /* End PBXBuildFile section */
@@ -196,6 +216,7 @@
 		020CA0C37B1F95F3FBF529FE /* AuthBySMSCodeModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeModel.swift; sourceTree = "<group>"; };
 		07297676832391E29D0A967D /* WelcomeViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		0881AE1AFEF076A20DB77BBE /* WelcomePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		08E9861127506310A350BD3C /* ProfileService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 		0AD76CF6A09BD7698415C7D0 /* MainUserTableDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainUserTableDelegate.swift; sourceTree = "<group>"; };
 		0EB9EF9C0191FC3C7ED2D9C2 /* MenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		0F9110DBF760A1A1C57D223E /* WelcomeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -206,12 +227,17 @@
 		1D6CA191F6C6E7A22A90FC45 /* Pods_BVCAutoservice_BVCAutoserviceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVCAutoservice_BVCAutoserviceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FC021CB7CCCC1A374889CB /* AuthByAccountModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountModel.swift; sourceTree = "<group>"; };
 		26878891C03404A438707DAC /* Pods-BVCAutoservice-BVCAutoserviceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoservice-BVCAutoserviceUITests.debug.xcconfig"; path = "Target Support Files/Pods-BVCAutoservice-BVCAutoserviceUITests/Pods-BVCAutoservice-BVCAutoserviceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		26FD582B0BF105BE74750390 /* ProfileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileProvider.swift; sourceTree = "<group>"; };
 		27DF1D443C16372D5F84627F /* Pods_BVCAutoserviceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVCAutoserviceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		296C3DB8762B621F0F3B321A /* AuthByAccountInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountInteractor.swift; sourceTree = "<group>"; };
 		3447031844A9AC72A0174529 /* MenuViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		35030FDFE8B528FE38E9C006 /* ProfileTableDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileTableDelegate.swift; sourceTree = "<group>"; };
 		3639BB7B50BAD9B67132396E /* MenuService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
 		3867E5329EDD48D2A085C56A /* AuthBySMSCodePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodePresenter.swift; sourceTree = "<group>"; };
 		3957D7B28CB67C91B6205FFF /* AuthByAccountDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountDataStore.swift; sourceTree = "<group>"; };
+		3AE95CE4AA6147B91356FBFD /* ProfileDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
+		40DA962F10F4D846455E1E21 /* ProfileModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		4495595EE7000E13E725231D /* ProfilePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		4618812C7A9E7DCA9513FBE5 /* WelcomeDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeDataStore.swift; sourceTree = "<group>"; };
 		478AAD8D84CAE4FDDFA308BD /* AuthBySMSCodeDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeDataFlow.swift; sourceTree = "<group>"; };
 		47F6B073EB6DDF7E94CFB75A /* WelcomeProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeProvider.swift; sourceTree = "<group>"; };
@@ -219,10 +245,12 @@
 		49B60592A201B53B5CAE5A40 /* MainUserBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainUserBuilder.swift; sourceTree = "<group>"; };
 		4D84364ED1886D6984E4D313 /* MainUserTableDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainUserTableDataSource.swift; sourceTree = "<group>"; };
 		51E527D5B59D21B8A545A1EF /* AuthBySMSCodeInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeInteractor.swift; sourceTree = "<group>"; };
+		53C90F7303F42C989090B1D1 /* ProfileTableDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileTableDataSource.swift; sourceTree = "<group>"; };
 		56CB93E6170DD63470D8F9FC /* WelcomeDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeDataFlow.swift; sourceTree = "<group>"; };
 		5D3477FC15FF6A8EA2EDB80C /* AuthByAccountViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountViewController.swift; sourceTree = "<group>"; };
 		629ADAD964A3BE380B3260B9 /* WelcomeModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeModel.swift; sourceTree = "<group>"; };
 		62BC1EF3DD15A25AC4055A28 /* MenuInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		68FC470BFF20DB93D8E7B01E /* ProfileDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileDataFlow.swift; sourceTree = "<group>"; };
 		690CC538431ED0690150B8B5 /* AuthByAccountPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountPresenter.swift; sourceTree = "<group>"; };
 		6B4FFD9F03F8E006AFFCF01A /* AuthByAccountDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthByAccountDataFlow.swift; sourceTree = "<group>"; };
 		72C900B29A2626BF2336906F /* Pods-BVCAutoserviceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BVCAutoserviceTests.debug.xcconfig"; path = "Target Support Files/Pods-BVCAutoserviceTests/Pods-BVCAutoserviceTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -246,7 +274,9 @@
 		B91AED5BE0D6750693849E1F /* MainUserInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainUserInteractor.swift; sourceTree = "<group>"; };
 		BAC4B08B50E4E8CD95D93EAB /* AuthBySMSCodeDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeDataStore.swift; sourceTree = "<group>"; };
 		BDCF7B22AD95B4BE4C98E113 /* MenuBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MenuBuilder.swift; sourceTree = "<group>"; };
+		BEF3423B0872794DA758A127 /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C0BC88FB95AC8CB5F091C065 /* MainUserView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainUserView.swift; sourceTree = "<group>"; };
+		C193145D8607DE7CEDA8877B /* ProfileView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C932E9A529169FDC008D7057 /* AuthChoiceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoiceBuilder.swift; sourceTree = "<group>"; };
 		C932E9A729169FE7008D7057 /* AuthChoicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoicePresenter.swift; sourceTree = "<group>"; };
 		C932E9A929169FF7008D7057 /* AuthChoiceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthChoiceInteractor.swift; sourceTree = "<group>"; };
@@ -266,6 +296,13 @@
 		C93F5F7629137B0800B74065 /* BVCAutoserviceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVCAutoserviceUITests.swift; sourceTree = "<group>"; };
 		C93F5F7829137B0800B74065 /* BVCAutoserviceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BVCAutoserviceUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C94FDC50293494740025A87D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		C96AD17F296C8641007A323E /* ActionButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonCell.swift; sourceTree = "<group>"; };
+		C96AD181296C86DC007A323E /* ActionButtonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonCellViewModel.swift; sourceTree = "<group>"; };
+		C96EB589296BEE7A00D42CEC /* TitleLargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLargeView.swift; sourceTree = "<group>"; };
+		C96EB58B296BFE1400D42CEC /* MainTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextFieldView.swift; sourceTree = "<group>"; };
+		C96EB58E296C060F00D42CEC /* ProfileTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextFieldCell.swift; sourceTree = "<group>"; };
+		C96EB590296C3E3D00D42CEC /* UpdateSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSpacer.swift; sourceTree = "<group>"; };
+		C96EB593296C47F500D42CEC /* SpacedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedTableView.swift; sourceTree = "<group>"; };
 		C97C0D01296983D9001A4C27 /* SpacerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerCell.swift; sourceTree = "<group>"; };
 		C97C0D0329698753001A4C27 /* MenuContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContactsCell.swift; sourceTree = "<group>"; };
 		C9905809295CB68C00016867 /* MainUserServiceCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUserServiceCollectionDataSource.swift; sourceTree = "<group>"; };
@@ -365,6 +402,9 @@
 		D0CE4F8B5A575FBA1B418397 /* MainUserViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainUserViewController.swift; sourceTree = "<group>"; };
 		D2797E29662EA11D84902F8D /* MainUserDataFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainUserDataFlow.swift; sourceTree = "<group>"; };
 		DA5CBD40FED3F95C523A9352 /* MainUserViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainUserViewModel.swift; sourceTree = "<group>"; };
+		DB9915D2F8231C447371B7FC /* ProfileViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		E2AD435D17D86AE206267984 /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		EA5DFBF48681C6F1623030BB /* ProfileBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileBuilder.swift; sourceTree = "<group>"; };
 		EC9E352F6F240864B5CC1D9A /* MainUserPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainUserPresenter.swift; sourceTree = "<group>"; };
 		F3A5FE7887AFAE3D0E672B78 /* AuthBySMSCodeService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthBySMSCodeService.swift; sourceTree = "<group>"; };
 		F6173CB9DBC9646C956EBF06 /* WelcomeBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WelcomeBuilder.swift; sourceTree = "<group>"; };
@@ -400,6 +440,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033C741AF4D73E5CB4FC0099 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB9915D2F8231C447371B7FC /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0DBB516A2FF0B6BE45E2AF1B /* Provider */ = {
 			isa = PBXGroup;
 			children = (
@@ -761,6 +809,22 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		C96AD183296D4E67007A323E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C96AD181296C86DC007A323E /* ActionButtonCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C96EB58D296C05F000D42CEC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C96EB58E296C060F00D42CEC /* ProfileTextFieldCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C9A8AA82292D16370065A736 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -808,6 +872,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A8AA96292D1FFB0065A736 /* UITableView.swift */,
+				C96EB590296C3E3D00D42CEC /* UpdateSpacer.swift */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -852,6 +917,7 @@
 				C9C9C2DB295B17F500299AA4 /* Cells */,
 				C94FDC4F293494220025A87D /* Buttons */,
 				C9A9B9B229326F0900A91766 /* InsetLabel.swift */,
+				C96EB593296C47F500D42CEC /* SpacedTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -910,6 +976,7 @@
 			children = (
 				C9AD222C292FD3030039C187 /* TextFieldView.swift */,
 				C9B72C2C293A4A8A00FA9AC5 /* PassportTextFieldView.swift */,
+				C96EB58B296BFE1400D42CEC /* MainTextFieldView.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -1113,6 +1180,7 @@
 			children = (
 				788400583EB9C2F82CAE4AD5 /* MainUser */,
 				947DEC84EF8707533B60AA0C /* Menu */,
+				FCB4FE4D59787634E59FA727 /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1153,6 +1221,7 @@
 			isa = PBXGroup;
 			children = (
 				C97C0D01296983D9001A4C27 /* SpacerCell.swift */,
+				C96AD17F296C8641007A323E /* ActionButtonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1161,6 +1230,7 @@
 			isa = PBXGroup;
 			children = (
 				C9C9C2DD295B247600299AA4 /* TitleLargeMenuView.swift */,
+				C96EB589296BEE7A00D42CEC /* TitleLargeView.swift */,
 			);
 			path = Title;
 			sourceTree = "<group>";
@@ -1200,6 +1270,7 @@
 		C9D8B3612913C1AA00B68EFE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C96AD183296D4E67007A323E /* ViewModels */,
 				C9EB98E2294755EB002AD93F /* Constants */,
 				C9C69665293E15D4000CB92F /* Worker */,
 				C9C69662293E0461000CB92F /* Formatters */,
@@ -1277,6 +1348,24 @@
 			path = Provider;
 			sourceTree = "<group>";
 		};
+		D4077543812702DBA7CE918B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40DA962F10F4D846455E1E21 /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E7EB98B3FCC8A5F1CACF1E47 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				26FD582B0BF105BE74750390 /* ProfileProvider.swift */,
+				3AE95CE4AA6147B91356FBFD /* ProfileDataStore.swift */,
+				08E9861127506310A350BD3C /* ProfileService.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
 		EE025E9846A010A7F30F0305 /* AuthBySMSCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -1291,6 +1380,14 @@
 				4BC518D69ECB17E074F87820 /* View */,
 			);
 			path = AuthBySMSCode;
+			sourceTree = "<group>";
+		};
+		EEB1BB701EADDF5B544C02DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C193145D8607DE7CEDA8877B /* ProfileView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F12C038FE929F290ECBBA11E /* Model */ = {
@@ -1308,6 +1405,25 @@
 				3447031844A9AC72A0174529 /* MenuViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FCB4FE4D59787634E59FA727 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EA5DFBF48681C6F1623030BB /* ProfileBuilder.swift */,
+				BEF3423B0872794DA758A127 /* ProfileViewController.swift */,
+				53C90F7303F42C989090B1D1 /* ProfileTableDataSource.swift */,
+				35030FDFE8B528FE38E9C006 /* ProfileTableDelegate.swift */,
+				E2AD435D17D86AE206267984 /* ProfileInteractor.swift */,
+				4495595EE7000E13E725231D /* ProfilePresenter.swift */,
+				68FC470BFF20DB93D8E7B01E /* ProfileDataFlow.swift */,
+				C96EB58D296C05F000D42CEC /* Cell */,
+				D4077543812702DBA7CE918B /* Model */,
+				033C741AF4D73E5CB4FC0099 /* ViewModel */,
+				E7EB98B3FCC8A5F1CACF1E47 /* Provider */,
+				EEB1BB701EADDF5B544C02DA /* View */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1598,6 +1714,7 @@
 				C9AD2200292FB3A50039C187 /* TextStyle.swift in Sources */,
 				C9EB98DB29471EAB002AD93F /* RegistrationRecoveryModel.swift in Sources */,
 				C9B72C0E29379A4E00FA9AC5 /* PassportCreateModel.swift in Sources */,
+				C96EB591296C3E3D00D42CEC /* UpdateSpacer.swift in Sources */,
 				C9AD2227292FC9190039C187 /* RegistrationPresenter.swift in Sources */,
 				C9C69667293E1610000CB92F /* ContactWorker.swift in Sources */,
 				C9AD22302930D58D0039C187 /* UserRoleType.swift in Sources */,
@@ -1611,9 +1728,11 @@
 				C9C9C2E9295C8BBB00299AA4 /* MainUserMenuCell.swift in Sources */,
 				C9AD222D292FD3030039C187 /* TextFieldView.swift in Sources */,
 				C9EB98E429475613002AD93F /* KeychainKeys.swift in Sources */,
+				C96EB594296C47F500D42CEC /* SpacedTableView.swift in Sources */,
 				C9D8B3602913C19900B68EFE /* ApplicationCoordinator.swift in Sources */,
 				C9AD2226292FC9190039C187 /* RegistrationViewModel.swift in Sources */,
 				C9C9C2DE295B247600299AA4 /* TitleLargeMenuView.swift in Sources */,
+				C96AD182296C86DC007A323E /* ActionButtonCellViewModel.swift in Sources */,
 				C9C9C2E3295B5BC400299AA4 /* MainUserMenuCollectionDataSource.swift in Sources */,
 				C9AD2225292FC9190039C187 /* RegistrationView.swift in Sources */,
 				C9A8AA94292D1CC50065A736 /* UICollectionView.swift in Sources */,
@@ -1679,6 +1798,7 @@
 				C9A8AA9F292E7E890065A736 /* Array.swift in Sources */,
 				C9A8AA8D292D1A9C0065A736 /* AuthChoiceViewModel.swift in Sources */,
 				C9D8B35329138DD400B68EFE /* R.generated.swift in Sources */,
+				C96AD180296C8641007A323E /* ActionButtonCell.swift in Sources */,
 				AEF1E066FAD12A17EDD65658 /* AuthBySMSCodeBuilder.swift in Sources */,
 				460511920BBB6D16B80164EA /* AuthBySMSCodeViewController.swift in Sources */,
 				45828B04B1D37B4698BF2530 /* AuthBySMSCodeInteractor.swift in Sources */,
@@ -1698,6 +1818,7 @@
 				6898C1486137A676E4697CA4 /* AuthByAccountViewController.swift in Sources */,
 				910A2D518C0E719569D51955 /* AuthByAccountInteractor.swift in Sources */,
 				C9B889EA29475F3D00E49BBC /* UserAuthService.swift in Sources */,
+				C96EB58C296BFE1400D42CEC /* MainTextFieldView.swift in Sources */,
 				C990580E295CB76500016867 /* MainUserServiceInfoCell.swift in Sources */,
 				C990580C295CB6A400016867 /* MainUserServiceCollectionDelegate.swift in Sources */,
 				A032237D6DE6F2ED227C69CB /* AuthByAccountPresenter.swift in Sources */,
@@ -1737,6 +1858,7 @@
 				5585637969EC5BC686037679 /* MainUserView.swift in Sources */,
 				F7ECA740F375E6CB5DD80EBB /* MenuBuilder.swift in Sources */,
 				F4AB1C7B3C4C1E749EC0A25D /* MenuViewController.swift in Sources */,
+				C96EB58A296BEE7A00D42CEC /* TitleLargeView.swift in Sources */,
 				B92F8A0E9A894443DFEAE810 /* MenuTableDataSource.swift in Sources */,
 				1E1BF5CC4275D05A2094FDDC /* MenuTableDelegate.swift in Sources */,
 				578DE93264BD1A7AF577C8D2 /* MenuInteractor.swift in Sources */,
@@ -1748,6 +1870,20 @@
 				7F181A6597015CBE1523E6FE /* MenuDataStore.swift in Sources */,
 				43B8EAD16258B531CF2DAE9A /* MenuService.swift in Sources */,
 				7758C23D2D982E3AC4F1643D /* MenuView.swift in Sources */,
+				E8CD7698BAC6CE046B2E115A /* ProfileBuilder.swift in Sources */,
+				A74480362F53A408B70953CC /* ProfileViewController.swift in Sources */,
+				D79C19D2C7CB1D70C0B1F7C0 /* ProfileTableDataSource.swift in Sources */,
+				EC4366DD2B2F1EF39AB81C4B /* ProfileTableDelegate.swift in Sources */,
+				05CB2A93F9B26F109BB01000 /* ProfileInteractor.swift in Sources */,
+				51D7A60860E785449630A254 /* ProfilePresenter.swift in Sources */,
+				8898C79857042C2EE377794C /* ProfileDataFlow.swift in Sources */,
+				C96EB58F296C060F00D42CEC /* ProfileTextFieldCell.swift in Sources */,
+				F3A20FC3888AAE7B1FE914BB /* ProfileModel.swift in Sources */,
+				F2181D546F9680C48058BB32 /* ProfileViewModel.swift in Sources */,
+				374733AF416798767C9EBDD5 /* ProfileProvider.swift in Sources */,
+				243AB892987D83C13DFDACAF /* ProfileDataStore.swift in Sources */,
+				C280FE0278B629EDD1F58BC6 /* ProfileService.swift in Sources */,
+				416DA11DCB84DA77527D1A86 /* ProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
