@@ -6,7 +6,7 @@
 //
 
 protocol PrimaryRouterProtocol {
-    func openMain()
+    func openMainUser()
 }
 
 final class PrimaryRouter: PrimaryRouterProtocol {
@@ -17,9 +17,9 @@ final class PrimaryRouter: PrimaryRouterProtocol {
         self.router = router
     }
     
-    func openMain() {
-        let mainController = MainBuilder()
+    func openMainUser() {
+        let mainUserController = MainUserBuilder()
             .build()
-        router.setRootModules([mainController])
+        router.setRootModules([mainUserController])
     }
 }

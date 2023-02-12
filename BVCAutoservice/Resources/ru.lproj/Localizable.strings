@@ -10,6 +10,7 @@
 "common.logo-title" = "АвтоСервис";
 "common.enter" = "Войти";
 "common.next" = "Далее";
+"common.next-points" = "Далее...";
 "common.registration" = "Регистрация";
 "common.authorization" = "Авторизация";
 "common.error-message" = "Произошла ошибка";
@@ -54,3 +55,17 @@
 "welcome-common.describe-regitration" = "Регистрация успешно завершена";
 "welcome-common.describe-recovery" = "Ваш аккаунт успешно восстановлен";
 "welcome-common.describe-enter" = "Добро пожаловать!";
+
+// MARK: MainUser
+"main-user.menu-title.auto-service" = "АвтоСервис";
+"main-user.menu-title.auto-washing" = "АвтоМойка";
+"main-user.menu-title.oil-change" = "ЗаменаМасла";
+"main-user.button-filter.title" = "Сортировка и фильтр";
+
+// MARK: Menu
+"menu-user.home" = "ГЛАВНАЯ";
+"menu-user.personal-area" = "ЛИЧНЫЙ КАБИНЕТ";
+"menu-user.notification" = "УВЕДОМЛЕНИЯ";
+"menu-user.configure" = "НАСТРОЙКИ";
+"menu-user.help" = "СЛУЖБА ЗАБОТЫ";
+"menu-user.applications" = "МОИ ЗАЯВКИ";

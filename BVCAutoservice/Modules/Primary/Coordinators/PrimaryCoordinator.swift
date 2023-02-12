@@ -21,10 +21,10 @@ final class PrimaryCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        openMain()
+        openMainUser()
     }
     
-    private func openMain() {
-        primaryRouter.openMain()
+    private func openMainUser() {
+        primaryRouter.openMainUser()
     }
 }
