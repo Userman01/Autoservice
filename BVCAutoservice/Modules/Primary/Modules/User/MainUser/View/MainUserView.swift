@@ -74,6 +74,7 @@ final class MainUserView: UIView {
         tableView.dataSource = dataSource
         tableView.delegate = delegate
         tableView.reloadData()
+        tableView.layoutIfNeeded()
     }
     
     private func didTupMenu() {

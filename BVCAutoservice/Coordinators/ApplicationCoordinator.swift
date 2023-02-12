@@ -19,13 +19,11 @@ final class ApplicationCoordinator: BaseCoordinator {
     }
     
     override func start() {
-//        if isAutorized {
-//            runMainFlow()
-//        } else {
-//            runAuthFlow()
-//        }
-        let controller = ProfileBuilder().build()
-        router.push(controller)
+        if isAutorized {
+            runMainFlow()
+        } else {
+            runAuthFlow()
+        }
     }
     
     private func runMainFlow() {

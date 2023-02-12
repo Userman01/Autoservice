@@ -19,7 +19,7 @@ final class MainUserServiceCollectionDelegate: NSObject, UICollectionViewDelegat
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         print(collectionView.contentSize.height)
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height/2)
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

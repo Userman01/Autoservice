@@ -13,11 +13,11 @@ final class MainUserServiceCell: UITableViewCell {
         
     }
     
-    private lazy var collectionView: UICollectionView = {
+    private lazy var collectionView: DynamicHeightCollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 0
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collectionView = DynamicHeightCollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
@@ -54,6 +54,6 @@ final class MainUserServiceCell: UITableViewCell {
         collectionViewDataSource.representableViewModels = viewModel
         collectionViewDelegate.representableViewModels = viewModel
         collectionView.reloadData()
-        collectionView.setNeedsLayout()
+        collectionView.layoutIfNeeded()
     }
 }

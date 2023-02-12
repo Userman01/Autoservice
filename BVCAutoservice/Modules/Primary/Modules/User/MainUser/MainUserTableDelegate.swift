@@ -27,7 +27,7 @@ final class MainUserTableDelegate: NSObject, UITableViewDelegate {
         case 1:
             return tableView.frame.height - CGFloat.spacing80Pt
         default:
-            return .zero
+            return UITableView.automaticDimension
         }
     }
 }

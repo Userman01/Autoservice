@@ -34,14 +34,14 @@ extension MainUserPresenter {
                 MainUserServicesViewModel(
                     title: "Автосервис",
                     nameCityText: "Алматы",
-                    image: R.image.logo()!,
+                    image: R.image.mocAutoservice()!,
                     infoText: "ыааываываыва ы а ыва ыв а ыва  ыва ы ва ы а ыв а ыва ы ва ыв а ыв а ыва ы ва ыв а ыва ыв а ыв а ыва ыв а ыва ыв а вы а ыва ыв а ы",
                 countHeartText: "100",
                 countChatText: "200"),
                 MainUserServicesViewModel(
                     title: "Автосервис",
                     nameCityText: "Алматы",
-                    image: R.image.logo()!,
+                    image: R.image.mocAutoservice()!,
                     infoText: "ыааываываыва ы а ыва ыв а ыва  ыва ы ва ы а ыв а ыва ы ва ыв а ыв а ыва ы ва ыв а ыва ыв а ыв а ыва ыв а ыва ыв а вы а ыва ыв а ы",
                     countHeartText: "10",
                     countChatText: "20")])]
