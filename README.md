@@ -15,8 +15,8 @@ iOS minimum version 13.0
 ____
 ## Interface screens 
 <img src="https://user-images.githubusercontent.com/97108716/218308979-ab64b2ff-97fd-42cc-b2f7-5e7824fb1ce3.png" 
-     width="200" 
-     height="300"/>
+     width="196" 
+     height="420"/>
 ____
 ## Additional information
 N/A
